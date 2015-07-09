@@ -1,0 +1,347 @@
+/* 
+-----------------------------------------------------
+  Stylesheet Guide
+-----------------------------------------------------
+  
+  1. Default stylesheets
+    1.1. Color Schemes
+  2. General classes
+  3. Main
+    2.1 Page tilte end breadcrumps
+    2.2 Offsets
+  4. Header
+    4.1. Main navigation
+    4.2. Search
+  5. Basic Elements
+    5.1. Typography
+    5.2. Lists
+    5.3. Buttons
+    5.4. Dividers
+    5.5. Tooltips
+    5.6. Tables
+    5.7. Forms
+  6. Widgets and Shortcodes
+    6.1. Icon Boxes
+    6.2. Skills
+      6.2.1. Skills circle
+      6.2.2. Skillbar
+    6.3. Message Box
+    6.2. Accordion and Toggles
+    6.3. Alert Boxes
+    6.4. Progress Bars
+    6.5. Team Members
+    6.6. Counters
+    6.7. Tabs and Tour Sections
+    6.8. Before/After
+    6.9. Pricing Tables
+    6.10. Countdown
+  7. Isotope
+  8. Sliders
+  9. Lightboxes
+  10. Carousels
+  11. Main
+  12. Portfolio & Gallery
+    12.1. Portfolio Single item
+    12.2. Related Portfolio Projects
+    12.3. Gallery Albums
+    12.4. Gallery Flow
+    12.5. Protected Gallery
+    12.6. Gallery wall items
+  13. Blog
+  14. Shop
+  15. Animations
+  16. Footer
+    16.1. Footer Bottom
+    16.2. Copyright
+*/
+@import "../css/reset.css";
+
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
+
+
+/* ------------------------------------------------
+
+    1. Default stylesheets
+
+------------------------------------------------ */
+
+   body {
+    font-family: 'Droid Sans', sans-serif;
+    color:#929292;
+    font-size:13px;
+    line-height:20px;
+    background:#fdfdfd;
+    -webkit-text-size-adjust: none;
+   }
+
+   ::selection{
+    color: #fff;
+   }
+
+   ::-moz-selection{
+    color: #fff;
+   }
+
+   ::-moz-selection{background: #22cfef;}
+
+   ::-webkit-scrollbar{
+    background: #cdcdcd;  
+    width: 10px;
+   }
+
+   ::-webkit-scrollbar-thumb{background: #22cfef;}
+
+
+   ::-webkit-input-placeholder{
+    color:#505050;
+
+    -webkit-transition: text-indent .5s ease, color .5s ease;
+        transition: text-indent .5s ease, color .5s ease;
+   }
+
+   input::-moz-placeholder{
+    color:#505050;
+    opacity:1;
+   }
+
+   textarea::-moz-placeholder{
+    color: #505050;
+    opacity: 1;
+   }
+
+   ::ms-input-placeholder{
+    color:#505050;
+   }
+
+   [placeholder]:focus::-webkit-input-placeholder{
+    text-indent:10em;
+    color:transparent;
+   }
+
+
+   /* --------------------------------------------
+        1.1. Color Schemes
+   -------------------------------------------- */
+
+      
+
+/* ------------------------------------------------
+
+    2. General Classes
+
+------------------------------------------------ */
+
+   .align_left{
+    text-align: left;
+   }
+
+   .align_right{
+    text-align: right;
+   }
+
+   .align_center{
+    text-align: center;
+   }
+
+   .alignleft{
+    float: left;
+   }
+
+   .alignright{
+    float: right;
+   }
+
+   .wrapper{overflow: hidden;}
+
+   .hide{ display: none;}
+
+   .show{ display: block;}
+
+   .d_ib{display: inline-block;}
+
+   .transparent{ opacity:0; }
+
+   .invisible{ 
+    opacity: 0;
+    visibility: hidden;
+   }
+
+   .visible{ 
+    opacity:1; 
+    visibility: visible;
+   }
+
+   .p_abs{position: absolute;}
+
+   .p_rel{position: relative;}
+
+   .p_fix{position: fixed;}
+
+   .clear {clear:both;width:100%;line-height:0;font-size:0;}
+
+   .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+   }
+
+   .reg {text-transform:uppercase}
+
+/* ------------------------------------------------
+
+    3. Main
+
+------------------------------------------------ */
+
+   #content {padding:0px 0px 0px 0px; min-height: 1500px;}
+
+   /* --------------------------------------------
+        3.1. Page tilte end breadcrumps
+   -------------------------------------------- */
+    
+      .page_title_box{
+         padding: 39px 0 43px;
+         color: #505050;
+         border-bottom: 1px solid #efefef;
+         background-color: #fcfcfc;
+      }
+
+      .breadcrumps{
+         padding: 9px 0 0;
+      }
+  /* --------------------------------------------
+        3.2. Offsets
+  -------------------------------------------- */
+    
+      .section_offset{
+         padding: 55px 0;
+      }
+
+      .section_offset:first-child{
+         padding: 0 0 55px;
+      }
+
+      .cont_pad{
+         padding: 75px 0 0;
+      }
+
+/* ------------------------------------------------
+
+    4. Header
+
+------------------------------------------------ */
+   
+   header {}
+   .logo{}
+   .logo a{
+     display:block;
+     width:278px;
+     height:85px;
+     background:url(../images/logo.png) 0 0 no-repeat;
+     text-decoration:none;
+     text-indent:-9999px;
+   }
+
+/* ------------------------------------------------
+
+    5. Basic Elements
+
+------------------------------------------------ */
+   /* --------------------------------------------
+        5.1. Typography
+   -------------------------------------------- */
+  
+      h1,h2,h3,h4,h5,h6{
+         font-family: 'Roboto', sans-serif;
+         font-weight:normal;
+         line-height: 1.23em;
+         color: #333333;
+         margin: 0;
+         margin-bottom: 17px;
+      }
+
+      h1{font-size: 38px;}
+      h2{font-size: 30px;}
+      h3{font-size: 22px;}
+      h4{font-size: 18px;}
+      h5{font-size: 16px;}
+      h6{font-size: 14px;}
+
+      p:not(:last-child){margin-bottom: 20px;}
+
+      mark{background-color: #20cfef;padding: 0 2px;color: #fff;}
+      mark.red{background-color: #ee352f;}
+
+      a{
+         color: #;
+         text-decoration: none;
+         -webkit-transition: all 0.5s;
+         -o-transition: all 0.5s;
+         transition: all 0.5s;
+      }
+      a:hover{
+         color: #333;
+         text-decoration: none;
+         -webkit-transition: all 0.3s;
+         -o-transition: all 0.3s;
+         transition: all 0.3s;
+      }
+      a:focus,
+      a:visited{
+         text-decoration: none;
+      }
+
+   /* --------------------------------------------
+        5.2. Lists
+   -------------------------------------------- */
+      .list1{}
+      .list1_item{
+        background:url(../images/marker1.png) 0 7px no-repeat;
+        padding-left:20px;
+      }
+      .list1_link{}
+
+      .list2{}
+      .list2_item{
+        background:url(../images/marker1.png) 0 7px no-repeat;
+        padding-left:20px;
+      }
+      .list2_link{}
+
+      .list3{}
+      .list3_item{
+        background:url(../images/marker1.png) 0 7px no-repeat;
+        padding-left:20px;
+      }
+      .list3_link{}
+
+
+   /* --------------------------------------------
+        5.3. Buttons
+   -------------------------------------------- */
+
+   .btn{
+      display: inline-block;
+      outline: none;
+      background: #;
+      color: #;
+   }
+   .btn:hover{
+      background-color: #;
+      color: #;
+   }
+
+
+
+
+/* ------------------------------------------------
+
+    16. Footer
+
+------------------------------------------------ */
+
+   footer {}

@@ -1,0 +1,13 @@
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 992px) {
+ body{min-width:768px;}
+
+}
+
+@media only screen and (max-width: 767px) {
+ body{min-width:420px;}
+}
+
+@media only screen and (max-width: 479px) {
+ body{min-width:300px;}
+}
