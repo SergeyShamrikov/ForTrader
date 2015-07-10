@@ -5,61 +5,64 @@
   
   1. Default stylesheets
     1.1. Color Schemes
+    1.2. Fonts
   2. General classes
   3. Main
     2.1 Page tilte end breadcrumps
     2.2 Offsets
   4. Header
-    4.1. Main navigation
-    4.2. Search
-  5. Basic Elements
-    5.1. Typography
-    5.2. Lists
-    5.3. Buttons
-    5.4. Dividers
-    5.5. Tooltips
-    5.6. Tables
-    5.7. Forms
-  6. Widgets and Shortcodes
-    6.1. Icon Boxes
-    6.2. Skills
-      6.2.1. Skills circle
-      6.2.2. Skillbar
-    6.3. Message Box
-    6.2. Accordion and Toggles
-    6.3. Alert Boxes
-    6.4. Progress Bars
-    6.5. Team Members
-    6.6. Counters
-    6.7. Tabs and Tour Sections
-    6.8. Before/After
-    6.9. Pricing Tables
-    6.10. Countdown
-  7. Isotope
-  8. Sliders
-  9. Lightboxes
-  10. Carousels
-  11. Main
-  12. Portfolio & Gallery
-    12.1. Portfolio Single item
-    12.2. Related Portfolio Projects
-    12.3. Gallery Albums
-    12.4. Gallery Flow
-    12.5. Protected Gallery
-    12.6. Gallery wall items
-  13. Blog
-  14. Shop
-  15. Animations
-  16. Footer
-    16.1. Footer Bottom
-    16.2. Copyright
+    4.1. Header List
+    4.2. Enter Box
+  5. Nav
+    5.1. Main navigation
+      5.1.1. Sub Menu
+    5.2. Searchform
+  6. Basic Elements
+    6.1. Typography
+    6.2. Lists
+    6.3. Buttons
+    6.4. Dividers
+    6.5. Tooltips
+    6.6. Tables
+    6.7. Forms
+  7. Widgets and Shortcodes
+    7.1. Icon Boxes
+    7.2. Skills
+      7.2.1. Skills circle
+      7.2.2. Skillbar
+    7.3. Message Box
+    7.2. Accordion and Toggles
+    7.3. Alert Boxes
+    7.4. Progress Bars
+    7.5. Team Members
+    7.6. Counters
+    7.7. Tabs and Tour Sections
+    7.8. Before/After
+    7.9. Pricing Tables
+    7.10. Countdown
+  8. Isotope
+  9. Sliders
+  10. Lightboxes
+  11. Carousels
+  12. Main
+  13. Portfolio & Gallery
+    13.1. Portfolio Single item
+    13.2. Related Portfolio Projects
+    13.3. Gallery Albums
+    13.4. Gallery Flow
+    13.5. Protected Gallery
+    13.6. Gallery wall items
+  14. Blog
+  15. Shop
+  16. Animations
+  17. Footer
+    17.1. Footer Bottom
+    17.2. Copyright
 */
-@import "../css/reset.css";
+@import "reset.css";
+@import "../fonts/PFDindisplayproRegMedLight/font.css";
 
-
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto:700,500,400,300);
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 /* ------------------------------------------------
 
@@ -68,11 +71,11 @@
 ------------------------------------------------ */
 
    body {
-    font-family: 'Droid Sans', sans-serif;
-    color:#929292;
-    font-size:13px;
-    line-height:20px;
-    background:#fdfdfd;
+    font-family: 'Open Sans', sans-serif;
+    color:#787575;
+    font-size:14px;
+    line-height:22px;
+    background:#f1f1f1;
     -webkit-text-size-adjust: none;
    }
 
@@ -91,7 +94,7 @@
     width: 10px;
    }
 
-   ::-webkit-scrollbar-thumb{background: #22cfef;}
+   ::-webkit-scrollbar-thumb{background: #333131;}
 
 
    ::-webkit-input-placeholder{
@@ -120,12 +123,26 @@
     color:transparent;
    }
 
+   *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   }
+
 
    /* --------------------------------------------
         1.1. Color Schemes
    -------------------------------------------- */
 
-      
+    
+
+   /* --------------------------------------------
+        1.2. Fonts
+   -------------------------------------------- */
+    
+    .PFDlight{font-family: 'pf_dindisplay_prolight';}
+    .PFDregular{font-family: 'pf_dindisplay_proregular';}
+    .PFDmedium{font-family: 'pf_dindisplay_promedium';}
 
 /* ------------------------------------------------
 
@@ -196,8 +213,17 @@
     3. Main
 
 ------------------------------------------------ */
+  
+  .container{
+    width: 1103px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
 
-   #content {padding:0px 0px 0px 0px; min-height: 1500px;}
+  #content {padding:0px 0px 0px 0px; min-height: 1500px;}
 
    /* --------------------------------------------
         3.1. Page tilte end breadcrumps
@@ -235,24 +261,269 @@
 
 ------------------------------------------------ */
    
-   header {}
-   .logo{}
-   .logo a{
-     display:block;
-     width:278px;
-     height:85px;
-     background:url(../images/logo.png) 0 0 no-repeat;
-     text-decoration:none;
-     text-indent:-9999px;
-   }
+  .header_top{
+    margin-right: -20px;
+    padding-right: 20px;
+    height: 61px;
+    border-bottom: 1px solid #e8e8e8;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2f2f2+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f2f2f2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+  }
+  .logo{float: left;background-color: #fff;}
+  .logo a{font-size: 0;}
+
+  /* --------------------------------------------
+        4.1. Header List
+   -------------------------------------------- */
+
+    .header_list li{float: left;}
+
+    .header_list li a{
+      display: block;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 21px 10px 23px;
+      border-right: 1px solid #e8e8e8;
+      color: #454141;
+    }
+    .header_list li a:hover{
+      background-color: #f0f0f0;
+    }
+
+  /* --------------------------------------------
+        4.2. Enter Box
+  -------------------------------------------- */
+
+    .enter_box span{
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 21px 10px 23px;
+      font-weight: 400;
+      border-right: 1px solid #e8e8e8;
+      color: #454141;
+    }
+    .enter_box span strong{font-weight: 600;}
+
+    .enter_box a{
+      display: block;
+      float: left;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 21px 10px 23px;
+      font-weight: 400;
+      border-right: 1px solid #e8e8e8;
+      color: #454141;
+    }
+    .enter_box a:hover{
+      background-color: #f0f0f0;
+    }
 
 /* ------------------------------------------------
 
-    5. Basic Elements
+    5. Nav
+
+------------------------------------------------ */
+
+  .nav_wrap{background-color: #333030;}
+  
+  /* --------------------------------------------
+        5.1. Main Navigation
+   -------------------------------------------- */
+    
+    nav{
+      
+    }
+
+    .main_menu>li{
+      float: left;
+      position: relative;
+      border-right: 1px solid #0d0c0c;
+    }
+
+    .main_menu>li>a{
+      display: block;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 18px;
+      color: #fff;
+      padding: 22px 10px;
+      background-color: #242222;
+    }
+
+    .main_menu>li>a:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      background-color: #333030;
+    }
+    .main_menu>li:hover>a{
+      background-color: #333030;
+    }
+    .main_menu>li.current>a,
+    .main_menu>li>a:active{
+      background-color: #ff1616;
+    }
+    .main_menu>li:hover>a:after,
+    .main_menu>li.current>a:after{display: none;}
+
+  /* --------------------------------------------
+    5.2. Sub Menu
+  -------------------------------------------- */
+
+    .sub_menu{
+      width: 232px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      border-bottom: 5px solid #ff1616;
+      display: none;
+    }
+
+    .main_menu>li:hover>.sub_menu{
+      display: block;
+    }
+
+    .sub_menu>li>a{
+      display: block;
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+      padding: 20px 0 18px 20px;
+      border-top: 1px solid #0d0c0c;
+      background-color: #242222;
+      position: relative;
+    }
+    
+    .sub_menu>li>a:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #333030;
+    }
+
+    .sub_menu>li>a:hover:after,
+    .sub_menu>li>a:active:after{display: none;}
+
+    .sub_menu>li>a:hover{background-color: #333030;}
+    .sub_menu>li>a:active{background-color: #ff1616;}
+
+  /* --------------------------------------------
+    5.3. Additional Menu
+  -------------------------------------------- */
+
+    .additional_menu_box{
+      background-color: #242222;
+      border-right: 1px solid #0d0c0c;
+      position: relative;
+      padding: 22px 18px 20px;
+    }
+
+    .additional_menu_box:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      background-color: #333030;
+    }
+
+    .additional_menu_box button{
+      display: block;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      background: url(../images/icon.png) 0 0 no-repeat;
+    }
+
+    .additional_menu_box button:hover,
+    .additional_menu_box button.active{
+      background-position: 0 -23px;
+    }
+
+    .additional_menu{
+      width: 232px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      border-bottom: 5px solid #ff1616;
+      display: none;
+    }
+
+    .additional_menu>li{position: relative;}
+
+    .additional_menu.active{
+      display: block;
+    }
+
+    .additional_menu>li>a{
+      display: block;
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+      padding: 20px 0 18px 20px;
+      border-top: 1px solid #0d0c0c;
+      background-color: #242222;
+      position: relative;
+    }
+    
+    .additional_menu>li>a:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #333030;
+    }
+
+    .additional_menu>li>a:hover:after,
+    .additional_menu>li>a:active:after{display: none;}
+
+    .additional_menu>li>a:hover{background-color: #333030;}
+    .additional_menu>li>a:active{background-color: #ff1616;}
+
+    .additional_menu .sub_menu{
+      top: 0;
+      right: 100%;
+      left: auto;
+    }
+    .additional_menu>li:hover>.sub_menu{display: block;}
+
+   /* --------------------------------------------
+        5.2. Searchform
+   -------------------------------------------- */
+
+
+
+/* ------------------------------------------------
+
+    6. Basic Elements
 
 ------------------------------------------------ */
    /* --------------------------------------------
-        5.1. Typography
+        6.1. Typography
    -------------------------------------------- */
   
       h1,h2,h3,h4,h5,h6{
@@ -296,7 +567,7 @@
       }
 
    /* --------------------------------------------
-        5.2. Lists
+        6.2. Lists
    -------------------------------------------- */
       .list1{}
       .list1_item{
@@ -321,7 +592,7 @@
 
 
    /* --------------------------------------------
-        5.3. Buttons
+        6.3. Buttons
    -------------------------------------------- */
 
    .btn{

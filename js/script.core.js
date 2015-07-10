@@ -8,7 +8,7 @@
 
 			var self = this;
 
-			self.NameFunction();
+			self.additionalMenuItem();
 
 		},
 
@@ -16,11 +16,8 @@
 
 			var self = this;
 
-			self.NameFunction();
-			self.stickyHeader.init();
-			if($('.skillbar').length){
-				self.skillBar();
-			}
+			self.additionalMenuWidth();
+			
 
 		},
 
@@ -28,16 +25,90 @@
 
 			var self = this;
 			
-			self.NameFunction();
+			// self.additionalMenuItemScroll();
+		},
+
+		windowResize: function(){
+
+			var self = this;
+
+			self.additionalMenuItemScroll();
+
+			setTimeout(function(){
+
+				self.additionalMenuWidth();
+
+			},500);
 		},
 
 		/**
-		**	Purpose code
+		**	Additional Menu width and open
 		**/
 
-		NameFunction : function(){
+		additionalMenuWidth : function(){
 
-		    // some code
+		    var searchFormWidth = $('.search_form').width(),
+		    	menuWidh = searchFormWidth + 58;
+
+		    $(".additional_menu").width(menuWidh);
+
+		    
+
+		},
+
+		additionalMenuItem : function(){
+
+			var navWrapWidth = $(".nav_wrap").width(),
+				fullWidth = navWrapWidth - 162,
+				itemWidth = 0;
+
+			$(".main_menu>li").each(function(){
+
+				var $this = $(this),
+					index = $this.index();
+
+				itemWidth += $(this).width();
+
+				if(itemWidth > fullWidth){
+					$this.appendTo(".additional_menu");
+				}				
+
+			});
+
+		},
+
+		additionalMenuItemScroll : function(){
+
+			var navWrapWidth = $(".nav_wrap").width(),
+				fullWidth = navWrapWidth - 162,
+				itemWidth = 0;
+
+				$(".additional_menu>li").each(function(){
+
+					var $this = $(this);
+
+					$this.appendTo(".main_menu");
+
+				});
+
+				$(".main_menu>li").each(function(){
+
+					var $this = $(this),
+						index = $this.index();
+
+					itemWidth += $(this).width();
+
+					if(itemWidth > fullWidth){
+
+						$this.appendTo(".additional_menu");
+
+					}				
+
+				});
+
+				
+
+			
 
 		}
 
@@ -51,6 +122,13 @@
 
 		Core.DOMReady();
 
+		$('.additional_menu_box button').on('click',function(){
+		    	
+	    	$(this).toggleClass('active');
+	    	$(".additional_menu").toggleClass('active');
+
+	    });
+
 	});
 
 	$(window).load(function(){
@@ -62,6 +140,12 @@
 	$(window).scroll(function(){
 
 		Core.windowScroll();
+		
+	});
+
+	$(window).on("resize",function(){
+
+		Core.windowResize();
 		
 	});
 
