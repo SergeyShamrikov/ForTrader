@@ -17,7 +17,12 @@
 
         <!-- Favicon
         ============================================ -->
-        <link rel="shortcut icon" type="images/x-icon" href="images/fav_icon.ico">
+        
+
+         <!-- Libs CSS
+        ============================================ -->
+        <link rel="stylesheet" href="plagins/owlCarousel/css/owl.carousel.css">
+        <link rel="stylesheet" href="plagins/tinycarousel/css/tinycarousel.css">
 
         <!-- Theme CSS
         ============================================ -->
@@ -50,7 +55,7 @@
         
         <!-- - - - - - - - - - - - - - Container - - - - - - - - - - - - - - - - -->
 
-        <div class="container">
+        <div class="container white_container">
 
             <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
 
@@ -104,7 +109,7 @@
 
             <!-- - - - - - - - - - - - - - Banner 1063*90 - - - - - - - - - - - - - - - - -->
             
-            <div style="margin:15px 0;">
+            <div class="header_banner1">
                 
                 <a href="#"><img src="images/banner1063x90.jpg" height="90" width="1063" alt=""></a>
 
@@ -112,11 +117,11 @@
 
             <!-- - - - - - - - - - - - - - End of Banner 1063*90 - - - - - - - - - - - - - - - - -->
 
-            <div class="nav_wrap clearfix">
+            <div class="nav_wrap">
 
                 <!-- - - - - - - - - - - - - - Main Navigation - - - - - - - - - - - - - - - - -->
                 
-                <nav role="navigation" class="alignleft">
+                <nav role="navigation">
                 
                     <ul class="main_menu PFDregular alignleft">
                 
@@ -201,41 +206,580 @@
 
                 <!-- - - - - - - - - - - - - - Searchform - - - - - - - - - - - - - - - - -->
 
-                <form role="search" class="search_form wrapper">
+                <div class="search_box">
 
-                    <input type="text" placeholder="Поиск">
-                    <button></button>
+                    <form role="search" class="search_form">
+                    
+                        <input type="text" placeholder="Поиск">
+                        <button></button>
+                    
+                    </form>
 
-                </form>
+                </div>
 
                 <!-- - - - - - - - - - - - - - End of Searchform - - - - - - - - - - - - - - - - -->
 
             </div><!--/ .nav_wrap -->
 
+            <!-- - - - - - - - - - - - - - Quotes End Focus Bosxs - - - - - - - - - - - - - - - - -->
+            
+            <div class="header_info_box">
+
+                <!-- - - - - - - - - - - - - - Quotes - - - - - - - - - - - - - - - - -->
+                
+                <div class="quotes_box clearfix">
+                    
+                    <div class="header_info_title">Котировки</div>
+
+                    <div class="header_info_container">
+                        
+                        <marquee scrollamount="12">
+                            
+                            <span>
+                                
+                                <strong>USD/RUB:</strong>
+
+                                 55,7345
+
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>EUR/RUB:</strong>
+
+                                 62,6259
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>EUR/USD:</strong>
+
+                                 1,11874
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>GOLD:</strong>
+
+                                 1176,83
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>Oil:</strong>
+
+                                 58,22
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>GAZP:</strong>
+
+                                 142,99
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>Alum:</strong>
+
+                                 142,99
+                                 
+                                <i></i>
+
+                            </span>
+                            
+                            <span>
+                                
+                                <strong>USD/RUB:</strong>
+
+                                 55,7345
+
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>EUR/RUB:</strong>
+
+                                 62,6259
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>EUR/USD:</strong>
+
+                                 1,11874
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>GOLD:</strong>
+
+                                 1176,83
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>Oil:</strong>
+
+                                 58,22
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>GAZP:</strong>
+
+                                 142,99
+                                 
+                                <i></i>
+
+                            </span>
+
+                            <span>
+                                
+                                <strong>Alum:</strong>
+
+                                 142,99
+                                 
+                                <i></i>
+
+                            </span>
+
+                        </marquee>
+
+                    </div><!--/ .header_info_container -->
+
+                </div><!--/ .quotes_box -->
+
+                <!-- - - - - - - - - - - - - - End of Quotes - - - - - - - - - - - - - - - - -->
+
+                <!-- - - - - - - - - - - - - - Focus - - - - - - - - - - - - - - - - -->
+
+                <div class="focus_box clearfix">
+                    
+                    <div class="header_info_title">В фокусе</div>
+
+                    <div class="header_info_container">
+
+                        <!-- - - - - - - - - - - - - - Focus Slidet - - - - - - - - - - - - - - - - -->
+                        
+                        <div class="owl-carousel" data-desktop="3" data-ipad="2" data-iphon="1">
+                            
+                            <div>
+                                Рост курса рубля на этой неделе <span>(231)</span>
+                            </div>
+
+                            <div>
+                                Банкротство брокера Форекс-Тренд <span>(159)</span>
+                            </div>
+
+                            <div>
+                                Новый брокер «Форекс пульс» старый друг? <span>(78)</span>
+                            </div>
+
+                            <div>
+                                Рост курса рубля на этой неделе <span>(231)</span>
+                            </div>
+
+                            <div>
+                                Банкротство брокера Форекс-Тренд <span>(159)</span>
+                            </div>
+
+                            <div>
+                                Новый брокер «Форекс пульс» старый друг? <span>(78)</span>
+                            </div>
+
+                        </div><!--/ .owl-carousel -->
+
+                        <!-- - - - - - - - - - - - - - End of Focus Slider - - - - - - - - - - - - - - - - -->
+
+                    </div><!--/ .header_info_container -->
+
+                </div><!--/ .focus_box -->
+
+            </div><!--/ .header_info_box -->
+
+            <!-- - - - - - - - - - - - - - End of Quotes End Focus Bosxs - - - - - - - - - - - - - - - - -->
+
 
             <!-- - - - - - - - - - - - - - Content - - - - - - - - - - - - - - - - -->
 
-            <div id="content"></div>
+            <div id="content" class="clearfix">
+
+                <!-- - - - - - - - - - - - - - Left Part - - - - - - - - - - - - - - - - -->
+                
+                <div class="left_part">
+                    
+                    <div class="banner1"><img src="images/banner728x90.jpg" alt=""></div>
+
+                    <h2>
+
+                        Журнал для трейдеров <a href="#" class="link_accent">#95</a>
+                        <a href="#" class="icon pdf_icon"></a>
+
+                    </h2>
+    
+                    <hr class="separator1">
+
+                    <div class="clearfix section_offset">
+                        
+                        <img src="images/img1.jpg" alt="" class="alignleft">
+
+                        <div class="wrapper">
+
+                            <ul class="list1">
+                                
+                                <li>
+                            
+                                    <a href="#">Технический анализ форекс на Июнь: сигналы входа для EUR/USD и USD/JPY <span class="red_color">(36)</span></a>
+                            
+                                </li>
+                            
+                                <li>
+                            
+                                    <a href="#">Три выгдные инвестиции: куда вложить средства летом 2015 года? <span class="red_color">(15)</span></a>
+                            
+                                </li>
+                            
+                                <li>
+                            
+                                    <a href="#">Стратегия инвестирования для портфельного спреда — торгуем 8 активами на одном графике <span class="red_color">(17)</span></a>
+                            
+                                </li>
+                            
+                                <li>
+                            
+                                    <a href="#">Портвельное инвестирвоание с Сергеем Каменщиковым, к.ф.м.н., аналитиком компании IFC markets <span class="red_color">(8)</span></a>
+                            
+                                </li>
+                            
+                                <li>
+                            
+                                    <a href="#">Инвестирование в памм счета на практике: создаем портфель на $500 <span class="red_color">(42)</span></a>
+                            
+                                </li>
+                            
+                            </ul>
+
+                            <div class="clearfix">
+                                
+                                <a href="#" class="archive_btn alignleft">Архив</a>
+                                <a href="#" class="edition_btn alignright">Архив</a>
+
+                            </div>
+
+                        </div>
+
+                    </div><!--/ .section_offset -->
+
+                    <!-- - - - - - - - - - - - - - Tabs - - - - - - - - - - - - - - - - -->
+
+                    <div class="tabs_box">
+
+                        <!-- - - - - - - - - - - - - - Tabs List - - - - - - - - - - - - - - - - -->
+                        
+                        <ul class="tabs_list clearfix PFDregular">
+                            
+                            <li class="active"><a href="javascript:;">Свежие</a></li>
+                            <li><a href="javascript:;">Самые читаемые</a></li>
+
+                        </ul>
+
+                        <!-- - - - - - - - - - - - - - End of Tabs List  - - - - - - - - - - - - - - - - -->
+
+                        <!-- - - - - - - - - - - - - - Tabs Contant - - - - - - - - - - - - - - - - -->
+
+                        <div class="tabs_contant">
+
+                            <!-- - - - - - - - - - - - - - Tabs Item 1 - - - - - - - - - - - - - - - - -->
+                            
+                            <div class="active">
+                                
+                                <!-- - - - - - - - - - - - - - News List Slider - - - - - - - - - - - - - - - - -->
+
+                                <div class="news_slider p_rel">
+
+                                    <div class="news_slider_nav">
+                                    
+                                        <a class="slider_nav_prev" href="javascript:;"></a>
+                                        
+                                        <a class="slider_nav_next" href="javascript:;"></a>
+
+                                    </div>
+
+                                    <ul class="news_list">
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:06">17:06</time>
+
+                                            <p><a href="#">Мэр Риги в интервью «Дождю» от войны санкций мы пострадали больше всех <span class="red_color">(12)</span></a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:14">17:14</time>
+
+                                            <p><a href="#">Под рабочими переломились опоры электролинии: пострадавший госпитализирован</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:33">17:33</time>
+
+                                            <p><a href="#">Полиция разыскивает пропавшего без вести мужчину</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T18:16">18:16</time>
+
+                                            <p><a href="#">Чп на Югле: собака найдена, не проявляет агрессии, доставлена в приют</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T19:05">19:05</time>
+
+                                            <p><a href="#">Диетологи: разгрузочные дни замедляют старение</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:06">17:06</time>
+
+                                            <p><a href="#">Мэр Риги в интервью «Дождю» от войны санкций мы пострадали больше всех <span class="red_color">(12)</span></a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:14">17:14</time>
+
+                                            <p><a href="#">Под рабочими переломились опоры электролинии: пострадавший госпитализирован</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:33">17:33</time>
+
+                                            <p><a href="#">Полиция разыскивает пропавшего без вести мужчину</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T18:16">18:16</time>
+
+                                            <p><a href="#">Чп на Югле: собака найдена, не проявляет агрессии, доставлена в приют</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T19:05">19:05</time>
+
+                                            <p><a href="#">Диетологи: разгрузочные дни замедляют старение</a></p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div><!--/ .news_slider -->
+
+                                <!-- - - - - - - - - - - - - - End of News List Slider - - - - - - - - - - - - - - - - -->
+
+                            </div>
+
+                            <!-- - - - - - - - - - - - - - End of Tabs Item 1 - - - - - - - - - - - - - - - - -->
+
+                            <!-- - - - - - - - - - - - - - Tabs Item 2 - - - - - - - - - - - - - - - - -->
+                            
+                            <div>
+                                
+                                <!-- - - - - - - - - - - - - - News List Slider - - - - - - - - - - - - - - - - -->
+
+                                <div class="news_slider p_rel">
+
+                                    <div class="news_slider_nav">
+                                    
+                                        <a class="slider_nav_prev" href="javascript:;"></a>
+                                        
+                                        <a class="slider_nav_next" href="javascript:;"></a>
+                                        
+                                    </div>
+
+                                    <ul class="news_list">
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:06">17:06</time>
+
+                                            <p><a href="#">Мэр Риги в интервью «Дождю» от войны санкций мы пострадали больше всех <span class="red_color">(12)</span></a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:14">17:14</time>
+
+                                            <p><a href="#">Под рабочими переломились опоры электролинии: пострадавший госпитализирован</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:33">17:33</time>
+
+                                            <p><a href="#">Полиция разыскивает пропавшего без вести мужчину</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T18:16">18:16</time>
+
+                                            <p><a href="#">Чп на Югле: собака найдена, не проявляет агрессии, доставлена в приют</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T19:05">19:05</time>
+
+                                            <p><a href="#">Диетологи: разгрузочные дни замедляют старение</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:06">17:06</time>
+
+                                            <p><a href="#">Мэр Риги в интервью «Дождю» от войны санкций мы пострадали больше всех <span class="red_color">(12)</span></a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:14">17:14</time>
+
+                                            <p><a href="#">Под рабочими переломились опоры электролинии: пострадавший госпитализирован</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T17:33">17:33</time>
+
+                                            <p><a href="#">Полиция разыскивает пропавшего без вести мужчину</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T18:16">18:16</time>
+
+                                            <p><a href="#">Чп на Югле: собака найдена, не проявляет агрессии, доставлена в приют</a></p>
+
+                                        </li>
+
+                                        <li>
+
+                                            <time datetime="2015-07-11T19:05">19:05</time>
+
+                                            <p><a href="#">Диетологи: разгрузочные дни замедляют старение</a></p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div><!--/ .news_slider -->
+
+                                <!-- - - - - - - - - - - - - - End of News List Slider - - - - - - - - - - - - - - - - -->
+
+
+                            </div>
+
+                            <!-- - - - - - - - - - - - - - End of Tabs Item 2 - - - - - - - - - - - - - - - - -->
+
+                        </div>
+
+                        <!-- - - - - - - - - - - - - - End of Tabs Contant - - - - - - - - - - - - - - - - -->
+
+                    </div><!--/ .tabs_box -->
+
+                    <!-- - - - - - - - - - - - - - End of Tabs - - - - - - - - - - - - - - - - -->
+                
+                </div>
+
+                <!-- - - - - - - - - - - - - - End of Left Part - - - - - - - - - - - - - - - - -->
+
+                <!-- - - - - - - - - - - - - - Sidebar - - - - - - - - - - - - - - - - -->
+
+                <aside class="sidebar">
+                    
+                </aside>
+
+                <!-- - - - - - - - - - - - - - End of Sidebar - - - - - - - - - - - - - - - - -->
+
+            </div>
 
             <!-- - - - - - - - - - - - - - End of Content - - - - - - - - - - - - - - - - -->
-
-
-            <!-- - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
-
-            <footer></footer>
-
-            <!-- - - - - - - - - - - - - - End of Footer - - - - - - - - - - - - - - - - -->
             
         </div><!-- / .container -->
 
         <!-- - - - - - - - - - - - - - End of Container - - - - - - - - - - - - - - - - -->
 
+
+        <!-- - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
+
+        <footer></footer>
+
+        <!-- - - - - - - - - - - - - - End of Footer - - - - - - - - - - - - - - - - -->
+
         <!-- Include Libs & Plugins
         ============================================ -->
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery-migrate-1.1.1.js"></script>
-        <script type="text/javascript" src="js/jquery.equalheights.js"></script>
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="plagins/owlCarousel/js/owl.carousel.js"></script>
+        <script type="text/javascript" src="plagins/tinycarousel/js/jquery.tinycarousel.js"></script>
 
         <!-- Theme files
         ============================================ -->

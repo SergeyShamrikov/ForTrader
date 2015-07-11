@@ -17,17 +17,21 @@
     5.1. Main navigation
       5.1.1. Sub Menu
     5.2. Searchform
-  6. Basic Elements
-    6.1. Typography
-    6.2. Lists
-    6.3. Buttons
-    6.4. Dividers
-    6.5. Tooltips
-    6.6. Tables
-    6.7. Forms
-  7. Widgets and Shortcodes
-    7.1. Icon Boxes
-    7.2. Skills
+  6. Quotes End Focus Bosxs
+    6.1. Quotes
+    6.2. Focus
+  7. Basic Elements
+    7.1. Typography
+    7.2. Lists
+    7.3. Buttons
+    7.4. Banners
+    7.5. Dividers
+    7.5. Tooltips
+    7.6. Tables
+    7.7. Forms
+  8. Widgets and Shortcodes
+    8.1. Accordion and Toggles
+    8.2. Tabs and Tour Sections
       7.2.1. Skills circle
       7.2.2. Skillbar
     7.3. Message Box
@@ -40,8 +44,9 @@
     7.8. Before/After
     7.9. Pricing Tables
     7.10. Countdown
-  8. Isotope
   9. Sliders
+    8.1. Vertical
+    8.2. Horisantal
   10. Lightboxes
   11. Carousels
   12. Main
@@ -60,6 +65,7 @@
     17.2. Copyright
 */
 @import "reset.css";
+@import "animate.css";
 @import "../fonts/PFDindisplayproRegMedLight/font.css";
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
@@ -130,15 +136,18 @@
    }
 
 
-   /* --------------------------------------------
+  /* --------------------------------------------
         1.1. Color Schemes
-   -------------------------------------------- */
-
+  -------------------------------------------- */
+    
+    .red_color{
+      color: #ff1616;
+    }
     
 
-   /* --------------------------------------------
+  /* --------------------------------------------
         1.2. Fonts
-   -------------------------------------------- */
+  -------------------------------------------- */
     
     .PFDlight{font-family: 'pf_dindisplay_prolight';}
     .PFDregular{font-family: 'pf_dindisplay_proregular';}
@@ -208,6 +217,9 @@
 
    .reg {text-transform:uppercase}
 
+   img.alignleft{margin: 0 20px 20px 0;}
+   img.alignright{margin: 0  20px 20px;}
+
 /* ------------------------------------------------
 
     3. Main
@@ -217,43 +229,71 @@
   .container{
     width: 1103px;
     margin: 0 auto;
+  }
+
+  .white_container{
     padding: 0 20px;
     background: #fff;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
   }
 
-  #content {padding:0px 0px 0px 0px; min-height: 1500px;}
+  #content {padding:15px 0px 0px 0px;}
 
-   /* --------------------------------------------
+  .left_part{
+    float: left;
+    width: 728px;
+  }
+
+  .sidebar{
+    float: right;
+    width: 300px;
+  }
+
+
+  /* --------------------------------------------
         3.1. Page tilte end breadcrumps
-   -------------------------------------------- */
+  -------------------------------------------- */
     
-      .page_title_box{
-         padding: 39px 0 43px;
-         color: #505050;
-         border-bottom: 1px solid #efefef;
-         background-color: #fcfcfc;
-      }
+    .page_title_box{
+       padding: 39px 0 43px;
+       color: #505050;
+       border-bottom: 1px solid #efefef;
+       background-color: #fcfcfc;
+    }
 
-      .breadcrumps{
-         padding: 9px 0 0;
-      }
+    .breadcrumps{
+       padding: 9px 0 0;
+    }
+
+
   /* --------------------------------------------
         3.2. Offsets
   -------------------------------------------- */
     
-      .section_offset{
-         padding: 55px 0;
-      }
+    .section_offset{
+       padding: 0 0 30px;
+    }
 
-      .section_offset:first-child{
-         padding: 0 0 55px;
-      }
+    .section_offset:first-child{
+       padding: 0 0 55px;
+    }
 
-      .cont_pad{
-         padding: 75px 0 0;
-      }
+  /* --------------------------------------------
+        3.3. Icons
+  -------------------------------------------- */
+    
+    .icon:before{
+      content: "";
+      display: inline-block;
+      background: url(../images/icon.png) 0 0 no-repeat;
+    }
+
+    .pdf_icon:before{
+      width: 26px;
+      height: 32px;
+      background-position: -2px -116px;
+    }
 
 /* ------------------------------------------------
 
@@ -279,9 +319,11 @@
   .logo{float: left;background-color: #fff;}
   .logo a{font-size: 0;}
 
+  .header_banner1{margin: 15px 0;}
+
   /* --------------------------------------------
         4.1. Header List
-   -------------------------------------------- */
+  -------------------------------------------- */
 
     .header_list li{float: left;}
 
@@ -333,14 +375,20 @@
 
 ------------------------------------------------ */
 
-  .nav_wrap{background-color: #333030;}
+  .nav_wrap{
+    position: relative;
+    z-index: 99;
+    background-color: #333030;
+    display: table;
+    width: 100%;
+  }
   
   /* --------------------------------------------
-        5.1. Main Navigation
-   -------------------------------------------- */
+      5.1. Main Navigation
+  -------------------------------------------- */
     
     nav{
-      
+      display: table-cell;
     }
 
     .main_menu>li{
@@ -348,6 +396,8 @@
       position: relative;
       border-right: 1px solid #0d0c0c;
     }
+
+    .main_menu>li:first-child{width: 92px;}
 
     .main_menu>li>a{
       display: block;
@@ -380,7 +430,7 @@
     .main_menu>li.current>a:after{display: none;}
 
   /* --------------------------------------------
-    5.2. Sub Menu
+      5.2. Sub Menu
   -------------------------------------------- */
 
     .sub_menu{
@@ -425,14 +475,13 @@
     .sub_menu>li>a:active{background-color: #ff1616;}
 
   /* --------------------------------------------
-    5.3. Additional Menu
+      5.3. Additional Menu
   -------------------------------------------- */
 
     .additional_menu_box{
       background-color: #242222;
       border-right: 1px solid #0d0c0c;
       position: relative;
-      padding: 22px 18px 20px;
     }
 
     .additional_menu_box:after{
@@ -448,16 +497,28 @@
 
     .additional_menu_box button{
       display: block;
+      position: relative;
       outline: none;
       border: none;
       cursor: pointer;
+      width: 57px;
+      height: 62px;
+      background: none;
+    }
+
+    .additional_menu_box button:before{
+      content: "";
+      display: block;
+      position: absolute;
       width: 20px;
       height: 20px;
+      top: 22px;
+      left: 18px;
       background: url(../images/icon.png) 0 0 no-repeat;
     }
 
-    .additional_menu_box button:hover,
-    .additional_menu_box button.active{
+    .additional_menu_box button:hover:before,
+    .additional_menu_box button.active:before{
       background-position: 0 -23px;
     }
 
@@ -511,51 +572,279 @@
     }
     .additional_menu>li:hover>.sub_menu{display: block;}
 
-   /* --------------------------------------------
-        5.2. Searchform
-   -------------------------------------------- */
+  /* --------------------------------------------
+      5.2. Searchform
+  -------------------------------------------- */
+    
+    .search_box{
+      display: table-cell;
+    }
+    
+    .search_form{
+      display: block;
+      position: relative;
+      height: 62px;
+    }
 
+    .search_form input[type="text"]{
+      display: block;
+      outline: none;
+      background: #333030;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      padding: 21px 55px 21px 12px;
+      color: #a6a1a1;
+      font-size: 16px;
+      line-height: 20px;
+      -webkit-transition: width 0.5s;
+      -o-transition: width 0.5s;
+      transition: width 0.5s;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+
+    .search_form input[type="text"]:focus{
+      border-left: 4px solid #b3adad;
+      color: #f1f1f1;
+      width: 200%;
+      -webkit-transition: width 0.5s;
+      -o-transition: width 0.5s;
+      transition: width 0.5s;
+    }
+    .search_form button{
+      display: block;
+      position: absolute;
+      outline: none;
+      border: none;
+      width: 55px;
+      height: 62px;
+      top: 0;
+      right: 0;
+      background: none;
+      cursor: pointer;
+    }
+
+    .search_form  button:hover{opacity: 0.7;}
+
+    .search_form button:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 17px;
+      left: 6px;
+      width: 30px;
+      height: 30px;
+      background: url(../images/icon.png) -2px -50px no-repeat;
+    }
+
+    .search_form input[type="text"]:focus ~ button:before{
+      background-position: -2px -84px;
+    }
 
 
 /* ------------------------------------------------
 
-    6. Basic Elements
+    6. Quotes End Focus Bosxs
+
+------------------------------------------------ */
+
+  .header_info_box{
+    background-color: #2e2b2b;
+    line-height: 22px;
+  }
+
+  .header_info_title{
+    position: relative;
+    float: left;
+    width: 91px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 20px 0;
+  }
+  .header_info_title:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    margin-top: -10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+  }
+  
+  .header_info_container{overflow: hidden;}
+  
+  /* --------------------------------------------
+        6.1. Quotes
+  -------------------------------------------- */
+    
+    .quotes_box .header_info_title{
+      background-color: #1575bf;
+    }
+    .quotes_box .header_info_title:before{border-left-color: #1575bf;}
+
+    .quotes_box .header_info_container{
+      border-bottom: 1px solid #1c1a1a;
+      padding: 20px 20px;
+      position: relative;
+    }
+
+    .quotes_box .header_info_container:before{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #403e3e;
+    }
+
+    .quotes_box marquee span{
+      color: #fff;
+      font-size: 15px;
+      padding-right: 10px;
+    }
+
+    .quotes_box marquee span>strong{
+      color: #22a7f0;
+      font-weight: 400;
+      padding-right: 5px;
+    }
+
+    .quotes_box marquee span>i{
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 5px;
+      width: 10px;
+      height: 5px;
+      background: url(../images/icon.png) -26px -2px no-repeat;
+    }
+    
+
+  /* --------------------------------------------
+        6.2. Focus
+  -------------------------------------------- */
+
+    .focus_box .header_info_title{
+      background-color: #403e3e;
+    }
+
+    .focus_box .header_info_title:before{border-left-color: #403e3e;}
+
+    .focus_box .header_info_container{
+      padding: 0 20px;
+      color: #f1f1f1;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -0.5px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .focus_box .header_info_container .owl-item{
+      height: 62px;
+      position: relative;
+    }
+
+    .focus_box .header_info_container .owl-item:before{
+      display: inline-block;
+      content: "";
+      width: 0;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+
+    .focus_box .header_info_container .owl-item>div{display: inline-block;vertical-align: middle;}
+    .focus_box .header_info_container span{color: #ff1616;}
+
+    .focus_box .owl-controls .owl-buttons div{
+      display: none;
+    }
+
+/* ------------------------------------------------
+
+    7. Basic Elements
 
 ------------------------------------------------ */
    /* --------------------------------------------
-        6.1. Typography
+        7.1. Typography
    -------------------------------------------- */
   
       h1,h2,h3,h4,h5,h6{
-         font-family: 'Roboto', sans-serif;
          font-weight:normal;
-         line-height: 1.23em;
-         color: #333333;
+         line-height: 1;
+         color: #333;
          margin: 0;
          margin-bottom: 17px;
+         position: relative;
       }
 
       h1{font-size: 38px;}
-      h2{font-size: 30px;}
-      h3{font-size: 22px;}
-      h4{font-size: 18px;}
+
+      h2{
+        font-family: 'pf_dindisplay_promedium';
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      h3{
+        font-family: 'pf_dindisplay_proregular';
+        font-size: 19px;
+        line-height: 38px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+        .PFDlight{font-family: 'pf_dindisplay_prolight';}
+
+      h4{
+        font-family: 'pf_dindisplay_prolight';
+        font-size: 22px;
+      }
+
       h5{font-size: 16px;}
+
       h6{font-size: 14px;}
 
-      p:not(:last-child){margin-bottom: 20px;}
+      .aside_title{
+        line-height: 45px;
+        border-top: 1px solid #e3e3e3;
+      }
+
+      h2>.icon,
+      h3>.icon,
+      h4>.icon,
+      h5>.icon,
+      h6>.icon{
+        position: absolute;
+        right: 0;
+        line-height: inherit;
+      }
+
+      p:not(:last-child){margin-bottom: 15px;}
 
       mark{background-color: #20cfef;padding: 0 2px;color: #fff;}
       mark.red{background-color: #ee352f;}
 
       a{
-         color: #;
+         color: #454242;
          text-decoration: none;
          -webkit-transition: all 0.5s;
          -o-transition: all 0.5s;
          transition: all 0.5s;
       }
       a:hover{
-         color: #333;
+         color: #146eb3;
          text-decoration: none;
          -webkit-transition: all 0.3s;
          -o-transition: all 0.3s;
@@ -566,15 +855,66 @@
          text-decoration: none;
       }
 
-   /* --------------------------------------------
-        6.2. Lists
-   -------------------------------------------- */
-      .list1{}
-      .list1_item{
-        background:url(../images/marker1.png) 0 7px no-repeat;
-        padding-left:20px;
+      .link_accent{
+        color: #146eb3;
       }
-      .list1_link{}
+      .link_accent:hover{
+        color: #454242;
+      }
+
+      a.icon:hover{opacity: 0.7;}
+
+   /* --------------------------------------------
+        7.2. Lists
+   -------------------------------------------- */
+
+      .list1>li{
+        padding: 8px 20px 8px 0;
+        border-top: 1px solid #e3e3e3;
+        font-size: 15px;
+        line-height: 22px;
+      }
+
+      .list1>li:first-child{padding-top: 0;border: none;}
+
+      .news_list>li{
+        background-color: #f5f5f5;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 4px;
+        height: 38px;
+      }
+
+      .news_list>li time{
+        display: block;
+        position: relative;
+        padding:8px 0 8px 28px;
+        float: left;
+        width: 64px;
+        background-color: #f0f0f0;
+        color: #787777;
+        font-size: 11px;
+        line-height: 20px;
+        font-weight: 700;
+      }
+
+      .news_list>li time:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 6px;
+        top: 50%;
+        margin-top: -10px;
+        background: url(../images/icon.png) -24px -13px no-repeat;
+      }
+
+      .news_list>li p{
+        overflow: hidden;
+        padding: 7px 0 7px 10px;
+      }
+
 
       .list2{}
       .list2_item{
@@ -591,20 +931,224 @@
       .list3_link{}
 
 
-   /* --------------------------------------------
-        6.3. Buttons
-   -------------------------------------------- */
+  /* --------------------------------------------
+        7.3. Buttons
+  -------------------------------------------- */
+    
+    .archive_btn{
+      display: block;
+      width: 172px;
+      font: 16px/19px 'pf_dindisplay_proregular';
+      text-transform: uppercase;
+      text-align: center;
+      background-color: #f0f0f0;
+      color: #333131;
+      padding: 14px 0;
+    }
 
-   .btn{
-      display: inline-block;
-      outline: none;
-      background: #;
-      color: #;
-   }
-   .btn:hover{
-      background-color: #;
-      color: #;
-   }
+    .archive_btn:hover{
+      color: #333131;
+      background-color: #e8e8e8;
+    }
+
+    .edition_btn{
+      display: block;
+      width: 287px;
+      font: 15px/19px 'pf_dindisplay_proregular';
+      text-transform: uppercase;
+      text-align: center;
+      background-color: #146eb3;
+      color: #fff;
+      padding: 11px 0;
+      border: 3px solid #115e99;
+    }
+
+    .edition_btn:hover{
+      background-color: #115e99;
+      color: #fff;
+    }
+    
+
+  /* --------------------------------------------
+        7.4. Banners
+  -------------------------------------------- */
+    
+
+    .banner1{margin-bottom: 25px;}
+    .banner2{margin-bottom: 20px;}
+
+
+  /* --------------------------------------------
+        7.5. Dividers
+  -------------------------------------------- */
+    
+    hr{
+      border: none;
+      border-bottom: 1px solid #e3e3e3;
+      margin:0 0 15px;
+    }
+    
+    hr.separator1{
+      height: 4px;
+      border-top: 1px solid #e3e3e3;
+      margin: 0 0 25px;
+    }
+
+  /* --------------------------------------------
+        7.6. Tooltips
+  -------------------------------------------- */
+    
+
+
+/* ------------------------------------------------
+
+    8. Widgets and Shortcodes
+
+------------------------------------------------ */
+
+
+  /* --------------------------------------------
+        8.1. Accordion and Toggles
+  -------------------------------------------- */
+    
+
+  /* --------------------------------------------
+        8.2. Tabs and Tour Sections
+  -------------------------------------------- */
+    
+    .tabs_list{
+      position: relative;
+      margin-bottom: 25px;
+    }
+    .tabs_list:before{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #e3e3e3;
+    }
+
+    .tabs_list>li{
+      float: left;
+      padding-right: 4px;
+      background-color: #fff;
+      position: relative;
+      z-index: 9;
+    }
+
+    .tabs_list>li>a{
+      display: block;
+      font-size: 17px;
+      line-height: 19px;
+      padding: 11px 15px;
+      border: 2px solid #e3e3e3;
+      position: relative;
+    }
+
+    .tabs_list>li>a:hover,
+    .tabs_list>li.active>a{
+      background-color: #f1f1f1;
+      color: #454242;
+    }
+
+    .tabs_list>li.active>a{cursor: default;}
+
+    .tabs_list>li.active>a:before,
+    .tabs_list>li.active>a:after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 4px solid transparent;
+      border-top: 8px solid #e3e3e3;
+      top: 100%;
+      left: 50%;
+      margin-left: -4px;
+    }
+
+    .tabs_list>li.active>a:before{
+      border: 3px solid transparent;
+      border-top: 6px solid #f1f1f1;
+      margin-left: -3px;
+      z-index: 9;
+    }
+    
+    .tabs_contant>div{display: none;}
+    .tabs_contant>div.active{display: block;}
+
+/* ------------------------------------------------
+
+    9. Sliders
+
+------------------------------------------------ */
+
+  /* --------------------------------------------
+        9.1. Vertical
+  -------------------------------------------- */
+    
+    .news_slider .news_list>li{
+      display: none;
+    }
+
+    .news_slider .news_list>li.active{
+      display: block;
+    }
+
+    .news_slider_nav{
+      position: absolute;
+      top: -70px;
+      right: 0;
+    }
+
+    .news_slider_nav>a{
+      display: block;
+      position: relative;
+      float: left;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #e3e3e3;
+      margin-left: 4px;
+    }
+    .news_slider_nav>a:hover{
+      background-color: #333131;
+    }
+
+    .news_slider_nav>a:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      margin-left: -6px;
+      margin-top: -6px;
+      background-image: url(../images/icon.png);
+      background-repeat: no-repeat;
+    }
+
+    .news_slider_nav>a.slider_nav_prev:before{background-position: -91px -18px;}
+
+    .news_slider_nav>a.slider_nav_next:before{background-position: -49px -18px;}
+
+    .news_slider_nav>a.slider_nav_prev:hover:before{background-position: -114px -18px;}
+    
+    .news_slider_nav>a.slider_nav_next:hover:before{background-position: -72px -18px;}
+
+  /* --------------------------------------------
+        9.2. Horisantal
+  -------------------------------------------- */
+    
+
+/* ------------------------------------------------
+
+    16. Footer
+
+------------------------------------------------ */
 
 
 

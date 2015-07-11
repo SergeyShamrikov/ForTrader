@@ -9,6 +9,11 @@
 			var self = this;
 
 			self.additionalMenuItem();
+			self.additionalMenuOpen();
+			self.additionalMenuClose();
+			self.tabsBox();
+			self.firstOpenNewsList();
+			self.newsList();
 
 		},
 
@@ -16,7 +21,11 @@
 
 			var self = this;
 
-			self.additionalMenuWidth();
+			setTimeout(function(){
+
+				self.additionalMenuWidth();
+
+			},500);
 			
 
 		},
@@ -32,7 +41,7 @@
 
 			var self = this;
 
-			self.additionalMenuItemScroll();
+			self.additionalMenuItem();
 
 			setTimeout(function(){
 
@@ -47,8 +56,8 @@
 
 		additionalMenuWidth : function(){
 
-		    var searchFormWidth = $('.search_form').width(),
-		    	menuWidh = searchFormWidth + 58;
+		    var searchFormWidth = $('.search_box').width(),
+		    	menuWidh = searchFormWidth + 59;
 
 		    $(".additional_menu").width(menuWidh);
 
@@ -56,63 +65,131 @@
 
 		},
 
-		additionalMenuItem : function(){
+		additionalMenuOpen : function(){
 
-			var navWrapWidth = $(".nav_wrap").width(),
-				fullWidth = navWrapWidth - 162,
-				itemWidth = 0;
+			$('.additional_menu_box button').on('click',function(){
+		    	
+		    	$(this).toggleClass('active');
+		    	$(".additional_menu").toggleClass('active');
 
-			$(".main_menu>li").each(function(){
+		    });
 
-				var $this = $(this),
-					index = $this.index();
+		},
 
-				itemWidth += $(this).width();
 
-				if(itemWidth > fullWidth){
-					$this.appendTo(".additional_menu");
-				}				
+		additionalMenuClose : function(){
+
+			$(document).click(function(event) {
+
+				if ($(event.target).closest(".additional_menu_box").length) return;
+				$(".additional_menu").removeClass('active');
+				event.stopPropagation();
 
 			});
 
 		},
 
-		additionalMenuItemScroll : function(){
+		additionalMenuItem : function(){
 
 			var navWrapWidth = $(".nav_wrap").width(),
 				fullWidth = navWrapWidth - 162,
-				itemWidth = 0;
+				itemWidth = 0,
+				navWidth;
 
-				$(".additional_menu>li").each(function(){
+			$(".additional_menu>li").each(function(){
 
-					var $this = $(this);
+				var $this = $(this);
 
-					$this.appendTo(".main_menu");
+				$this.appendTo(".main_menu");
 
-				});
+			});
 
-				$(".main_menu>li").each(function(){
+			$(".main_menu>li").each(function(){
 
-					var $this = $(this),
-						index = $this.index();
+				var $this = $(this);
 
-					itemWidth += $(this).width();
+				itemWidth += $(this).width();
 
-					if(itemWidth > fullWidth){
+				if(itemWidth > fullWidth){
 
-						$this.appendTo(".additional_menu");
+					$this.appendTo(".additional_menu");
 
-					}				
+				}				
 
-				});
+			});
 
-				
+			setTimeout(function(){
 
-			
+				navWidth = $(".main_menu").width();
 
-		}
+				$("nav").width(navWidth +58);
+
+			},100);
+
+		},
 
 		
+		/**
+		**	Tabs
+		**/
+
+		tabsBox : function(){
+
+			$('.tabs_list>li').on('click',function(){
+
+				var $this = $(this),
+					index = $this.index();
+
+				$this.addClass('active').siblings().removeClass('active');
+				$(".tabs_contant>div").eq(index).addClass('active').siblings().removeClass('active');
+
+			});
+
+		},
+
+
+		/**
+		**	News List Slider
+		**/
+
+		firstOpenNewsList : function(){
+
+			$('.news_slider .news_list>li:nth-child(6),.news_slider .news_list>li:nth-child(2),.news_slider .news_list>li:nth-child(3),.news_slider .news_list>li:nth-child(4),.news_slider .news_list>li:nth-child(5)').addClass('active');
+		},
+
+		newsList : function(){
+
+			$('.slider_nav_prev').on('click',function(){
+
+				var parent = $(this).parents('.news_slider'),
+					firstItem = parent.find('.news_list>li.active').index(),
+					showItem = parent.find(".news_list>li.active").eq(0).prev();
+
+				if(firstItem == 0){return false}
+
+				parent.find(".news_list>li.active").eq(4).slideUp(300).removeClass("active");
+				
+				showItem.slideDown(300).addClass('active');
+
+			});
+
+			$('.slider_nav_next').on('click',function(){
+
+				var parent = $(this).parents('.news_slider'),
+					last = parent.find('.news_list>li:last').index(),
+					lastActive = parent.find(".news_list>li.active").eq(4).index(),
+					showItem = parent.find(".news_list>li.active").eq(4).next();
+
+				if(last == lastActive){return false}
+
+
+				parent.find(".news_list>li.active").eq(0).slideUp(300).removeClass("active");;
+				
+				showItem.slideDown(300).addClass('active');
+
+			});
+
+		}
 
 
 	}
@@ -121,13 +198,6 @@
 	$(function(){
 
 		Core.DOMReady();
-
-		$('.additional_menu_box button').on('click',function(){
-		    	
-	    	$(this).toggleClass('active');
-	    	$(".additional_menu").toggleClass('active');
-
-	    });
 
 	});
 
