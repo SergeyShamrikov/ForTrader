@@ -62,23 +62,17 @@
 
 
 		/* ------------------------------------------------
-				tinycarousel
+				liMarquee
 		------------------------------------------------ */
 
-			// if($(".news_slider").length){
+			if($(".news_slider").length){
 
-			// 	$(".news_slider").each(function(){
+				$('.ticker').liMarquee();
 
-			// 		$(this).tinycarousel({
-			// 	        axis   : "y"
-			// 	    });
-
-			// 	});
-
-			// }
+			}
 
         /* ------------------------------------------------
-				End of tinycarousel
+				End of liMarquee
 		------------------------------------------------ */
 
 

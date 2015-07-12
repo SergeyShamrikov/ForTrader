@@ -32,9 +32,7 @@
   8. Widgets and Shortcodes
     8.1. Accordion and Toggles
     8.2. Tabs and Tour Sections
-      7.2.1. Skills circle
-      7.2.2. Skillbar
-    7.3. Message Box
+    8.3. Turn Box
     7.2. Accordion and Toggles
     7.3. Alert Boxes
     7.4. Progress Bars
@@ -44,19 +42,14 @@
     7.8. Before/After
     7.9. Pricing Tables
     7.10. Countdown
-  9. Sliders
-    8.1. Vertical
-    8.2. Horisantal
-  10. Lightboxes
+  9. Carousels
+    9.1. Vertical
+    9.2. Horisantal
+  10. Beginner
   11. Carousels
-  12. Main
-  13. Portfolio & Gallery
-    13.1. Portfolio Single item
-    13.2. Related Portfolio Projects
-    13.3. Gallery Albums
-    13.4. Gallery Flow
-    13.5. Protected Gallery
-    13.6. Gallery wall items
+  11. Posts
+    13.1. Post
+    13.2. Post small
   14. Blog
   15. Shop
   16. Animations
@@ -293,6 +286,12 @@
       width: 26px;
       height: 32px;
       background-position: -2px -116px;
+    }
+
+    .student_icon:before{
+      width: 23px;
+      height: 26px;
+      background-position: 0 -159px;
     }
 
 /* ------------------------------------------------
@@ -706,22 +705,24 @@
       height: 1px;
       background-color: #403e3e;
     }
+    
+    .quotes_box .ticker{background: none;}
 
-    .quotes_box marquee span{
+    .quotes_box .ticker span{
       color: #fff;
       font-size: 15px;
       padding-right: 10px;
     }
 
-    .quotes_box marquee span>strong{
+    .quotes_box .ticker span>strong{
       color: #22a7f0;
       font-weight: 400;
       padding-right: 5px;
     }
 
-    .quotes_box marquee span>i{
+    .quotes_box .ticker span>i{
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 8px;
       margin-left: 5px;
       width: 10px;
       height: 5px;
@@ -821,6 +822,7 @@
         border-top: 1px solid #e3e3e3;
       }
 
+
       h2>.icon,
       h3>.icon,
       h4>.icon,
@@ -830,6 +832,32 @@
         right: 0;
         line-height: inherit;
       }
+
+      .title1{
+        font: 17px/27px 'pf_dindisplay_proregular';
+        color: #454242;
+        background-color: #f1f1f1;
+        text-transform: uppercase;
+        padding: 9px 55px 9px 15px;
+        position: relative;
+        margin-bottom: 4px;
+      }
+
+      .title1 .icon{
+        right: 28px;
+      }
+
+      .title1:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 4px;
+      }
+
+      .title1.red_border:before{background-color: #ff1616;}
 
       p:not(:last-child){margin-bottom: 15px;}
 
@@ -915,13 +943,40 @@
         padding: 7px 0 7px 10px;
       }
 
-
-      .list2{}
-      .list2_item{
-        background:url(../images/marker1.png) 0 7px no-repeat;
-        padding-left:20px;
+      .list2>li{
+        margin-bottom: 4px;
       }
-      .list2_link{}
+
+      .list2>li>a{
+        display: block;
+        position: relative;
+        background-color: #f5f5f5;
+        font-size: 14px;
+        line-height: 22px;
+        color: #454242;
+        padding: 9px 5px 9px 14px;
+        letter-spacing: -0.2px;
+      }
+
+      .list2>li>a:before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        width: 3px;
+        background-color: #e3e3e3;
+      }
+
+      .list2>li>a:hover{
+        background-color: #f2f2f2;
+        color: #146eb3;
+      }
+
+      .list2>li>a:hover:before{
+        width: 4px;
+        background-color: #146eb3;      }
 
       .list3{}
       .list3_item{
@@ -998,6 +1053,7 @@
         7.6. Tooltips
   -------------------------------------------- */
     
+
 
 
 /* ------------------------------------------------
@@ -1080,9 +1136,55 @@
     .tabs_contant>div{display: none;}
     .tabs_contant>div.active{display: block;}
 
+
+  /* --------------------------------------------
+        8.3. Turn Box
+  -------------------------------------------- */
+
+    .nav_buttons>a{
+      display: block;
+      position: relative;
+      float: left;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #e3e3e3;
+      margin-left: 4px;
+    }
+
+    .nav_buttons>a:hover{
+      background-color: #333131;
+    }
+
+    .nav_buttons>a:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      margin-left: -6px;
+      margin-top: -6px;
+      background-image: url(../images/icon.png);
+      background-repeat: no-repeat;
+    }
+    
+
+    .nav_buttons>a.prev_btn:before{background-position: -47px 0;}
+
+    .nav_buttons>a.next_btn:before{background-position: -89px 0;}
+
+    .nav_buttons>a.turn_btn:before{background-position: -34px -34px;}
+
+    .nav_buttons>a.prev_btn:hover:before{background-position: -68px 0;}
+    
+    .nav_buttons>a.next_btn:hover:before{background-position: -114px 0;}
+
+    .nav_buttons>a.turn_btn:hover:before{background-position: -54px -34px;}
+
 /* ------------------------------------------------
 
-    9. Sliders
+    9. Carousels
 
 ------------------------------------------------ */
 
@@ -1090,6 +1192,8 @@
         9.1. Vertical
   -------------------------------------------- */
     
+    .news_slider .news_list{height: 210px;}
+
     .news_slider .news_list>li{
       display: none;
     }
@@ -1141,6 +1245,39 @@
 
   /* --------------------------------------------
         9.2. Horisantal
+  -------------------------------------------- */
+    
+/* ------------------------------------------------
+
+    10. Beginner
+
+------------------------------------------------ */
+  
+  .beginner_left{
+    width: 361px;
+    float: left;
+  }
+
+  .beginner_right{
+    width: 345px;
+    float: right;
+  }
+
+
+/* ------------------------------------------------
+
+    11. Posts
+
+------------------------------------------------ */
+  
+  /* --------------------------------------------
+        11.1. Post
+  -------------------------------------------- */
+
+    .post
+    
+  /* --------------------------------------------
+        11.2. Post small
   -------------------------------------------- */
     
 
