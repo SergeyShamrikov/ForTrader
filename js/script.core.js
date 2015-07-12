@@ -14,6 +14,7 @@
 			self.tabsBox();
 			self.firstOpenNewsList();
 			self.newsList();
+			self.buttonSlider();
 
 		},
 
@@ -189,8 +190,43 @@
 
 			});
 
-		}
+		},
 
+
+
+		/**
+		**	Nav Buttons 
+		**/
+
+		buttonSlider : function(){
+
+			$('.nav_buttons>a').on('click',function(event){
+
+				var parent = $(this).parents('.turn_box'),
+					turn = $(this).parents('.turn_box').find('.turn_content'),
+					owl = parent.find(".owl-carousel");
+
+				if($(this).hasClass('prev_btn')){
+
+					owl.trigger('owl.prev');
+					event.preventDefault();
+
+				}
+				else if($(this).hasClass('next_btn')){
+
+					owl.trigger('owl.next');
+					event.preventDefault();
+
+				}
+				else if($(this).hasClass('turn_btn')){
+
+					turn.slideToggle(500);
+					event.preventDefault();
+				}
+
+			});
+			
+		}
 
 	}
 

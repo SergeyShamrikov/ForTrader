@@ -26,9 +26,9 @@
     7.3. Buttons
     7.4. Banners
     7.5. Dividers
-    7.5. Tooltips
-    7.6. Tables
+    7.6. Tooltips
     7.7. Forms
+    7.8. Tables
   8. Widgets and Shortcodes
     8.1. Accordion and Toggles
     8.2. Tabs and Tour Sections
@@ -80,13 +80,15 @@
 
    ::selection{
     color: #fff;
+    background: #146eb3;
    }
 
    ::-moz-selection{
     color: #fff;
+    background: #146eb3;
    }
 
-   ::-moz-selection{background: #22cfef;}
+   ::-moz-selection{background: #146eb3;color: #fff;}
 
    ::-webkit-scrollbar{
     background: #cdcdcd;  
@@ -954,7 +956,7 @@
         font-size: 14px;
         line-height: 22px;
         color: #454242;
-        padding: 9px 5px 9px 14px;
+        padding: 8px 5px 9px 14px;
         letter-spacing: -0.2px;
       }
 
@@ -1022,6 +1024,22 @@
       background-color: #115e99;
       color: #fff;
     }
+
+    .button1{
+      font: 17px/21px 'pf_dindisplay_proregular';
+      color: #fff;
+      border: 4px solid #136bad;
+      background-color: #1575bf;
+      padding: 9px 25px;
+      border-radius: 3px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .button1:hover{
+      background-color: #136bad;
+      color: #fff;
+    }
     
 
   /* --------------------------------------------
@@ -1052,7 +1070,63 @@
   /* --------------------------------------------
         7.6. Tooltips
   -------------------------------------------- */
+
     
+  /* --------------------------------------------
+        7.7. Forms
+  -------------------------------------------- */
+    
+    .ask_question{
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .ask_question>i{
+      display: block;
+      position: absolute;
+      top: 16px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      background: url(../images/icon.png) -47px -79px no-repeat;
+    }
+
+    .ask_question>textarea{
+      width: 100%;
+      outline: none;
+      font-size: 14px;
+      line-height: 21px;
+      color: #8c8989;
+      border: 1px solid #e3e3e3;
+      border-radius: 2px;
+      background-color: #f7f7f7;
+      height: 52px;
+      margin-bottom: 10px;
+      resize:none;
+      padding: 15px 40px 10px 15px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    .ask_question>textarea:focus{
+      color: #333232;
+      border-color: #1575bf;
+      height: 104px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    .ask_question>textarea:focus ~ i{
+      display: none;
+    }
+
+    .ask_question button.button1{
+      display: none;
+    }
+
+    .ask_question>textarea:focus ~ button{display: block;}
 
 
 
@@ -1246,6 +1320,8 @@
   /* --------------------------------------------
         9.2. Horisantal
   -------------------------------------------- */
+
+    .owl-controls .owl-buttons div{display: none;}
     
 /* ------------------------------------------------
 
@@ -1273,13 +1349,89 @@
   /* --------------------------------------------
         11.1. Post
   -------------------------------------------- */
+    
+    .post{margin-bottom: 20px;}
 
-    .post
+    .post>img{width: 100%;}
+
+    .post_info{
+      font: 14px/17px 'pf_dindisplay_proregular';
+      padding: 10px 0;
+    }
+
+    .post_info time{
+      display: block;
+      float: left;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .post_info time:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 1px;
+      width: 16px;
+      height: 17px;
+      background: url(../images/icon.png) -39px -52px no-repeat;
+    }
+
+    .post_info span{
+      display: block;
+      float: right;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .post_info span:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 0;
+      width: 21px;
+      height: 16px;
+      background: url(../images/icon.png) -64px -52px no-repeat;
+    }
+
+    .post figcaption>a{
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 600;
+    }
     
   /* --------------------------------------------
         11.2. Post small
   -------------------------------------------- */
     
+    .post_small{
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #e3e3e3;
+    }
+
+    .post_small>img{
+      float: left;
+      margin-right: 10px;
+    }
+
+    .post_small figcaption{
+      display: block;
+      overflow: hidden;
+    }
+
+    .post_small figcaption>a{
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .post_small figcaption>time{
+      font-size: 13px;
+      line-height: 21px;
+      color: #999999;
+      display: block;
+    }
 
 /* ------------------------------------------------
 
