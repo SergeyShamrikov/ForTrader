@@ -45,11 +45,16 @@
   9. Carousels
     9.1. Vertical
     9.2. Horisantal
+    9.3. Partners Slider
   10. Beginner
-  11. Carousels
   11. Posts
-    13.1. Post
-    13.2. Post small
+    11.1. Post
+    11.2. Post small
+    11.3. News Post
+    11.4. Books Post
+    11.5. Brokers Post
+  12. Сompetition
+  13. Categories
   14. Blog
   15. Shop
   16. Animations
@@ -60,6 +65,7 @@
 @import "reset.css";
 @import "animate.css";
 @import "../fonts/PFDindisplayproRegMedLight/font.css";
+@import "../fonts/PFDindisplayproThinBold/font.css";
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
@@ -147,6 +153,7 @@
     .PFDlight{font-family: 'pf_dindisplay_prolight';}
     .PFDregular{font-family: 'pf_dindisplay_proregular';}
     .PFDmedium{font-family: 'pf_dindisplay_promedium';}
+    .PFDthin{font-family: 'pf_dindisplay_prothin';}
 
 /* ------------------------------------------------
 
@@ -308,6 +315,46 @@
       width: 45px;
       height: 30px;
       background-position: -41px -118px;
+    }
+
+    .clock_icon:before{
+      width: 30px;
+      height: 30px;
+      background-position: -44px -156px;
+    }
+
+    .trophy_icon:before{
+      width: 25px;
+      height: 30px;
+      background-position: -94px -38px;
+    }
+    
+    .newspaper_icon{margin-top: 4px;}
+
+    .newspaper_icon:before{
+      width: 27px;
+      height: 27px;
+      background-position: -94px -156px;
+    }
+
+    .profesional_icon:before{
+      width: 27px;
+      height: 31px;
+      background-position: -130px 0;
+    }
+
+    .folder_icon:before{
+      width: 34px;
+      height: 31px;
+      background-position: -130px -46px;
+    }
+    
+    .feather_icon{margin-top: 4px;}
+
+    .feather_icon:before{
+      width: 26px;
+      height: 27px;
+      background-position: -128px -93px;
     }
 
 /* ------------------------------------------------
@@ -903,6 +950,8 @@
 
       .title1.red_border:before{background-color: #ff1616;}
 
+      .title1.blue_border:before{background-color: #146eb3;}
+
       p:not(:last-child){margin-bottom: 15px;}
 
       mark{background-color: #20cfef;padding: 0 2px;color: #fff;}
@@ -1104,7 +1153,59 @@
     .load_btn:before{
       content: attr(data-text);
     }
+
+    .registration_btn{
+      display: inline-block;
+      font: 19px/22px 'pf_dindisplay_probold';
+      color: #fff;
+      background-color: #ff1616;
+      border: 5px solid #eb2a2a;
+      padding: 10px 35px;
+      border-radius: 3px;
+    }
     
+    .registration_btn:hover{
+      background-color: #eb2a2a;
+      color: #fff;
+    }
+
+    .categories_btn{
+      display: inline-block;
+      width: 141px;
+      height: 35px;
+      font: 14px/19px 'pf_dindisplay_promedium';
+      color: #666464;
+      text-align: center;
+      padding: 9px 0;
+      background: url(../images/categories_btn.png) 0 100% no-repeat;
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none;
+    }
+
+    .categories_btn:hover{
+      color: #fff;
+      background-position: 0 0;
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none;
+    }
+
+    .account_btn{
+      display: block;
+      text-align: center;
+      font: 16px/21px 'pf_dindisplay_proregular';
+      color: #454242;
+      padding: 10px 0;
+      background-color: #f1f1f1;
+      border: 1px solid #e3e3e3;
+      text-transform: uppercase;
+    }
+
+    .account_btn:hover{
+      color: #fff;
+      background-color: #333131;
+    }
 
   /* --------------------------------------------
         7.4. Banners
@@ -1239,7 +1340,54 @@
 
     .ask_question>textarea:focus ~ button{display: block;}
 
+  
+  /* --------------------------------------------
+        7.8. Tables
+  -------------------------------------------- */
 
+    .events_table{
+      width: 100%;
+      table-layout: fixed;
+      margin-bottom: 30px;
+    }
+
+    .events_table th{
+      background-color: #f0f0f0;
+      font-size: 14px;
+      line-height: 24px;
+      color: #333131;
+      text-transform: uppercase;
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+
+    .events_table td{
+      background-color: #f5f5f5;
+      border-top: 4px solid #fff;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      font-size: 14px;
+      line-height: 24px;
+      color: #454242; 
+    }
+
+    .events_table .event_time{
+      width: 181px;
+      border-left: 1px solid #d9d9d9;
+      text-align: center;
+    }
+
+    .events_table .event_item{
+      text-align: left;
+      border-left: 3px solid #e3e3e3;
+      padding-left: 17px;
+    }
+    .events_table th.event_item{
+      border-left-color: #333131;
+    }
+
+
+    
 
 /* ------------------------------------------------
 
@@ -1436,9 +1584,30 @@
 
     .post_carousel{
       margin: 0 -5px;
+      width: auto;
     }
     .post_carousel .owl-item{padding: 0 5px;}
-    
+
+  /* --------------------------------------------
+        9.3. Partners Slider
+  -------------------------------------------- */
+
+
+    .parner_logo a{
+      display: block;
+      text-align: center;
+      background-color: #f7f7f7;
+      border: 1px solid #e3e3e3;
+      height: 80px;
+      line-height: 78px;
+    }
+
+    .parner_logo a:hover{
+      border-color: #146eb3;
+    }
+
+    .parner_logo a>img{vertical-align: middle;}
+
 /* ------------------------------------------------
 
     10. Beginner
@@ -1472,11 +1641,18 @@
     height: 0;
     clear: both;
   }
+  
+  [class*="post_col"]{
+    float: left;
+    padding: 0 5px;
+  }
 
   .post_col3{
-    float: left;
     width: 33.33%;
-    padding: 0 5px;
+  }
+
+  .post_col4{
+    width: 25%;
   }
   
   /* --------------------------------------------
@@ -1534,6 +1710,9 @@
       letter-spacing: -0.3px;
       font-weight: 600;
     }
+
+    .post figcaption>a strong{}
+
     .post.big figcaption>a{
       font-size: 15px;
       line-height: 24px;
@@ -1562,6 +1741,7 @@
     .post_small figcaption>a{
       font-size: 14px;
       line-height: 21px;
+      letter-spacing: -0.3px;
     }
 
     .post_small figcaption>time{
@@ -1570,7 +1750,218 @@
       color: #999999;
       display: block;
     }
+    
+    .post_small2{
+      margin-bottom: 25px;
+    }
 
+    .post_small2>img{
+      float: left;
+      margin-right: 10px;
+    }
+
+    .post_small2 figcaption{
+      display: block;
+      overflow: hidden;
+    }
+
+    .post_small2 figcaption>a{
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 600;
+    }
+
+    .post_small2 figcaption>p{
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+
+
+  /* --------------------------------------------
+        11.3. News Post
+  -------------------------------------------- */
+    
+    .news_post_box{
+      margin: 0 -19px 17px;
+      position: relative;
+    }
+
+    .news_post_box:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: #e6e6e6;
+      left: 50%;
+      top: 0;
+    }
+
+    .news_post_box>div{
+      float: left;
+      width: 50%;
+      padding: 0 19px;
+    }
+
+    .news_post_right>.post>.post_info{position: relative;}
+
+    .news_post_right>.post>.post_info:before{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -18px;
+      left: -19px;
+      width: 2px;
+      height: 37px;
+      background-color: #fff;
+    }
+
+    .news_left1{
+      width: 427px;
+      float: left;
+    }
+
+    .news_right1{
+      width: 291px;
+      float: right;
+    }
+
+
+  /* --------------------------------------------
+        11.4. Books Post
+  -------------------------------------------- */
+    
+
+    .book_post{margin-bottom: 20px;} 
+
+    .book_post .book_img{
+      width: 100%;
+      height: 240px;
+      line-height: 240px;
+      margin-bottom: 10px;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    .book_post .book_img img{vertical-align: middle;}
+    
+    .book_post figcaption{
+      display: block;
+      font-size: 14px;
+      line-height: 21px;
+      color: #454242;
+      letter-spacing: -0.3px;
+    }
+
+
+  /* --------------------------------------------
+        11.5. Brokers Post
+  -------------------------------------------- */
+    
+    .broker_post{
+      margin-bottom: 20px;
+    }
+
+    .broker_post>img{width: 100%;margin-bottom: 10px;}
+
+    .broker_post>p{
+      font-size: 14px;
+      line-height: 22px;
+      color: #787575;
+      padding-right: 5px;
+    }    
+
+
+/* ------------------------------------------------
+
+    12. Сompetition
+
+------------------------------------------------ */
+  
+  .competition_box{margin-bottom: 25px;}
+
+  .competition_title{
+    font: 26px/1em 'pf_dindisplay_prothin';
+    color: #333131;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+
+  .competition_title span{
+    background-color: #333131;
+    color: #fff;
+    padding: 0 5px;
+  }
+
+  .competition_description{
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border: 1px solid #cfcfcf;
+    border-top: none;
+    border-radius: 3px 0 0 3px;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 11px;
+  }
+  
+  .competition_description_title{display: inline-block;}
+
+  .competition_description_title>h5{
+    font: 24px/1em 'pf_dindisplay_prolight';
+    color: #595656;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .competition_description_title>hr{
+    border: 1px solid #787373;
+    border-left: none;
+    border-right: none;
+    height: 5px;
+    margin: 0;
+  }
+
+  .competition_description_title>span{
+    display: block;
+    font: 72px/1em 'pf_dindisplay_probold';
+    color: #333131;
+    margin: 7px 0 10px;
+  }
+
+  .competition_description_title>p{
+    font-size: 15px;
+    line-height: 20px;
+    color: #595656;
+    font-weight: 600;
+    padding-top: 10px;
+    margin-bottom: 18px;
+  }
+
+  .competition_description_title>p>span{display: block;}
+
+  .competition_description_title>a.registration_btn{margin-bottom: 15px;}
+
+
+/* ------------------------------------------------
+
+    13. Categories
+
+------------------------------------------------ */
+  
+  .categories_box{
+    margin-right: -2px;
+    margin-bottom: 15px;
+  }
+
+  .categories_box>a{
+    display: block;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
 /* ------------------------------------------------
 
     16. Footer
