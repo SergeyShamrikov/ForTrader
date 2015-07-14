@@ -53,9 +53,10 @@
     11.3. News Post
     11.4. Books Post
     11.5. Brokers Post
+    11.6. Autor Post
   12. Сompetition
   13. Categories
-  14. Blog
+  14. Site List
   15. Shop
   16. Animations
   17. Footer
@@ -235,6 +236,7 @@
 
   .white_container{
     padding: 0 20px;
+    margin-bottom: 35px;
     background: #fff;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
@@ -1117,6 +1119,7 @@
     }
 
     .button1{
+      display: inline-block;
       font: 17px/21px 'pf_dindisplay_proregular';
       color: #fff;
       border: 4px solid #136bad;
@@ -1129,6 +1132,23 @@
 
     .button1:hover{
       background-color: #136bad;
+      color: #fff;
+    }
+
+    .button2{
+      display: inline-block;
+      font: 17px/21px 'pf_dindisplay_proregular';
+      color: #fff;
+      border: 4px solid #4d4a4a;
+      background-color: #2b2a2a;
+      padding: 9px 25px;
+      border-radius: 3px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .button2:hover{
+      background-color: #4d4a4a;
       color: #fff;
     }
 
@@ -1646,6 +1666,10 @@
     float: left;
     padding: 0 5px;
   }
+  
+  .post_col2{
+    width: 50%;
+  }
 
   .post_col3{
     width: 33.33%;
@@ -1717,6 +1741,24 @@
       font-size: 15px;
       line-height: 24px;
     }
+
+    .post1{margin-bottom: 20px;}
+
+    .post1>img{width: 100%;}
+    
+    .post1 figcaption{
+      padding-top: 10px;
+      display: block;
+    }
+
+    .post1 figcaption>a{
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: -0.3px;
+      font-weight: 400;
+    }
+
+    .post1 figcaption>a strong{font-weight: 600;}
     
   /* --------------------------------------------
         11.2. Post small
@@ -1873,6 +1915,31 @@
     }    
 
 
+  /* --------------------------------------------
+        11.6. Autor Post
+  -------------------------------------------- */
+    
+    .post_autor{margin-bottom: 30px;}
+
+    .post_autor>img{width: 100%;}
+
+    .post_autor figcaption{
+      display: block;
+      padding-top: 10px;
+      font-size: 13px;
+      line-height: 21px;
+      color: #787575;
+    }
+
+    .post_autor figcaption>h6{
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+
+
 /* ------------------------------------------------
 
     12. Сompetition
@@ -1961,20 +2028,135 @@
     margin-right: 5px;
     margin-bottom: 5px;
   }
+
+
+/* ------------------------------------------------
+
+    14. Site List
+
+------------------------------------------------ */
   
+  .site_list{
+    border: 3px solid #e3e3e3;
+    margin-bottom: 30px;
+  }
+  
+  .site_list>h5{
+    font: 18px/21px 'pf_dindisplay_proregular';
+    padding: 13px 10px 13px 12px;
+    background-color: #f1f1f1;
+    color: #454242;
+    margin-bottom: 0;
+  }
+
+  .site_list>ul>li{
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .site_list>ul>li:first-child{
+    border: none;
+  }
+
+  .site_list>ul>li>a{
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: #146eb3;
+    font-weight: 600;
+    padding: 10px 10px 10px 12px;
+  }
+
+  .site_list>ul>li>a:hover{
+    color: #333;
+    background-color: #f9f9f9;
+  }
+
+
+
 /* ------------------------------------------------
 
     16. Footer
 
 ------------------------------------------------ */
 
+  #footer{
+    background-color: #1f1d1d;
+    border-top: 5px solid #ff1616;
+  }
+
+  .footer_top{
+    background-color: #2b2a2a;
+    padding: 10px 0;
+  }
+
+  .social>li{
+    float: left;
+    margin-right: 6px;
+  }
+
+  .social>li>a{
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: url(../images/social_icon.png) no-repeat;
+    -webkit-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+  .social>li:hover>a{
+    -webkit-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -o-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+    -webkit-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+  }
+
+  .social>li>a.google_plus{background-position: 0 0;}
+  .social>li>a.fb{background-position: -50px 0;}
+  .social>li>a.tw{background-position: -100px 0;}
+  .social>li>a.vk{background-position: -150px 0;}
+
+  .social>li>a.google_plus:hover{background-position: 0 -49px;}
+  .social>li>a.fb:hover{background-position: -50px -49px;}
+  .social>li>a.tw:hover{background-position: -100px -49px;}
+  .social>li>a.vk:hover{background-position: -150px -49px;}
 
 
+  .newsletter_form label{
+    font: 15px/44px 'pf_dindisplay_proregular';
+    color: #ccc8c8;
+    text-transform: uppercase;
+    padding-right: 14px;
+  }
 
-/* ------------------------------------------------
+  .newsletter_form input[type="text"]{
+    width: 300px;
+    border-radius: 3px 0 0 3px;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 10px;
+  }
 
-    16. Footer
+  .newsletter_form button{
+    font: 13px/20px 'pf_dindisplay_proregular';
+    padding: 12px 10px;
+    text-transform: uppercase;
+    background-color: #4d4a4a;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    display: inline-block;
+    float: right;
+  }
 
------------------------------------------------- */
-
-   footer {}
+  .newsletter_form button:hover{
+    background-color: #666363;
+    color: #fff;
+  }
