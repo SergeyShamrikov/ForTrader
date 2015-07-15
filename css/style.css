@@ -57,11 +57,10 @@
   12. Сompetition
   13. Categories
   14. Site List
-  15. Shop
-  16. Animations
-  17. Footer
-    17.1. Footer Bottom
-    17.2. Copyright
+  15. Footer
+    15.1. Footer Top
+    15.2. Footer Middle
+    15.3. Footer Bottom
 */
 @import "reset.css";
 @import "animate.css";
@@ -871,7 +870,6 @@
         text-transform: uppercase;
         margin-bottom: 6px;
       }
-        .PFDlight{font-family: 'pf_dindisplay_prolight';}
 
       h4{
         font-family: 'pf_dindisplay_prolight';
@@ -1071,15 +1069,31 @@
 
       .list2>li>a:hover:before{
         width: 4px;
-        background-color: #146eb3;      }
-
-      .list3{}
-      .list3_item{
-        background:url(../images/marker1.png) 0 7px no-repeat;
-        padding-left:20px;
+        background-color: #146eb3;
       }
-      .list3_link{}
 
+      .list3 > li{
+        padding-bottom: 10px;
+      }
+
+      .list3 > li > a{
+        font-size: 14px;
+        line-height: 18px;
+        color: #ccc8c8;
+      }
+
+      .list3 > li > a:hover{
+        color: #ff1616;
+        text-decoration: underline;
+      }
+
+      
+      .list4{text-align: center;}
+      
+      .list4 > li{
+        display: inline-block;
+      }
+      
 
   /* --------------------------------------------
         7.3. Buttons
@@ -2075,14 +2089,21 @@
 
 /* ------------------------------------------------
 
-    16. Footer
+    15. Footer
 
 ------------------------------------------------ */
 
   #footer{
     background-color: #1f1d1d;
     border-top: 5px solid #ff1616;
+    padding-bottom: 30px;
   }
+
+
+  /* --------------------------------------------
+        15.1. Footer Top
+  -------------------------------------------- */
+    
 
   .footer_top{
     background-color: #2b2a2a;
@@ -2160,3 +2181,51 @@
     background-color: #666363;
     color: #fff;
   }
+
+
+  /* --------------------------------------------
+        15.2. Footer Middle
+  -------------------------------------------- */
+    
+    .footer_middle{
+      padding: 20px 0 10px;
+      border-bottom: 1px solid #595656;
+      position: relative;
+    }
+
+    .footer_middle:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      bottom: -3px;
+      left: 50%;
+      margin-left: -2px;
+      background-color: #595656;
+    }
+
+    .list_box{
+      float: left;
+      width: 25%;
+    }
+
+    .list_box>h6{
+      font: 17px/24px 'pf_dindisplay_proregular';
+      color: #fff;
+      text-transform: uppercase;
+      /*margin-bottom: 10px;*/
+    }  
+
+
+  /* --------------------------------------------
+        15.3. Footer Bottom
+  -------------------------------------------- */
+    
+    .footer_bottom{
+      text-align: center;
+      font-size: 14px;
+      line-height: 25px;
+      color: #807d7d;
+      padding: 25px 0 0;
+    }
