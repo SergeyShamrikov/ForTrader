@@ -261,7 +261,9 @@
 
   .sidebar{
     float: right;
-    width: 300px;
+    width: 318px;
+    padding-left: 17px;
+    border-left: 1px solid #e8e8e8;
   }
 
 
@@ -422,6 +424,20 @@
       height: 22px;
       background-position: 0 -272px;
     }
+
+    .cup_icon:before{
+      width: 23px;
+      height: 27px;
+      background-position: -179px 0;
+    }
+
+    .dictionary_icon:before{
+      width: 18px;
+      height: 22px;
+      background-position: -182px -43px;
+    }
+
+
 
 /* ------------------------------------------------
 
@@ -1160,6 +1176,29 @@
       .list4 > li{
         display: inline-block;
       }
+
+      .list5>li{
+        padding: 10px 0 12px;
+        border-top: 1px solid #e3e3e3;
+      }
+
+      .list5>li:first-child{
+        border: none;
+        padding-top: 0;
+      }
+
+      .list5>li h6{
+        font: 15px/24px 'Open Sans', sans-serif;
+        color: #454242;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .list5>li p{
+        font-size: 14px;
+        line-height: 24px;
+        color: #787575;
+      }
       
 
   /* --------------------------------------------
@@ -1308,6 +1347,44 @@
       background-color: #333131;
     }
 
+    .more_interview_btn{
+      display: inline-block;
+      outline: none;
+      border: none;
+      background-color: #f0f0f0;
+      font-size: 16px;
+      font: 16px/18px 'pf_dindisplay_prolight';
+      color: #454545;
+      padding: 15px 0;
+      width: 148px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .more_interview_btn:hover{
+      background-color: #e6e6e6;
+      color: #454545;
+    }
+
+    .reply_btn{
+      display: inline-block;
+      outline: none;
+      border: none;
+      background-color: #333131;
+      font: 16px/18px 'pf_dindisplay_proregular';
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+      text-transform: uppercase;
+      width: 148px;
+      cursor: pointer;
+    }
+
+    .reply_btn:hover{
+      background-color: #ff1616;
+      color: #fff;
+    }
+
   /* --------------------------------------------
         7.4. Banners
   -------------------------------------------- */
@@ -1451,6 +1528,70 @@
     }
 
     .ask_question>textarea:focus ~ button{display: block;}
+
+    .interview_box h6{
+      font-size: 15px;
+      line-height: 24px;
+      color: #454242;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .interview{
+      border-top: 1px solid #e3e3e3;
+      padding: 20px 0 18px;
+      position: relative;
+    }
+
+    .interview:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 67px;
+      background-color: #e3e3e3;
+    }
+
+    .interview input[type="radio"],
+    .interview input[type="checkbox"]{
+      display: none;
+    }
+
+    .interview label{
+      display: block;
+      font: 17px/18px 'pf_dindisplay_proregular';
+      color: #454242;
+      padding-left: 26px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .interview label>i{
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      border: 1px solid #cccccc;
+      background-color: #f7f7f7;
+    }
+
+    .interview  input[type="radio"]:checked + label>i:before,
+    .interview  input[type="checkbox"]:checked + label>i:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 12px;
+      height: 12px;
+      background-color: #f74d4d;
+      border-radius: 3px;
+    }
 
   
   /* --------------------------------------------
@@ -1857,6 +1998,7 @@
   -------------------------------------------- */
     
     .post_small{
+      overflow: hidden;
       padding-bottom: 15px;
       margin-bottom: 15px;
       border-bottom: 1px solid #e3e3e3;
