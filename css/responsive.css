@@ -1,10 +1,16 @@
 /*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (min-width: 993px) {
+
+	.site_list>ul,.list_box>ul{display: block !important;}
+}
+
 @media only screen and (max-width: 1200px) {
 	
 	.container{width: 960px;}
 
-	.left_part{width: 623px;}
-	.sidebar{width: 280px;}
+	.left_part{width: 640px;}
+
+	.sidebar{width: 263px;}
 
 	.archive_btn{width: 120px;}
 
@@ -79,7 +85,7 @@
 
 	.additional_menu>li>a{font-size: 14px;}
 
-	.left_part{width: 413px;}
+	.left_part{width: 430px;}
 
 	.image_box{
 		float: none;
@@ -147,11 +153,193 @@
 	.post_col4{width: 50%;}
 
 	.post_col2{width: 100%;}
+	
+	.newsletter_form input[type="text"]{width: 190px;}
 
+	/*responsive accordion*/
+
+	.site_list>h5{
+		cursor: pointer;
+	}
+	.site_list>h5:before{
+		content: "";
+		display: block;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		margin-top: -6px;
+		width: 12px;
+		height: 12px;
+		background: url(../images/icon.png) -91px -18px no-repeat;
+	}
+	.site_list>h5.active:before{
+		background-position: -49px -18px;
+	}
+	.site_list>ul{display: none;}
+
+	.list_box{
+		padding-right: 15px;
+	}
+
+	.tooltip{display: none;}
+
+	.news_post_box{margin: 0 0 17px;}
+
+	.news_post_box>div{padding: 0;}
 }
 
 @media only screen and (max-width: 767px) {
- body{min-width:420px;}
+ 	
+ 	body{
+ 		min-width:420px;
+ 		background-color: #fff;
+ 	}
+
+ 	[class*="banner"]{display: none;}
+	
+	.container{width: auto;}
+
+	.white_container{
+		padding: 0 15px;
+		margin-bottom: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	.left_part,.sidebar{
+		float: none;
+		width: auto;
+		padding: 0;
+		border: none;
+	}
+
+	/*header*/
+	
+	#header{
+		margin-right: 0;
+		padding-right: 0;
+		height: auto;
+		background: none;
+	}
+	.enter_box{
+		float: none;
+		margin: 0 -15px;
+		padding: 0 15px;
+		text-align: center;
+		height: 61px;
+		border-bottom: 1px solid #e8e8e8;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2f2f2+100 */
+		background: #ffffff; /* Old browsers */
+		background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #ffffff 0%,#f2f2f2 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+	}
+
+	.enter_box a{float: right;}
+
+	.header_top_menu{
+		float: right;
+		margin: 12px 0;
+	}
+
+	.logo{margin: 12px 0;}
+
+
+	/*menu*/
+
+	.nav_wrap{
+		display: block;
+		width: auto;
+	}
+
+	nav{
+		display: block;
+		width: auto !important;
+		float: right;
+	}
+
+	.search_box{
+		display: block;
+		width: auto;
+		overflow: hidden;
+	}
+
+	.search_form input[type="text"]:focus{
+		width: 100%;
+	}
+
+	.additional_menu_box{position: static;}
+
+	.additional_menu{
+		width: 100% !important;
+		background-color: rgba(0,0,0,0.8);
+		border-bottom: 1px solid #474646;
+	}
+
+	.additional_menu>li a{
+		background: none;
+		border-top: 1px solid #474646;
+		font-size: 16px;
+		line-height: 19px;
+		padding: 11px 35px 11px 20px;
+	}
+	.additional_menu>li a:hover{
+		background-color: #f61616;
+	}
+	
+	.additional_menu>li.has_submenu>a:before{
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 99;
+		width: 12px;
+		height: 12px;
+		right: 18px;
+		top: 50%;
+		margin-top: -6px;
+		background: url(../images/icon.png) -114px -18px no-repeat;
+	}
+	.additional_menu>li.active.has_submenu>a:before,
+	.additional_menu>li.has_submenu:hover>a:before{
+		background-position: -72px -18px;
+	}
+
+	.additional_menu .sub_menu{
+		position: relative;
+		display: none;
+		right: auto;
+		top: auto;
+		width: auto;
+		border: none;
+	}
+
+	.additional_menu li.active .sub_menu{display: block;}
+
+	.additional_menu .sub_menu:before{
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 99;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 5px;
+		background-color: #f61717;
+	}
+	.additional_menu .sub_menu a{
+		padding-left: 40px;
+	}
+	
+
+
+	.post_autor{height: auto;}
+
+
+
 }
 
 @media only screen and (max-width: 479px) {

@@ -257,14 +257,14 @@
 
   .left_part{
     float: left;
-    width: 728px;
+    width: 745px;
+    padding-right: 17px;
+    border-right: 1px solid #e8e8e8;
   }
 
   .sidebar{
     float: right;
-    width: 318px;
-    padding-left: 17px;
-    border-left: 1px solid #e8e8e8;
+    width: 300px;
   }
 
 
@@ -468,6 +468,8 @@
   /* --------------------------------------------
         4.1. Header List
   -------------------------------------------- */
+    
+    .header_top_menu{float: left;}
 
     .header_list li{float: left;}
 
@@ -531,7 +533,6 @@
       line-height: 17px;
       padding: 21px 10px 23px;
       font-weight: 400;
-      border-right: 1px solid #e8e8e8;
       color: #454141;
     }
     .enter_box span strong{font-weight: 600;}
@@ -544,6 +545,7 @@
       padding: 21px 10px 23px;
       font-weight: 400;
       border-right: 1px solid #e8e8e8;
+      border-left: 1px solid #e8e8e8;
       color: #454141;
     }
     .enter_box a:hover{
@@ -600,7 +602,8 @@
       width: 1px;
       background-color: #333030;
     }
-    .main_menu>li:hover>a{
+    .main_menu>li:hover>a,
+    .main_menu>li.active>a{
       background-color: #333030;
     }
     .main_menu>li.current>a,
@@ -623,7 +626,8 @@
       display: none;
     }
 
-    .main_menu>li:hover>.sub_menu{
+    .main_menu>li:hover>.sub_menu,
+    .main_menu>li.active>.sub_menu{
       display: block;
     }
 
@@ -751,7 +755,8 @@
       right: 100%;
       left: auto;
     }
-    .additional_menu>li:hover>.sub_menu{display: block;}
+    .additional_menu>li:hover>.sub_menu,
+    .additional_menu>li.active>.sub_menu{display: block;}
 
   /* --------------------------------------------
       5.2. Searchform
@@ -2076,6 +2081,7 @@
     }
     
     .post_small2{
+      overflow: hidden;
       margin-bottom: 25px;
     }
 
@@ -2582,6 +2588,7 @@
     .list_box{
       float: left;
       width: 25%;
+      padding-right: 15px;
     }
 
     .list_box>h6{
