@@ -15,6 +15,7 @@
 			self.firstOpenNewsList();
 			self.newsList();
 			self.buttonSlider();
+			self.headerList();
 
 		},
 
@@ -123,7 +124,7 @@
 
 				navWidth = $(".main_menu").width();
 
-				$("nav").width(navWidth +58);
+				$("nav").width(navWidth +59);
 
 			},100);
 
@@ -226,6 +227,31 @@
 
 			});
 			
+		},
+
+
+		/**
+		**	Header list open on responsive 
+		**/
+
+		headerList : function(){
+
+			$('.header_list_btn').on('click',function(){
+
+				$(this).toggleClass('active');
+				$('.header_list').toggleClass('active');
+
+			});
+
+			$(document).click(function(event) {
+
+				if ($(event.target).closest(".header_list,.header_list_btn").length) return;
+				$(".header_list").removeClass('active');
+				$(".header_list_btn").removeClass('active');
+				event.stopPropagation();
+
+			});
+
 		}
 
 	}

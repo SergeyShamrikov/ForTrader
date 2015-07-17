@@ -1,6 +1,152 @@
 /*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 1200px) {
+	
+	.container{width: 960px;}
+
+	.left_part{width: 623px;}
+	.sidebar{width: 280px;}
+
+	.archive_btn{width: 120px;}
+
+	.edition_btn{width: 230px;}
+
+	.beginner_left{width: 330px;}
+
+	.beginner_right{width: 280px;}
+
+	.news_left1{width: 360px;}
+
+	.news_right1{width: 250px;}
+
+	.more_interview_btn{margin-bottom: 20px;}
+}
+
 @media only screen and (max-width: 992px) {
- body{min-width:768px;}
+	
+	body{min-width:768px;}
+	.container{width: 750px;}
+
+
+	/*header*/
+
+	.header_list_btn{
+		display: block;
+	}
+
+	.header_list{
+		position: absolute;
+		display: none;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #2b2929;
+		z-index: 999;
+	}
+
+	.header_list.active{display: block;}
+
+	.header_list li{
+		float: none;
+	}
+
+	.header_list li a{
+		position: relative;
+		font-size: 14px;
+		line-height: 19px;
+		color: #fff;
+		padding: 20px 0 18px 10px;
+		border-top: 1px solid #0d0c0c;
+		border-right: none;
+		background-color: #242222;
+	}
+
+	.header_list li a:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: #333030;
+	}
+
+	.header_list li a:hover{
+		background-color: #333030;
+	}
+
+	.main_menu>li>a{font-size: 14px;}
+
+	.additional_menu>li>a{font-size: 14px;}
+
+	.left_part{width: 413px;}
+
+	.image_box{
+		float: none;
+		text-align: center;
+	}
+
+	.beginner_left,
+	.beginner_right{
+		float: none;
+		width: auto;
+		margin-bottom: 15px;
+	}
+	
+	h2{font-size: 22px;}
+	h3{font-size: 17px;}
+	h4{font-size: 20px;}
+	h2>.sub_title, h3>.sub_title, h4>.sub_title, h5>.sub_title, h6>.sub_title{
+		font-size: 14px;
+		line-height: 18px;
+		display: block;
+		padding-left: 0;
+	}
+	h2>.sub_title:before, h3>.sub_title:before, h4>.sub_title:before, h5>.sub_title:before, h6>.sub_title:before{display: none;}
+
+	.post_col3{width: 100%;}
+
+	.events_table th{
+		font-size: 12px;
+		line-height: 16px;
+		vertical-align: middle;
+	}
+
+	.events_table .event_time{width: 100px;}
+
+	.events_table td{
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.competition_img{
+		float: none;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.competition_description{
+		border: 1px solid #cfcfcf;
+		border-radius: 3px;
+	}
+
+	.news_post_box>div{
+		float: none;
+		width: auto;
+	}
+	.news_post_box:before,
+	.news_post_right>.post>.post_info:before{display: none;}
+
+	.news_left1,.news_right1{
+		float: none;
+		width: auto;
+	}
+
+	.post_autor{height: 335px;}
+
+	.post_col4{width: 50%;}
+
+	.post_col2{width: 100%;}
 
 }
 

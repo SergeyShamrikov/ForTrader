@@ -10,13 +10,13 @@
 })(jQuery)
 
 $(window).load(function(){
-	if($(document).width()>767){
+	if($(document).width()>992){
 		if($(".maxheight").length){$(".maxheight").equalHeights()}
 	}
 })
 $(window).resize(function(){
 	$(".maxheight").css({height:'auto'});
-	if($(document).width()>767){
+	if($(document).width()>992){
 		if($(".maxheight").length){$(".maxheight").equalHeights()}
 	}
 })

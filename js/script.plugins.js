@@ -36,15 +36,19 @@
 					else{
 
 						var desktop = $this.attr('data-desktop'),
-							ipad = $this.attr('data-ipad'),
-							iphon = $this.attr('data-iphon');
+							large = $this.attr('data-large '),
+							medium = $this.attr('data-medium'),
+							small = $this.attr('data-small'),
+							extraSmall = $this.attr('data-extra-small');
 
 						$this.owlCarousel({
 
 							itemsCustom : [
-								[0, iphon],
-								[767, ipad],
-								[992, desktop]
+								[0, extraSmall],
+								[480, small],
+								[768, medium],
+								[992, large],
+								[1200, desktop]
 							],
 							navigation : true
 
