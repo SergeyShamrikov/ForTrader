@@ -164,6 +164,7 @@
 	}
 
 	.news_list>li time span{
+		padding-left: 0;
 		padding-top: 20px;
 	}
 
@@ -389,7 +390,8 @@
 		line-height: 19px;
 		padding: 11px 35px 11px 20px;
 	}
-	.additional_menu>li a:hover{
+	.additional_menu>li a:hover,
+	.additional_menu>li.current>a{
 		background-color: #f61616;
 	}
 	

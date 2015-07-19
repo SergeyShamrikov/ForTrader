@@ -112,6 +112,7 @@
 
 						$(">a", this).toggle(
 
+
 							function(){
 								$(this).parent().toggleClass('active');
 								$(this).next("ul").slideToggle();

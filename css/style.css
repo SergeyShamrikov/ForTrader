@@ -166,6 +166,9 @@
     .PFDmedium{font-family: 'pf_dindisplay_promedium';}
     .PFDthin{font-family: 'pf_dindisplay_prothin';}
 
+    .regular{font-weight: 400;}
+    .semibold{font-weight: 600;}
+
 /* ------------------------------------------------
 
     2. General Classes
@@ -1024,15 +1027,19 @@
       h3{
         font-family: 'pf_dindisplay_proregular';
         font-size: 19px;
-        line-height: 38px;
+        line-height: 39px;
+        padding: 7px 35px 7px 0;
         text-transform: uppercase;
-        margin-bottom: 6px;
+        margin-bottom: 0;
+
       }
 
       h4{
         font-family: 'pf_dindisplay_prolight';
         font-size: 22px;
-        margin-bottom: 10px;
+        line-height: 25px;
+        padding: 10px 35px 10px 0;
+        margin-bottom: 0;
       }
 
       h5{font-size: 16px;}
@@ -1153,12 +1160,14 @@
         7.2. Lists
    -------------------------------------------- */
 
+      .list1{margin-bottom: 8px;}
+      
       .list1>li{
-        padding: 8px 20px 8px 0;
+        padding: 6px 20px 8px 0;
         border-top: 1px solid #e3e3e3;
         font-size: 15px;
         line-height: 22px;
-        font-weight: 600;
+        /*font-weight: 600;*/
       }
 
       .list1>li:first-child{padding-top: 0;border: none;}
@@ -1189,6 +1198,7 @@
       .news_list>li time span{
         display: inline-block;
         vertical-align: middle;
+        padding-left: 5px;
       }
 
       .news_list>li time:before{
@@ -1547,7 +1557,7 @@
       margin: 0 0 25px;
     }
 
-    hr.separator2{margin-bottom: 8px;}
+    hr.separator2{margin-bottom: 0;}
 
   /* --------------------------------------------
         7.6. Tooltips
