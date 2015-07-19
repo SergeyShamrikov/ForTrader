@@ -267,6 +267,37 @@
     width: 300px;
   }
 
+  #go_up{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border: 2px solid #e3e3e3;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  #go_up.active{
+    visibility: visible;
+    opacity: 0.5;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  #go_up:hover{
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
 
   /* --------------------------------------------
         3.1. Page tilte end breadcrumps
@@ -626,11 +657,6 @@
       display: none;
     }
 
-    .main_menu>li:hover>.sub_menu,
-    .main_menu>li.active>.sub_menu{
-      display: block;
-    }
-
     .sub_menu>li>a{
       display: block;
       font-size: 16px;
@@ -755,8 +781,7 @@
       right: 100%;
       left: auto;
     }
-    .additional_menu>li:hover>.sub_menu,
-    .additional_menu>li.active>.sub_menu{display: block;}
+    
 
   /* --------------------------------------------
       5.2. Searchform
@@ -842,6 +867,7 @@
   .header_info_box{
     background-color: #2e2b2b;
     line-height: 22px;
+    position: relative;
   }
 
   .header_info_title{
@@ -878,7 +904,7 @@
 
     .quotes_box .header_info_container{
       border-bottom: 1px solid #1c1a1a;
-      padding: 20px 20px;
+      padding: 20px;
       position: relative;
     }
 
@@ -928,7 +954,7 @@
     .focus_box .header_info_title:before{border-left-color: #403e3e;}
 
     .focus_box .header_info_container{
-      padding: 0 20px;
+      padding: 20px;
       color: #f1f1f1;
       font-size: 14px;
       line-height: 18px;
@@ -937,25 +963,20 @@
       white-space: nowrap;
     }
 
-    .focus_box .header_info_container .owl-item{
-      height: 62px;
-      position: relative;
+    .focus_box .ticker{
+      background: none;
+      font-size: 14px;
+      line-height: 18px;
     }
 
-    .focus_box .header_info_container .owl-item:before{
+    .focus_box .ticker p{
       display: inline-block;
-      content: "";
-      width: 0;
-      height: 100%;
-      vertical-align: middle;
+      margin-bottom: 0;
+      padding-right: 10px;
     }
 
-
-    .focus_box .header_info_container .owl-item>div{display: inline-block;vertical-align: middle;}
-    .focus_box .header_info_container span{color: #ff1616;}
-
-    .focus_box .owl-controls .owl-buttons div{
-      display: none;
+    .focus_box .ticker p strong{
+      padding-left: 10px;
     }
 
 /* ------------------------------------------------
@@ -1130,7 +1151,6 @@
 
       .news_list>li{
         background-color: #f5f5f5;
-        font-size: 14px;
         line-height: 24px;
         margin-bottom: 4px;
         position: relative;
@@ -1152,14 +1172,30 @@
         font-weight: 700;
       }
 
+      .news_list>li time span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+
       .news_list>li time:before{
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+        margin-left: -5px;
+        visibility: hidden;
+      }
+
+      .news_list>li time:after{
         content: "";
         display: block;
         position: absolute;
         width: 20px;
         height: 20px;
         left: 6px;
-        top: 9px;
+        top: 50%;
+        margin-top: -10px;
         background: url(../images/icon.png) -24px -13px no-repeat;
       }
 
@@ -1176,8 +1212,6 @@
         display: block;
         position: relative;
         background-color: #f5f5f5;
-        font-size: 14px;
-        line-height: 22px;
         color: #454242;
         padding: 8px 5px 9px 14px;
         letter-spacing: -0.2px;
@@ -1209,7 +1243,6 @@
       }
 
       .list3 > li > a{
-        font-size: 14px;
         line-height: 18px;
         color: #ccc8c8;
       }
@@ -1432,6 +1465,30 @@
 
     .chench_btn:before{
       content: attr(data-text);
+    }
+
+    .share_btn{
+      outline: none;
+      cursor: pointer;
+      display: none;
+      width: 195px;
+      height: 48px;
+      color: #fff;
+      line-height: 17px;
+      padding: 8px 45px 0 30px;
+      text-align: left;
+      background: url(../images/share_btn.png) 0 0 no-repeat;
+      -webkit-transition: none;
+       -o-transition: none;
+       transition: none; 
+    }
+
+    .share_btn:hover{
+      color: #fff;
+      background-position: 0 100%;
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none;
     }
 
   /* --------------------------------------------
@@ -1660,21 +1717,17 @@
 
     .events_table th{
       background-color: #f0f0f0;
-      font-size: 14px;
-      line-height: 24px;
       color: #333131;
       text-transform: uppercase;
-      padding-top: 9px;
-      padding-bottom: 9px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .events_table td{
       background-color: #f5f5f5;
       border-top: 4px solid #fff;
-      padding-top: 9px;
-      padding-bottom: 9px;
-      font-size: 14px;
-      line-height: 24px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       color: #454242; 
     }
 
@@ -2237,7 +2290,7 @@
   .competition_box{margin-bottom: 25px;}
 
   .competition_title{
-    font: 26px/1em 'pf_dindisplay_prothin';
+    font: 26px/1.3em 'pf_dindisplay_prothin';
     color: #333131;
     text-align: center;
     text-transform: none;
@@ -2248,6 +2301,7 @@
     background-color: #333131;
     color: #fff;
     padding: 0 5px;
+    white-space: nowrap;
   }
 
   .competition_description{
@@ -2488,6 +2542,13 @@
   .footer_top{
     background-color: #2b2a2a;
     padding: 10px 0;
+  }
+
+  .social_label{
+    font: 15px/44px 'pf_dindisplay_proregular';
+    color: #ccc8c8;
+    text-transform: uppercase;
+    padding-right: 14px;
   }
 
   .social>li{

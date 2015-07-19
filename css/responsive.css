@@ -4,6 +4,14 @@
 	.site_list>ul,.list_box>ul{display: block !important;}
 }
 
+@media only screen and (min-width: 768px) {
+
+	.main_menu>li:hover>.sub_menu{
+      display: block !important;
+    }
+    .additional_menu>li:hover>.sub_menu{display: block !important;}
+}
+
 @media only screen and (max-width: 1200px) {
 	
 	.container{width: 960px;}
@@ -29,9 +37,17 @@
 
 @media only screen and (max-width: 992px) {
 	
-	body{min-width:768px;}
+	body{
+		min-width:768px;
+		font-size: 13px;
+		line-height: 21px;
+	}
 	.container{width: 750px;}
 
+	.post_col_sm2{width: 50%;}
+
+	.post_col_sm1{width: 100%;}
+	
 
 	/*header*/
 
@@ -99,42 +115,77 @@
 		margin-bottom: 15px;
 	}
 	
-	h2{font-size: 22px;}
-	h3{font-size: 17px;}
+	h2{
+		font-size: 18px;
+		text-transform: none;
+	}
+	h3{
+		font-size: 18px;
+		text-transform: none;
+	}
 	h4{font-size: 20px;}
 	h2>.sub_title, h3>.sub_title, h4>.sub_title, h5>.sub_title, h6>.sub_title{
 		font-size: 14px;
 		line-height: 18px;
 		display: block;
+		text-transform: none;
+		margin-top: -5px;
 		padding-left: 0;
 	}
+
+	.title1{
+		font-size: 17px;
+		text-transform: none;
+	}
+
 	h2>.sub_title:before, h3>.sub_title:before, h4>.sub_title:before, h5>.sub_title:before, h6>.sub_title:before{display: none;}
 
-	.post_col3{width: 100%;}
 
+	.list1>li,
+	.tabs_list>li>a,
+	.post.big figcaption>a{font-size: 14px;}
+	
+	.archive_btn{font-size: 15px;}
+
+	.button1,.button2{font-size: 16px;}
+
+	
+	.news_list>li{min-height: 62px;}
+
+	.news_list>li time{
+		padding: 8px 0;
+		text-align: center;
+	}
+
+	.news_list>li time:after{
+		margin-top: -20px;
+		left: 50%;
+		margin-left: -10px;
+	}
+
+	.news_list>li time span{
+		padding-top: 20px;
+	}
+
+	
 	.events_table th{
-		font-size: 12px;
-		line-height: 16px;
 		vertical-align: middle;
 	}
 
 	.events_table .event_time{width: 100px;}
 
-	.events_table td{
-		font-size: 12px;
-		line-height: 16px;
-	}
-
 	.competition_img{
-		float: none;
-		text-align: center;
-		margin-bottom: 20px;
+		display: none;
 	}
 
 	.competition_description{
 		border: 1px solid #cfcfcf;
 		border-radius: 3px;
+		padding-bottom: 95px;
+		background: #f5f5f5 url(../images/competition_description_bg.png) 50% 100% no-repeat;
 	}
+
+	.competition_description_title i.icon{display: none;}
 
 	.news_post_box>div{
 		float: none;
@@ -150,10 +201,6 @@
 
 	.post_autor{height: 335px;}
 
-	.post_col4{width: 50%;}
-
-	.post_col2{width: 100%;}
-	
 	.newsletter_form input[type="text"]{width: 190px;}
 
 	/*responsive accordion*/
@@ -186,32 +233,35 @@
 	.news_post_box{margin: 0 0 17px;}
 
 	.news_post_box>div{padding: 0;}
+
+	.site_list{margin-bottom: 10px;}
 }
 
 @media only screen and (max-width: 767px) {
  	
  	body{
- 		min-width:420px;
- 		background-color: #fff;
+ 		min-width:460px;
  	}
 
  	[class*="banner"]{display: none;}
 	
-	.container{width: auto;}
+	.container{width: 460px;}
 
 	.white_container{
 		padding: 0 15px;
-		margin-bottom: 0;
-		-webkit-box-shadow: none;
-		box-shadow: none;
 	}
 
-	.left_part,.sidebar{
+	.left_part{
 		float: none;
 		width: auto;
 		padding: 0;
 		border: none;
 	}
+
+	.sidebar{display: none;}
+
+	.post_col_xs1{width: 100%;}
+
 
 	/*header*/
 	
@@ -247,6 +297,59 @@
 	}
 
 	.logo{margin: 12px 0;}
+
+
+	/*header_info_box*/
+
+	.header_info_box{margin-bottom: 61px;}
+	.header_info_box>div{
+		float: left;
+	}
+
+	.header_info_box .header_info_title{
+		cursor: pointer;
+		background-color: #242222;
+	}
+
+	.header_info_box .header_info_title.active{
+		background-color: #146eb3;
+	}
+
+	.header_info_box .header_info_title:before{
+		top: 100%;
+		margin-top: 0;
+		right: 50%;
+		margin-right: -5px;
+		border: 5px solid transparent;
+	}
+	.header_info_title.active:before{
+		border-top-color: #146eb3;
+		z-index: 99;
+	}
+
+	.header_info_box .header_info_container{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding: 20px 0;
+		background-color: #2e2b2b;
+		border-bottom: 1px solid #1c1a1a;
+	}
+
+	.header_info_box .header_info_container.active{z-index: 9;}
+
+	.header_info_box .header_info_container:before{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: #403e3e;
+	}
+
 
 
 	/*menu*/
@@ -303,8 +406,7 @@
 		margin-top: -6px;
 		background: url(../images/icon.png) -114px -18px no-repeat;
 	}
-	.additional_menu>li.active.has_submenu>a:before,
-	.additional_menu>li.has_submenu:hover>a:before{
+	.additional_menu>li.active.has_submenu>a:before{
 		background-position: -72px -18px;
 	}
 
@@ -316,8 +418,8 @@
 		width: auto;
 		border: none;
 	}
-
-	.additional_menu li.active .sub_menu{display: block;}
+	
+	.additional_menu>li:hover>.sub_menu{display: none;}
 
 	.additional_menu .sub_menu:before{
 		content: "";
@@ -334,9 +436,92 @@
 		padding-left: 40px;
 	}
 	
+	.post1>img{
+		width: 80px;
+		float: left;
+		margin-right: 10px;
+	}
 
+	.post1 figcaption{overflow: hidden;}
 
-	.post_autor{height: auto;}
+	
+	.footer_middle{border-bottom: none;}
+
+	.footer_bottom{padding-top: 10px;}
+
+	.footer_middle:before{display: none;}
+
+	.list_box{
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+	
+	.list_box>h6{
+		cursor: pointer;
+		position: relative;
+		margin-bottom: 0;
+		font-size: 16px;
+		padding: 10px 20px 10px 10px;
+		border-bottom: 1px solid #121212;
+	}
+
+	.list_box>h6:after{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: #242424;
+	}
+
+	.list_box>h6:before{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		margin-top: -6px;
+		width: 12px;
+		height: 12px;
+		background: url(../images/icon.png) -114px -18px no-repeat;
+	}
+
+	.list_box>h6.active:before{
+		background-position: -74px -36px;
+	}
+
+	.list3{display: none;}
+
+	.list3 > li > a{
+		display: block;
+		padding: 3px 10px;
+	}
+
+	.list3 > li > a:hover{
+		color: #fff;
+		background-color: #262425;
+		text-decoration: none;
+	}
+
+	.footer_top{
+		text-align: center;
+		padding-bottom: 30px;
+	}
+
+	.social_label{display: block;margin-bottom: 0 !important;}
+
+	.social{
+		display: inline-block;
+		float: none;
+		margin-bottom: 10px;
+	}
+
+	.newsletter_form{display: none;}
+
+	.share_btn{display: inline-block;}
 
 
 

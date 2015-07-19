@@ -36,7 +36,7 @@
 					else{
 
 						var desktop = $this.attr('data-desktop'),
-							large = $this.attr('data-large '),
+							large = $this.attr('data-large'),
 							medium = $this.attr('data-medium'),
 							small = $this.attr('data-small'),
 							extraSmall = $this.attr('data-extra-small');
