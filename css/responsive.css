@@ -304,10 +304,13 @@
 	.header_info_box{margin-bottom: 61px;}
 	.header_info_box>div{
 		float: left;
+		width: 50%;
 	}
 
 	.header_info_box .header_info_title{
 		cursor: pointer;
+		float: none;
+		width: auto;
 		background-color: #242222;
 	}
 
