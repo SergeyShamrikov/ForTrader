@@ -271,10 +271,10 @@
     position: fixed;
     bottom: 30px;
     right: 20px;
-    border: 2px solid #e3e3e3;
-    background-color: #fff;
-    font-size: 16px;
-    padding: 5px;
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: rgba(191,191,191,0.6);
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -283,16 +283,30 @@
     transition: all 0.5s;
   }
 
+  #go_up:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -9px;
+    background: url(../images/icon.png) -180px -79px no-repeat;
+  }
+
   #go_up.active{
+    opacity: 1;
     visibility: visible;
-    opacity: 0.5;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
   }
 
   #go_up:hover{
-    opacity: 1;
+    border-radius: 0;
+    background-color: #ff1616;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -2546,6 +2560,7 @@
   }
 
   .social_label{
+    display: none;
     font: 15px/44px 'pf_dindisplay_proregular';
     color: #ccc8c8;
     text-transform: uppercase;

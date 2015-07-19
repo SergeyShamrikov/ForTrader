@@ -251,15 +251,14 @@
 		padding: 0 15px;
 	}
 
-	.left_part{
+	.left_part,.sidebar{
 		float: none;
 		width: auto;
 		padding: 0;
 		border: none;
 	}
 
-	.sidebar{display: none;}
-
+	
 	.post_col_xs1{width: 100%;}
 
 
@@ -494,10 +493,12 @@
 	}
 
 	.list3{display: none;}
-
+	
+	.list3 > li{padding-bottom: 0;}
+	
 	.list3 > li > a{
 		display: block;
-		padding: 3px 10px;
+		padding: 8px 10px;
 	}
 
 	.list3 > li > a:hover{
