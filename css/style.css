@@ -9,8 +9,10 @@
     1.2. Fonts
   2. General classes
   3. Main
-    2.1 Page tilte end breadcrumps
-    2.2 Offsets
+    3.1 Page tilte end breadcrumps
+    3.2 Offsets
+    3.3 Breadcrumbs
+    3.4 Icons
   4. Header
     4.1. Header List
     4.2. Enter Box
@@ -34,8 +36,7 @@
     8.1. Accordion and Toggles
     8.2. Tabs and Tour Sections
     8.3. Turn Box
-    7.2. Accordion and Toggles
-    7.3. Alert Boxes
+    8.4. Article
     7.4. Progress Bars
     7.5. Team Members
     7.6. Counters
@@ -260,7 +261,7 @@
 
   .left_part{
     float: left;
-    width: 745px;
+    width: 746px;
     padding-right: 17px;
     border-right: 1px solid #e8e8e8;
   }
@@ -344,8 +345,49 @@
        padding: 0 0 55px;
     }
 
+
   /* --------------------------------------------
-        3.3. Icons
+        3.3. Breadcrumbs
+  -------------------------------------------- */
+    
+    .breadcrumbs{
+      margin-bottom: 15px;
+    }
+
+    .breadcrumbs ul li{
+      float: left;
+      font: 16px/20px 'pf_dindisplay_proregular';
+      color: #333;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .breadcrumbs ul li:first-child{padding-left: 0;}
+
+    .breadcrumbs ul li:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      width: 4px;
+      height: 8px;
+      background: url(../images/icon.png) -187px -107px no-repeat;
+    }
+
+    .breadcrumbs ul li:first-child:before{display: none;}
+
+
+    .breadcrumbs ul li a{
+      color: #787878;
+    }
+
+    .breadcrumbs ul li a:hover{
+      color: #146eb3;
+    }
+ 
+  /* --------------------------------------------
+        3.4. Icons
   -------------------------------------------- */
     
     .icon:before{
@@ -1313,6 +1355,44 @@
         line-height: 24px;
         color: #787575;
       }
+
+      .share_list{
+        margin-bottom: 30px;
+      }
+
+      .share_list li{
+        float: left;
+        margin-left: 4px;
+      }
+      .share_list li:first-child{margin-left: 0;}
+      
+      .share_list li a{
+        display: block;
+        width: 240px;
+        height: 48px;
+        line-height: 18px;
+        color: #fff;
+        padding: 15px 0 15px 19px;
+        background: url(../images/share_btns.png) 0 0 no-repeat;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+      }
+      .share_list li a:hover{
+        color: #fff;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+      }
+
+      .share_list li a.share_fb{background-position: -244px 0;}
+      .share_list li a.share_vk{background-position: -488px 0;}
+
+      .share_list li a.share_fortrader:hover{background-position: 0 100%;}
+      .share_list li a.share_fb:hover{background-position: -244px 100%;}
+      .share_list li a.share_vk:hover{background-position: -488px 100%;}
+
+
       
 
   /* --------------------------------------------
@@ -1906,6 +1986,80 @@
     .nav_buttons>a.next_btn:hover:before{background-position: -114px 0;}
 
     .nav_buttons>a.turn_btn:hover:before{background-position: -54px -34px;}
+
+
+  /* --------------------------------------------
+        8.4. Article
+  -------------------------------------------- */
+
+    article{
+      font-size: 15px;
+    }
+
+    .article_info{
+      font: 15px/20px 'pf_dindisplay_proregular';
+      color: #787878;
+      margin-bottom: 15px;
+    }
+
+    .article_info .comment{
+      padding-left: 32px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .article_info .comment:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 20px;
+      background: url(../images/icon.png) -174px -132px no-repeat;
+    }
+
+    .article_info .views{
+      display: inline-block;
+      position: relative;
+      padding-left: 25px;
+      margin-left: 6px;
+    }
+
+    .article_info .views:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 0;
+      width: 21px;
+      height: 16px;
+      background: url(../images/icon.png) -64px -52px no-repeat;
+    }
+
+    .article_info time{
+      display: inline-block;
+      position: relative;
+      padding-left: 20px;
+      margin-left: 6px;
+    }
+
+    .article_info time:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 1px;
+      width: 16px;
+      height: 17px;
+      background: url(../images/icon.png) -39px -52px no-repeat;
+    }
+
+    .diagram_box{
+      margin-bottom: 20px;
+    }
+
+    .diagram_box img{margin-bottom: 15px;}
 
 /* ------------------------------------------------
 
