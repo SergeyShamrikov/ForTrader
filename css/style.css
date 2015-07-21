@@ -1376,13 +1376,14 @@
 
       .share_list{
         margin-bottom: 30px;
+        margin-left: -4px;
       }
 
       .share_list li{
         float: left;
         margin-left: 4px;
+        margin-bottom: 5px;
       }
-      .share_list li:first-child{margin-left: 0;}
       
       .share_list li a{
         display: block;
@@ -2327,11 +2328,11 @@
 
 
   .thesis_box{
-    border-left: 5px solid #ff1616;
     margin-bottom: 30px;
   }
 
   .thesis{
+    border-left: 5px solid #ff1616;
     overflow: hidden;
     padding-left: 15px;
     font-size: 17px;
@@ -2363,7 +2364,10 @@
     transform: translateY(-50%);
   }
 
-  .nav_list_btn{margin-left: 5px;}
+  .nav_list_btn{
+    margin-left: 5px;
+    padding-top: 0;
+  }
 
   .materials_box{
     font: 17px/26px 'pf_dindisplay_proregular';
@@ -2719,9 +2723,9 @@
       padding: 0 19px;
     }
 
-    .news_post_right>.post>.post_info{position: relative;}
+    .news_post_box>div:nth-child(even)>.post>.post_info{position: relative;}
 
-    .news_post_right>.post>.post_info:before{
+    .news_post_box>div:nth-child(even)>.post>.post_info:before{
       content: "";
       display: block;
       position: absolute;
@@ -2730,6 +2734,11 @@
       width: 2px;
       height: 37px;
       background-color: #fff;
+    }
+
+    .news_post_box figcaption{
+      height: 48px;
+      overflow: hidden;
     }
 
     .news_left1{
