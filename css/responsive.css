@@ -347,6 +347,17 @@
 		margin-bottom: 10px;
 	}
 
+	.category_box>li{
+		float: none;
+		width: auto;
+	}
+
+	.category_link{
+		font-size: 18px;
+		line-height: 20px;
+		height: 60px;
+	}
+
 
 }
 
