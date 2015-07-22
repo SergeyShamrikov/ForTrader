@@ -660,6 +660,10 @@
 
 	.tabs_comment .tabs_list>li>a{font-size: 13px;}
 
+	.box1>i.icon{
+		display: none;
+	}
+
 }
 
 @media only screen and (max-width: 479px) {
@@ -683,4 +687,6 @@
 		line-height: 16px;
 		padding: 8px 0;
 	}
+
+	.search_form button{width: 44px;}
 }

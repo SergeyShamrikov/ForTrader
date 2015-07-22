@@ -1768,8 +1768,6 @@
       color: #333131;
       padding: 13px 0;
       text-transform: uppercase;
-      -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-      box-shadow: 0 1px 1px rgba(0,0,0,0.3);
     }
 
     .read_all:hover{
@@ -2257,6 +2255,8 @@
     article{
       font-size: 15px;
     }
+
+    article .semibold{color: #333131.;}
 
     .article_info{
       font: 15px/20px 'pf_dindisplay_proregular';
