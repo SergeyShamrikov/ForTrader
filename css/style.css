@@ -37,13 +37,6 @@
     8.2. Tabs and Tour Sections
     8.3. Turn Box
     8.4. Article
-    7.4. Progress Bars
-    7.5. Team Members
-    7.6. Counters
-    7.7. Tabs and Tour Sections
-    7.8. Before/After
-    7.9. Pricing Tables
-    7.10. Countdown
   9. Carousels
     9.1. Vertical
     9.2. Horisantal
@@ -62,10 +55,10 @@
   15. Rates
   16. Comments
   17. Comment Tabs
-  15. Footer
-    15.1. Footer Top
-    15.2. Footer Middle
-    15.3. Footer Bottom
+  18. Footer
+    18.1. Footer Top
+    18.2. Footer Middle
+    18.3. Footer Bottom
 */
 @import "reset.css";
 @import "animate.css";
@@ -3105,7 +3098,7 @@
 
 /* ------------------------------------------------
 
-    17. Footer
+    18. Footer
 
 ------------------------------------------------ */
 
@@ -3117,7 +3110,7 @@
 
 
   /* --------------------------------------------
-        15.1. Footer Top
+        18.1. Footer Top
   -------------------------------------------- */
     
 
@@ -3208,7 +3201,7 @@
 
 
   /* --------------------------------------------
-        15.2. Footer Middle
+        18.2. Footer Middle
   -------------------------------------------- */
     
     .footer_middle{
@@ -3244,7 +3237,7 @@
 
 
   /* --------------------------------------------
-        15.3. Footer Bottom
+        18.3. Footer Bottom
   -------------------------------------------- */
     
     .footer_bottom{
