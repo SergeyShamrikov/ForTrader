@@ -56,14 +56,14 @@
   16. Comments
   17. Comment Tabs
   18. Category
-  19. Footer
-    19.1. Footer Top
-    19.2. Footer Middle
-    19.3. Footer Bottom
+  19. Author Block
+  20. Footer
+    20.1. Footer Top
+    20.2. Footer Middle
+    20.3. Footer Bottom
 =======
 */
 @import "reset.css";
-@import "animate.css";
 @import "../fonts/PFDindisplayproRegMedLight/font.css";
 @import "../fonts/PFDindisplayproThinBold/font.css";
 
@@ -260,15 +260,34 @@
   #content {padding:15px 0px 0px 0px;}
 
   .left_part{
+    position: relative;
     float: left;
     width: 746px;
     padding-right: 17px;
-    border-right: 1px solid #e8e8e8;
+    
   }
 
   .sidebar{
+    position: relative;
     float: right;
     width: 300px;
+  }
+
+  .sidebar:before,
+  .left_part:before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: #e8e8e8;
+    top: 0;
+    right: -1px;
+  }
+
+  .sidebar:before{
+    right: auto;
+    left: -17px;
   }
 
   #go_up{
@@ -3249,9 +3268,30 @@
     background: url(../images/icon.png) -179px -161px no-repeat;
   }
 
+
 /* ------------------------------------------------
 
-    19. Footer
+    19. Author Block
+
+------------------------------------------------ */
+  
+  .author_box{
+    margin-bottom: 10px;
+  }
+
+  .author_social{
+    padding: 12px 15px;
+    margin-bottom: 30px;
+    text-align: right;
+    font-family: 'pf_dindisplay_promedium';
+    line-height: 26px;
+    color: #787575;
+    background-color: #f7f7f7;
+  }
+  
+/* ------------------------------------------------
+
+    20. Footer
 
 ------------------------------------------------ */
 
@@ -3263,7 +3303,7 @@
 
 
   /* --------------------------------------------
-        19.2. Footer Top
+        20.2. Footer Top
   -------------------------------------------- */
     
 
@@ -3354,7 +3394,7 @@
 
 
   /* --------------------------------------------
-        19.2. Footer Middle
+        20.2. Footer Middle
   -------------------------------------------- */
     
     .footer_middle{
@@ -3390,7 +3430,7 @@
 
 
   /* --------------------------------------------
-        19.3. Footer Bottom
+        20.3. Footer Bottom
   -------------------------------------------- */
     
     .footer_bottom{

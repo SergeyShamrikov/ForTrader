@@ -382,6 +382,9 @@
 		border: none;
 	}
 
+	.sidebar:before,
+  .left_part:before{display: none;}
+
 	
 	.post_col_xs1{width: 100%;}
 
@@ -700,4 +703,5 @@
 	}
 
 	.search_form button{width: 44px;}
+
 }
