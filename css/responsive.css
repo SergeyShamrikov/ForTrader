@@ -358,6 +358,52 @@
 		height: 60px;
 	}
 
+	.error_title{
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.error_title span{
+		display: block;
+	}
+
+	.error_title strong:before{
+		content: "";
+	}
+
+	.error_sub_title{
+		font-size: 19px;
+		line-height: 22px;
+	}
+
+	.error_text{
+		max-width: 260px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	.search_result{
+		padding-bottom: 15px;
+		border-bottom: 1px solid #e3e3e3;
+	}
+
+	.search_result .search_img>img{
+		width: 80px;
+		margin-right: 10px;
+	}
+
+	.search_result figcaption{border: none;}
+
+	.search_result figcaption hr,
+	.search_result figcaption p{display: none;}
+
+	.search_result figcaption a{
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 400;
+	}
+
+
 
 }
 
@@ -678,6 +724,40 @@
 		display: none;
 	}
 
+	.box1{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.materials_box{
+		float: none;
+		position: relative;
+		font-size: 14px;
+	}
+
+	.materials_box:before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 100%;
+		top: 0;
+		right: 0;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0.01+0,0.8+100 */
+		background: -moz-linear-gradient(left,  rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.8) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.01)), color-stop(100%,rgba(255,255,255,0.8))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.8) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.8) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.8) 100%); /* IE10+ */
+		background: linear-gradient(to right,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.8) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03ffffff', endColorstr='#ccffffff',GradientType=1 ); /* IE6-9 */
+
+	}
+
+	.materials_box p{
+		text-overflow: initial;
+	}
+
 }
 
 @media only screen and (max-width: 479px) {
@@ -703,5 +783,9 @@
 	}
 
 	.search_form button{width: 44px;}
+
+	.come_back_btn{
+		width: 100%;
+	}
 
 }

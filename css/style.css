@@ -57,10 +57,12 @@
   17. Comment Tabs
   18. Category
   19. Author Block
-  20. Footer
-    20.1. Footer Top
-    20.2. Footer Middle
-    20.3. Footer Bottom
+  20. Error
+  21. Search
+  22. Footer
+    22.1. Footer Top
+    22.2. Footer Middle
+    22.3. Footer Bottom
 =======
 */
 @import "reset.css";
@@ -1162,6 +1164,18 @@
         padding-left: 21px;
       }
 
+      h2>.sub_title1,
+      h3>.sub_title1,
+      h4>.sub_title1,
+      h5>.sub_title1,
+      h6>.sub_title1{
+        font-size: 16px;
+        color: #787575;
+        display: inline-block;
+        text-transform: none;
+        font-family: 'pf_dindisplay_proregular';
+      }
+
       h2>.sub_title:before,
       h3>.sub_title:before,
       h4>.sub_title:before,
@@ -1504,6 +1518,19 @@
         line-height: 16px;
       }
 
+      .nav_list_box{
+        border: 2px solid #e3e3e3;
+        padding: 13px 18px;
+        margin: 0 10px;
+        font: 16px/18px 'pf_dindisplay_proregular';
+      }
+
+      .nav_list_box .nav_list_active{
+        background-color: #ff1616;
+        padding: 0 4px;
+        color: #fff;
+      }
+
       .nav_list li{
         float: left;
         font: 16px/18px 'pf_dindisplay_proregular';
@@ -1517,6 +1544,10 @@
         text-align: center;
         padding: 0 4px;
         color: #333131;
+      }
+
+      .nav_list li span{
+        padding: 0 5px;
       }
       
       .nav_list li a:hover{
@@ -1658,25 +1689,54 @@
     }
 
     .categories_btn{
-      display: inline-block;
-      width: 141px;
+      display: block;
+      float: left;
+      position: relative;
       height: 35px;
       font: 14px/19px 'pf_dindisplay_promedium';
       color: #666464;
-      text-align: center;
-      padding: 9px 0;
-      background: url(../images/categories_btn.png) 0 100% no-repeat;
+      padding: 9px 8px 9px 13px;
+      margin-right: 16px;
+      margin-bottom: 5px;
+      background: url(../images/categories_btn.jpg) 0 0 repeat-x;
       -webkit-transition: none;
       -o-transition: none;
       transition: none;
     }
 
+    .categories_btn:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -11px;
+      width: 11px;
+      height: 35px;
+      background: url(../images/categories_btn_after.png) 0 0 no-repeat;
+    }
+
+    .categories_btn:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 35px;
+      background: url(../images/categories_btn_before.jpg) 0 0 no-repeat;
+    }
+
     .categories_btn:hover{
       color: #fff;
-      background-position: 0 0;
+      background-position: 0 100%;
       -webkit-transition: none;
       -o-transition: none;
       transition: none;
+    }
+
+    .categories_btn:hover:before,
+    .categories_btn:hover:after{
+      background-position: 0 100%;
     }
 
     .account_btn{
@@ -1816,6 +1876,25 @@
       color: #fff;
       background-color: #ff1616;
     }
+    
+    .come_back_btn{
+      outline: none;
+      display: inline-block;
+      font: 15px/16px Arial,sans-serif;
+      color: #fff;
+      width: 287px;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 15px 0;
+      border: 3px solid #115e99;
+      background-color: #146eb3;
+    }
+
+    .come_back_btn:hover{
+      color: #fff;
+      background-color: #115e99;
+    }
+
 
   /* --------------------------------------------
         7.4. Banners
@@ -1902,6 +1981,7 @@
       background-color: #333131;
       top: -36px;
       left: 50%;
+      z-index: 9;
       opacity: 0;
       visibility: hidden;
       -webkit-transform: translate(-50%,-15px);
@@ -2388,13 +2468,24 @@
     }
 
     .nav_list_btn{
-      margin-left: 5px;
+      margin-right: 5px;
+      margin-left: -5px;
       padding-top: 0;
+    }
+    .nav_list_btn>*{
+      margin: 0 5px;
     }
 
     .materials_box{
-      font: 17px/26px 'pf_dindisplay_proregular';
+      font: 16px/26px 'pf_dindisplay_proregular';
       color: #333131;
+      max-width: 100%;
+    }
+
+    .materials_box p{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .nav_list_btn>a{
@@ -2427,6 +2518,10 @@
       color: #333131;
       font-weight: 600;
       margin-bottom: 12px;
+    }
+
+    .info_buttons>a{
+      
     }
 
 
@@ -2983,10 +3078,9 @@
   }
 
   .categories_box>a{
-    display: block;
-    float: left;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    text-align: center;
+    padding: 9px 0;
+    width: 130px;
   }
 
 
@@ -3288,10 +3382,103 @@
     color: #787575;
     background-color: #f7f7f7;
   }
-  
+
+
 /* ------------------------------------------------
 
-    20. Footer
+    20. Error
+
+------------------------------------------------ */
+  
+  .error_block{
+    padding: 20px 0 100px;
+    background: url(../images/error_bg.png) 50% 0 no-repeat;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .error_title{
+    font: 32px/36px 'pf_dindisplay_probold';
+    color: #313131;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .error_title strong{font-weight: normal;}
+  .error_title strong:before{
+    content: " - ";
+  }
+
+  .error_sub_title{
+    font: 29px/30px 'pf_dindisplay_prolight';
+    color: #787474;
+    text-transform: uppercase;
+  }
+
+  .error_text{
+    display: inline-block;
+    font-size: 15px;
+    max-width: 390px;
+  }
+
+  .error_text:not(:last-child){
+    margin-bottom: 30px;
+  }
+
+  .error_block img{
+    max-width: 100%;
+    border: 5px solid #ededed;
+    margin-bottom: 40px;
+  }
+
+/* ------------------------------------------------
+
+    21. Search
+
+------------------------------------------------ */
+  
+
+  .search_result_box{
+    margin-bottom: 25px;
+  }
+
+  .search_result{
+    display: table;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .search_result .search_img{
+    display: table-cell;
+  }
+  .search_result .search_img>img{
+    width: 221px;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .search_result figcaption{
+    display: table-cell;
+    min-height: 100%;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .search_result figcaption a{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  .search_result figcaption hr{
+    margin: 10px 0;
+  }
+
+  .search_result figcaption p{
+    line-height: 24px;
+  }
+/* ------------------------------------------------
+
+    22. Footer
 
 ------------------------------------------------ */
 
@@ -3303,7 +3490,7 @@
 
 
   /* --------------------------------------------
-        20.2. Footer Top
+        22.2. Footer Top
   -------------------------------------------- */
     
 
@@ -3394,7 +3581,7 @@
 
 
   /* --------------------------------------------
-        20.2. Footer Middle
+        22.2. Footer Middle
   -------------------------------------------- */
     
     .footer_middle{
@@ -3430,7 +3617,7 @@
 
 
   /* --------------------------------------------
-        20.3. Footer Bottom
+        22.3. Footer Bottom
   -------------------------------------------- */
     
     .footer_bottom{
