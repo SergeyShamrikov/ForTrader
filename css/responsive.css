@@ -389,6 +389,7 @@
 
 	.search_result .search_img>img{
 		width: 80px;
+		margin-top: 5px;
 		margin-right: 10px;
 	}
 
@@ -401,6 +402,13 @@
 		font-size: 14px;
 		line-height: 21px;
 		font-weight: 400;
+	}
+
+	h2>.sub_title1, h3>.sub_title1, h4>.sub_title1, h5>.sub_title1, h6>.sub_title1{
+		display: block;
+		float: none;
+		margin-top: -5px;
+		line-height: 20px;
 	}
 
 

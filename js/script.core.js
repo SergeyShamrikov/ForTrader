@@ -22,6 +22,7 @@
 			self.siteList();
 			self.goUpAnimate();
 			self.goUp();
+			self.nextButtonHover();
 
 		},
 
@@ -473,7 +474,28 @@
 
 			});
 
+		},
+
+
+
+		/**
+		**	Next button hover 
+		**/
+
+		nextButtonHover : function(){
+
+			$('.next_btn').hover(
+
+					function(){
+						$('.materials_box').addClass('active');
+					},
+
+					function(){
+						$('.materials_box').removeClass('active');
+					}
+				);
 		}
+
 		
 
 

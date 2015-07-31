@@ -2482,6 +2482,10 @@
       max-width: 100%;
     }
 
+    .materials_box.active a{
+      color: #ff1616;
+    }
+
     .materials_box p{
       white-space: nowrap;
       overflow: hidden;
