@@ -2963,7 +2963,7 @@
       margin-bottom: 20px;
     }
 
-    .broker_post>img{width: 100%;margin-bottom: 10px;}
+    .broker_post>a img{width: 100%;margin-bottom: 10px;}
 
     .broker_post>p{
       font-size: 14px;
