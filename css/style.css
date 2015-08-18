@@ -3082,7 +3082,9 @@
   }
 
   .categories_box>a{
-
+    text-align: center;
+    padding: 9px 0;
+    width: 130px;
   }
 
 
