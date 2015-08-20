@@ -1021,21 +1021,67 @@
       background-color: #403e3e;
     }
     
-    .quotes_box .ticker{background: none;}
+    .header_info_slider{
+      margin-right: 110px;
+      width: auto;
+    }
 
-    .quotes_box .ticker span{
+    .header_info_slider .owl-item{text-align: center;}
+
+    .header_info_slider .owl-pagination{display: none;}
+
+    .header_info_slider .owl-controls .owl-buttons div{
+      display: block;
+      width: 46px;
+      height: 46px;
+      text-indent: -99999px;
+      position: absolute;
+      top: 50%;
+      margin-top: -23px;
+      right: -110px;
+      background-color: #403d3d;
+    }
+
+    .header_info_slider .owl-controls .owl-buttons div:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      margin-left: -6px;
+      margin-top: -6px;
+      background-image: url(../images/icon.png);
+      background-repeat: no-repeat;
+      background-position: -114px 0;
+    }
+
+    .header_info_slider .owl-controls .owl-buttons div.owl-prev{
+      right: -63px;
+    }
+
+    .header_info_slider .owl-controls .owl-buttons div.owl-prev:before{
+      background-position: -68px 0;
+    }
+
+    .header_info_slider .owl-controls .owl-buttons div:hover{
+      background-color: #4d4b4b;
+    }
+
+    .quotes_box .header_info_slider span{
       color: #fff;
       font-size: 15px;
       padding-right: 10px;
     }
 
-    .quotes_box .ticker span>strong{
+    .quotes_box .header_info_slider span>strong{
       color: #22a7f0;
       font-weight: 400;
       padding-right: 5px;
     }
 
-    .quotes_box .ticker span>i{
+    .quotes_box .header_info_slider span>i{
       display: inline-block;
       margin-top: 8px;
       margin-left: 5px;
@@ -1059,25 +1105,25 @@
       padding: 20px;
       color: #f1f1f1;
       font-size: 14px;
-      line-height: 18px;
+      line-height: 22px;
       letter-spacing: -0.5px;
       text-align: center;
       white-space: nowrap;
     }
 
-    .focus_box .ticker{
+    .focus_box .header_info_slider{
       background: none;
       font-size: 14px;
-      line-height: 18px;
+      line-height: 22px;
     }
 
-    .focus_box .ticker p{
+    .focus_box .header_info_slider p{
       display: inline-block;
       margin-bottom: 0;
       padding-right: 10px;
     }
 
-    .focus_box .ticker p strong{
+    .focus_box .header_info_slider p strong{
       padding-left: 10px;
     }
 

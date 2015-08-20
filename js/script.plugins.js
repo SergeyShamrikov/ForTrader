@@ -62,11 +62,11 @@
 				liMarquee
 		------------------------------------------------ */
 
-			if($(".news_slider").length){
+			// if($(".news_slider").length){
 
-				$('.ticker').liMarquee();
+			// 	$('.ticker').liMarquee();
 
-			}
+			// }
 
         /* ------------------------------------------------
 				End of liMarquee

@@ -1465,7 +1465,7 @@ if (typeof Object.create !== "function") {
         paginationSpeed : 800,
         rewindSpeed : 1000,
 
-        autoPlay : true,
+        autoPlay : false,
         stopOnHover : false,
 
         navigation : false,
