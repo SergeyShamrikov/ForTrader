@@ -1123,6 +1123,14 @@
       padding-right: 10px;
     }
 
+    .focus_box .header_info_slider p a{
+      color: #fff;
+    }
+
+    .focus_box .header_info_slider p a:hover{
+      color: #146eb3;
+    }
+
     .focus_box .header_info_slider p strong{
       padding-left: 10px;
     }
