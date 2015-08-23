@@ -1281,7 +1281,26 @@
         margin-bottom: 25px;
       }
 
+      .title3{
+        font: 600 17px/26px "Open Sans",sans-serif;
+        color: #146eb3;
+        text-transform: uppercase;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+
+      .title4{
+        font: 600 14px/26px "Open Sans",sans-serif;
+        color: #333030;
+        text-transform: uppercase;
+      }
+
       p:not(:last-child){margin-bottom: 15px;}
+
+      strong{
+        font-weight: 600;
+        color: #333030;
+      }
 
       mark{background-color: #20cfef;padding: 0 2px;color: #fff;}
       mark.red{background-color: #ee352f;}
@@ -1314,9 +1333,21 @@
 
       a.icon:hover{opacity: 0.7;}
 
+      .thesis_text{
+        padding-left: 20px;
+        border-left: 10px solid #d9d9d9;
+        color: #333030;
+        font-weight: 600;
+      }
+
+      .thesis_text:not(:last-child){
+        margin-bottom: 20px;
+      }
+
    /* --------------------------------------------
         7.2. Lists
    -------------------------------------------- */
+
 
       .list1{margin-bottom: 8px;}
       
@@ -1637,6 +1668,42 @@
       .social_list>li>a.fb{background-position: -28px 0;}
       .social_list>li>a.vk{background-position: -57px 0;}
       .social_list>li>a.google{background-position: -86px 0;}
+
+
+      .list6{
+        font-size: 14px;
+        line-height: 16px;
+        color: #333030;
+        font-weight: 600;
+      }
+
+      .list6:not(:last-child){
+        margin-bottom: 20px;
+      }
+
+      .list6 li:not(:last-child){
+        margin-bottom: 12px;
+      }
+
+      .list6 li:before{
+        content: "›";
+        padding-right: 10px;
+      }
+
+      .list7{
+        padding-left: 20px;
+        border-left: 10px solid #d9d9d9;
+        font-weight: 600;
+        color: #333030;
+      }
+
+      .list7:not(:last-child){
+        margin-bottom: 30px;
+      }
+
+      .list7 li:not(:last-child){
+        margin-bottom: 30px;
+      }
 
   /* --------------------------------------------
         7.3. Buttons
