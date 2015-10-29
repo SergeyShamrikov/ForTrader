@@ -23,6 +23,7 @@
 			self.goUpAnimate();
 			self.goUp();
 			self.nextButtonHover();
+			self.additionalMenuWidth();
 
 		},
 
@@ -32,10 +33,9 @@
 
 			setTimeout(function(){
 
-				self.additionalMenuWidth();
+				
 
 			},500);
-			
 
 		},
 

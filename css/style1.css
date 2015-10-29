@@ -1,12 +1,3 @@
-/*
-Theme Name: ForTrader Master
-Theme URI: http://fortrader.ru/
-Author: Vladimir Vekshin akadem87@gmail.com
-Author URI: http://www.weblancer.net/users/vvladimirr/
-Description: New ForTrader Theme
-Version: 1.0
-Theme for ForTrader
-*/
 
 /* 
 -----------------------------------------------------
@@ -613,17 +604,7 @@ Theme for ForTrader
     
     .header_top_menu{float: left;}
 
-    .header_list{
-      font-weight: normal;
-      line-height: inherit;
-      margin-bottom: 0;
-    }
-    
     .header_list li{float: left;}
-
-    .header_list li:before{
-      display: none;
-    }
 
     .header_list li a{
       display: block;
@@ -726,21 +707,11 @@ Theme for ForTrader
       display: table-cell;
     }
 
-    .main_menu{
-      font-weight: inherit;
-      line-height: inherit;
-      color: inherit;
-      margin: 0 !important;
-    }
-
     .main_menu>li{
       float: left;
       position: relative;
       border-right: 1px solid #0d0c0c;
-      margin-bottom: 0 !important;
     }
-
-    .main_menu>li:before{display: none;}
 
     .main_menu>li:first-child{width: 92px;}
 
@@ -780,8 +751,6 @@ Theme for ForTrader
   -------------------------------------------- */
 
     .sub_menu{
-      font-weight: inherit;
-      line-height: inherit;
       width: 232px;
       position: absolute;
       top: 100%;
@@ -789,10 +758,6 @@ Theme for ForTrader
       border-bottom: 5px solid #ff1616;
       display: none;
     }
-
-    .sub_menu>li:before{display: none;}
-
-    .sub_menu>li{margin-bottom: 0 !important;}
 
     .sub_menu>li>a{
       display: block;
@@ -871,8 +836,6 @@ Theme for ForTrader
     }
 
     .additional_menu{
-      font-weight: inherit;
-      line-height: inherit;
       width: 232px;
       position: absolute;
       top: 100%;
@@ -881,14 +844,7 @@ Theme for ForTrader
       display: none;
     }
 
-    .additional_menu>li:before{
-      display: none;
-    }
-
-    .additional_menu>li{
-      position: relative;
-      margin-bottom: 0 !important;
-    }
+    .additional_menu>li{position: relative;}
 
     .additional_menu.active{
       display: block;
@@ -1065,21 +1021,67 @@ Theme for ForTrader
       background-color: #403e3e;
     }
     
-    .quotes_box .ticker{background: none;}
+    .header_info_slider{
+      margin-right: 110px;
+      width: auto;
+    }
 
-    .quotes_box .ticker span{
+    .header_info_slider .owl-item{text-align: center;}
+
+    .header_info_slider .owl-pagination{display: none;}
+
+    .header_info_slider .owl-controls .owl-buttons div{
+      display: block;
+      width: 46px;
+      height: 46px;
+      text-indent: -99999px;
+      position: absolute;
+      top: 50%;
+      margin-top: -23px;
+      right: -110px;
+      background-color: #403d3d;
+    }
+
+    .header_info_slider .owl-controls .owl-buttons div:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      margin-left: -6px;
+      margin-top: -6px;
+      background-image: url(../images/icon.png);
+      background-repeat: no-repeat;
+      background-position: -114px 0;
+    }
+
+    .header_info_slider .owl-controls .owl-buttons div.owl-prev{
+      right: -63px;
+    }
+
+    .header_info_slider .owl-controls .owl-buttons div.owl-prev:before{
+      background-position: -68px 0;
+    }
+
+    .header_info_slider .owl-controls .owl-buttons div:hover{
+      background-color: #4d4b4b;
+    }
+
+    .quotes_box .header_info_slider span{
       color: #fff;
       font-size: 15px;
       padding-right: 10px;
     }
 
-    .quotes_box .ticker span>strong{
+    .quotes_box .header_info_slider span>strong{
       color: #22a7f0;
       font-weight: 400;
       padding-right: 5px;
     }
 
-    .quotes_box .ticker span>i{
+    .quotes_box .header_info_slider span>i{
       display: inline-block;
       margin-top: 8px;
       margin-left: 5px;
@@ -1103,25 +1105,33 @@ Theme for ForTrader
       padding: 20px;
       color: #f1f1f1;
       font-size: 14px;
-      line-height: 18px;
+      line-height: 22px;
       letter-spacing: -0.5px;
       text-align: center;
       white-space: nowrap;
     }
 
-    .focus_box .ticker{
+    .focus_box .header_info_slider{
       background: none;
       font-size: 14px;
-      line-height: 18px;
+      line-height: 22px;
     }
 
-    .focus_box .ticker p{
+    .focus_box .header_info_slider p{
       display: inline-block;
       margin-bottom: 0;
       padding-right: 10px;
     }
 
-    .focus_box .ticker p strong{
+    .focus_box .header_info_slider p a{
+      color: #fff;
+    }
+
+    .focus_box .header_info_slider p a:hover{
+      color: #146eb3;
+    }
+
+    .focus_box .header_info_slider p strong{
       padding-left: 10px;
     }
 
@@ -1146,49 +1156,28 @@ Theme for ForTrader
       h1{font-size: 38px;}
 
       h2{
-        font: 600 17px/26px "Open Sans",sans-serif;
-        color: #146eb3;
-        text-transform: uppercase;
-        padding: 0;
-        margin-bottom: 20px;
-        clear: both;
-      }
-
-      h3{
-        font: 600 14px/26px "Open Sans",sans-serif;
-        color: #333030;
-        text-transform: uppercase;
-      }
-      
-      .page_title1{
         font-family: 'pf_dindisplay_promedium';
         font-size: 24px;
         line-height: 34px;
         margin-bottom: 10px;
-        color: #333;
-        font-weight: normal;
         text-transform: uppercase;
       }
 
-      .page_title2{
+      h3{
         font-family: 'pf_dindisplay_proregular';
         font-size: 19px;
         line-height: 39px;
         padding: 7px 0;
-        font-weight: normal;
-        color: #333;
         text-transform: uppercase;
         margin-bottom: 0;
 
       }
 
-      .page_title3{
+      h4{
         font-family: 'pf_dindisplay_prolight';
         font-size: 22px;
         line-height: 25px;
         padding: 10px 0;
-        color: #333;
-        font-weight: normal;
         margin-bottom: 0;
       }
 
@@ -1279,8 +1268,9 @@ Theme for ForTrader
         bottom: 0;
         left: 0;
         width: 4px;
-        background-color: #ff1616;
       }
+
+      .title1.red_border:before{background-color: #ff1616;}
 
       .title1.blue_border:before{background-color: #146eb3;}
 
@@ -1291,8 +1281,19 @@ Theme for ForTrader
         margin-bottom: 25px;
       }
 
+      .title3{
+        font: 600 17px/26px "Open Sans",sans-serif;
+        color: #146eb3;
+        text-transform: uppercase;
+        padding: 0;
+        margin-bottom: 20px;
+      }
 
-
+      .title4{
+        font: 600 14px/26px "Open Sans",sans-serif;
+        color: #333030;
+        text-transform: uppercase;
+      }
 
       p:not(:last-child){margin-bottom: 15px;}
 
@@ -1301,18 +1302,18 @@ Theme for ForTrader
         color: #333030;
       }
 
-      mark{background-color: #146eb3;padding: 0 2px;color: #fff;}
+      mark{background-color: #20cfef;padding: 0 2px;color: #fff;}
       mark.red{background-color: #ee352f;}
 
       a{
-         color: #146eb3;
+         color: #454242;
          text-decoration: none;
          -webkit-transition: all 0.5s;
          -o-transition: all 0.5s;
          transition: all 0.5s;
       }
       a:hover{
-         color: #454242;
+         color: #146eb3;
          text-decoration: none;
          -webkit-transition: all 0.3s;
          -o-transition: all 0.3s;
@@ -1332,115 +1333,21 @@ Theme for ForTrader
 
       a.icon:hover{opacity: 0.7;}
 
-      blockquote{
-        overflow: hidden;
+      .thesis_text{
         padding-left: 20px;
         border-left: 10px solid #d9d9d9;
         color: #333030;
         font-weight: 600;
       }
 
-      blockquote:not(:last-child){
+      .thesis_text:not(:last-child){
         margin-bottom: 20px;
       }
-
-      .wp-caption-text{
-        font-size: 12px;
-        line-height: 18px;
-        color: #333030;
-        background-color: #f5f5f5;
-        text-align: center;
-        padding: 12px 40px;
-      }
-
-      .wp-caption img{width: 100%;}
-
-
 
    /* --------------------------------------------
         7.2. Lists
    -------------------------------------------- */
-      
 
-      ul{
-        line-height: 16px;
-        color: #333030;
-        font-weight: 600;
-      }
-
-      ul:not(:last-child){
-        margin-bottom: 20px;
-      }
-
-      ul li:not(:last-child){
-        margin-bottom: 12px;
-      }
-
-      ul li:before{
-        content: "›";
-        padding-right: 10px;
-      }
-
-      ul[style="list-style-type: circle;"]{
-        list-style-type: none !important;
-        font-size: 14px;
-        line-height: 22px;
-        padding-left: 20px;
-        border-left: 10px solid #d9d9d9;
-        font-weight: 600;
-        color: #333030;
-      }
-
-      ul[style="list-style-type: circle;"]:not(:last-child){
-        margin-bottom: 30px;
-      }
-
-      ul[style="list-style-type: circle;"] li:not(:last-child){
-        margin-bottom: 30px;
-      }
-
-      ul[style="list-style-type: circle;"] li:before{display: none;}
-
-      ul[style="list-style-type: disc;"]{
-        list-style: none !important;
-      }
-
-      ul[style="list-style-type: disc;"]:not(:last-child){
-        margin-bottom: 30px;
-      }
-
-      ul[style="list-style-type: disc;"]>li:before{display: none;}
-
-      ul[style="list-style-type: disc;"]>li>a{
-        display: block;
-        position: relative;
-        background-color: #f5f5f5;
-        color: #454242;
-        line-height: inherit;
-        padding: 8px 5px 9px 14px;
-        letter-spacing: -0.2px;
-      }
-
-      ul[style="list-style-type: disc;"]>li>a:before{
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        top: 0;
-        width: 3px;
-        background-color: #e3e3e3;
-      }
-
-      ul[style="list-style-type: disc;"]>li>a:hover{
-        background-color: #f2f2f2;
-        color: #146eb3;
-      }
-
-      ul[style="list-style-type: disc;"]>li>a:hover:before{
-        width: 4px;
-        background-color: #146eb3;
-      }
 
       .list1{margin-bottom: 8px;}
       
@@ -1449,10 +1356,8 @@ Theme for ForTrader
         border-top: 1px solid #e3e3e3;
         font-size: 15px;
         line-height: 22px;
-        font-weight: 400;
+        /*font-weight: 600;*/
       }
-
-      .list1 li:before{display: none;}
 
       .list1>li:first-child{padding-top: 0;border: none;}
 
@@ -1462,10 +1367,7 @@ Theme for ForTrader
         margin-bottom: 4px;
         position: relative;
         padding-left: 64px;
-        font-weight: normal;
       }
-
-      .news_list li:before{display: none;}
 
       .news_list>li time{
         display: block;
@@ -1515,12 +1417,43 @@ Theme for ForTrader
         padding: 7px 0 7px 10px;
       }
 
-      .list3 > li{
-        font-weight: inherit;
-        padding-bottom: 10px;
+      .list2>li{
+        margin-bottom: 4px;
       }
 
-      .list3 li:before{display: none;}
+      .list2>li>a{
+        display: block;
+        position: relative;
+        background-color: #f5f5f5;
+        color: #454242;
+        padding: 8px 5px 9px 14px;
+        letter-spacing: -0.2px;3
+      }
+
+      .list2>li>a:before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        width: 3px;
+        background-color: #e3e3e3;
+      }
+
+      .list2>li>a:hover{
+        background-color: #f2f2f2;
+        color: #146eb3;
+      }
+
+      .list2>li>a:hover:before{
+        width: 4px;
+        background-color: #146eb3;
+      }
+
+      .list3 > li{
+        padding-bottom: 10px;
+      }
 
       .list3 > li > a{
         line-height: 18px;
@@ -1533,31 +1466,17 @@ Theme for ForTrader
       }
 
       
-      .list4{
-        text-align: center;
-        font-weight: inherit;
-        line-height: inherit;
-      }
+      .list4{text-align: center;}
       
       .list4 > li{
         display: inline-block;
         margin-bottom: 15px;
       }
 
-      .list4 li:before{display: none;}
-
-      .list5{
-        font-weight: inherit;
-        color: inherit;
-        line-height: inherit;
-      }
-
       .list5>li{
         padding: 10px 0 12px;
         border-top: 1px solid #e3e3e3;
       }
-
-      .list5 li:before{display: none;}
 
       .list5>li:first-child{
         border: none;
@@ -1578,12 +1497,8 @@ Theme for ForTrader
       }
 
       .share_list{
-        margin-left: -4px;
-        font-weight: inherit;
-      }
-
-      .share_list:not(:last-child){
         margin-bottom: 30px;
+        margin-left: -4px;
       }
 
       .share_list li{
@@ -1591,8 +1506,6 @@ Theme for ForTrader
         margin-left: 4px;
         margin-bottom: 5px;
       }
-
-      .share_list li:before{display: none;}
       
       .share_list li a{
         display: block;
@@ -1703,19 +1616,12 @@ Theme for ForTrader
         color: #fff;
       }
 
-      .nav_list{
-        font-weight: inherit;
-      }
-
       .nav_list li{
         float: left;
         font: 16px/18px 'pf_dindisplay_proregular';
         padding: 4px 0;
         color: #333131;
-        margin-bottom: 0 !important;
       }
-
-      .nav_list li:before{display: none;}
 
       .nav_list li a{
         display: block;
@@ -1738,21 +1644,12 @@ Theme for ForTrader
         background-color: #ff1616;
       }
       
-      .social_list{
-        padding-left: 13px;
-        font-weight: inherit;
-        line-height: inherit;
-        color: inherit;
-        margin-bottom: 0 !important;
-      }
+      .social_list{padding-left: 13px;}
 
       .social_list>li{
         float: left;
         padding-right: 3px;
-        margin-bottom: 0 !important;
       }
-
-      .social_list li:before{display: none;}
 
       .social_list>li>a{
         display: block;
@@ -1772,6 +1669,41 @@ Theme for ForTrader
       .social_list>li>a.vk{background-position: -57px 0;}
       .social_list>li>a.google{background-position: -86px 0;}
 
+
+      .list6{
+        font-size: 14px;
+        line-height: 16px;
+        color: #333030;
+        font-weight: 600;
+      }
+
+      .list6:not(:last-child){
+        margin-bottom: 20px;
+      }
+
+      .list6 li:not(:last-child){
+        margin-bottom: 12px;
+      }
+
+      .list6 li:before{
+        content: "›";
+        padding-right: 10px;
+      }
+
+      .list7{
+        padding-left: 20px;
+        border-left: 10px solid #d9d9d9;
+        font-weight: 600;
+        color: #333030;
+      }
+
+      .list7:not(:last-child){
+        margin-bottom: 30px;
+      }
+
+      .list7 li:not(:last-child){
+        margin-bottom: 30px;
+      }
 
   /* --------------------------------------------
         7.3. Buttons
@@ -1925,7 +1857,7 @@ Theme for ForTrader
 
     .categories_btn:hover:before,
     .categories_btn:hover:after{
-		background-position: 0 100%;
+      background-position: 0 100%;
     }
 
     .account_btn{
@@ -2261,7 +2193,7 @@ Theme for ForTrader
       display: none;
     }
 
-    /*.ask_question>textarea:focus ~ button{display: block;}*/
+    .ask_question>textarea:focus ~ button{display: block;}
 
     .interview_box h6{
       font-size: 15px;
@@ -2389,7 +2321,6 @@ Theme for ForTrader
   -------------------------------------------- */
     
     .tabs_list{
-      font-weight: inherit;
       position: relative;
       margin-bottom: 25px;
     }
@@ -2411,8 +2342,6 @@ Theme for ForTrader
       position: relative;
       z-index: 9;
     }
-
-    .tabs_list>li:before{display: none;}
 
     .tabs_list>li>a{
       display: block;
@@ -2691,7 +2620,6 @@ Theme for ForTrader
 
     .author_article{
       margin-bottom: 30px;
-	  margin-top: 30px;
     }
 
     .author_avatar{
@@ -2925,7 +2853,7 @@ Theme for ForTrader
     
     .post{margin-bottom: 20px;}
 
-    .post>img{width: 100%;}
+    .post>a img{width: 100%;}
 
     .post_info{
       font: 14px/17px 'pf_dindisplay_proregular';
@@ -2984,7 +2912,7 @@ Theme for ForTrader
 
     .post1{margin-bottom: 20px;}
 
-    .post1>img{width: 100%;}
+    .post1>a img{width: 100%;}
     
     .post1 figcaption{
       padding-top: 10px;
@@ -3015,7 +2943,7 @@ Theme for ForTrader
       border-bottom: none;
     }
 
-    .post_small>img{
+    .post_small>a img{
       float: left;
       margin-right: 10px;
     }
@@ -3043,7 +2971,7 @@ Theme for ForTrader
       margin-bottom: 25px;
     }
 
-    .post_small2>img{
+    .post_small2>a img{
       float: left;
       margin-right: 10px;
     }
@@ -3156,7 +3084,7 @@ Theme for ForTrader
       margin-bottom: 20px;
     }
 
-    .broker_post>img{width: 100%;margin-bottom: 10px;}
+    .broker_post>a img{width: 100%;margin-bottom: 10px;}
 
     .broker_post>p{
       font-size: 14px;
@@ -3275,9 +3203,7 @@ Theme for ForTrader
   }
 
   .categories_box>a{
-    text-align: center;
-    padding: 9px 0;
-    width: 130px;
+
   }
 
 
@@ -3300,16 +3226,8 @@ Theme for ForTrader
     margin-bottom: 0;
   }
 
-  .site_list>ul{
-    font-weight: inherit;
-    line-height: inherit;
-  }
-
-  .site_list>ul>li:before{display: none;}
-
   .site_list>ul>li{
     border-top: 1px solid #e6e6e6;
-    margin-bottom: 0;
   }
 
   .site_list>ul>li:first-child{
@@ -3346,10 +3264,13 @@ Theme for ForTrader
   .rates_box>div{
     float: left;
     width: 50%;
-    padding: 20px 0;
-    text-align: center;
-    font: 22px/35px 'pf_dindisplay_prolight';
+    padding: 20px 0 20px 14px;
+    font: 18px/35px 'pf_dindisplay_prolight';
     color: #146eb3;
+  }
+
+  .rates_box>div:first-child{
+    padding-left: 0;
   }
 
   .rates_box>div:first-child{
@@ -3358,10 +3279,8 @@ Theme for ForTrader
   }
 
   .rates_box>div span{
-    padding-left: 0px;
+    padding-left: 6px;
   }
-
-  .rates_box>div i{margin-right: 3px;}
 
   .time_box{
     font: 13px/14px 'pf_dindisplay_proregular';
@@ -3439,485 +3358,12 @@ Theme for ForTrader
   }
 
 
-  /* ------------------------------------------------
-      13.1. Comment plagin
-  ------------------------------------------------ */
+/* ------------------------------------------------
 
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .wp-social-login-widget{
-      border-top: 1px solid #e3e3e3;
-      border-bottom: 1px solid #e3e3e3;
-      padding: 14px 0;
-      height: 72px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
+    17. Comment Tabs
 
-    body .wp-social-login-widget:after{
-      content: "";
-      display: block;
-      clear: both;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .wp-social-login-connect-with{
-      font: normal 19px/32px 'pf_dindisplay_proregular';
-      color: #333131;
-      text-transform: uppercase;
-      float: left;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .wp-social-login-provider-list{
-      float: left;
-      padding: 0;
-      padding-left: 30px;
-      margin-left: 15px;
-      border-left: 1px solid #e3e3e3;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section h3{
-      font: normal 19px/32px 'pf_dindisplay_proregular';
-      color: #333131;
-      text-transform: uppercase;
-      padding: 14px 0;
-      border-color: #e3e3e3;
-    }
-
-    body .decomments-enter-row input{
-      border: 1px solid #e3e3e3;
-      border-radius: 2px;
-      background-color: #f7f7f7 !important;
-    }
-
-    body .decomments-enter-row input:focus,
-    body .decomments-enter-row .de-form-field.de-field-complete input, 
-    body .decomments-enter-row .de-form-field.de-field-focus input{
-      border: 3px solid #e3e3e3;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-addform-body textarea{
-      border: 1px solid #e3e3e3;
-      border-radius: 2px;
-      background-color: #f7f7f7 !important;
-      height: 120px;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-addform-body textarea:focus{
-      border: 3px solid #e3e3e3;
-    }
-
-    body .decomments-enter-row{
-      border-bottom: 1px solid #e3e3e3;
-      margin-bottom: 10px;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-addform-head{
-      margin-bottom: 10px;
-    }
-
-   body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block{
-      width: auto !important;
-      float: right;
-      padding-left: 10px;
-      border-left: 1px solid #e3e3e3;
-      padding-right: 30px;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-subscribe-links{
-      padding: 0;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-checkbox{
-      padding: 15px 10px 15px 32px;
-      border-top: 1px solid #e3e3e3;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-checkbox:first-child{
-      border: none;
-      margin: 0;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-checkbox.active,
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-checkbox:hover:before{
-      border-color: #e3e3e3;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-checkbox:before{
-      top: 15px;
-      left: 10px;
-      background-color: #f7f7f7;
-      border-color: #e3e3e3;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-checkbox:after{
-      width: 11px;
-      height: 11px;
-      top: 18px;
-      left: 13px;
-      border-radius: 3px;
-      background-color: #f74d4d;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-subscribe-show{
-      color: #787474;
-      font-family: 'pf_dindisplay_promedium';
-      font-weight: normal;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-subscribe-show i{
-      position: absolute;
-      right: 0;
-      top: 50%;
-      margin-top: -10px;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-subscribe-block .decomments-subscribe-show:hover i:before{
-        color: #167ac6;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .descomments-form-nav{
-      width: auto !important;
-      position: relative;
-      float: left;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .descomments-form-nav a{
-      display: block;
-      float: left;
-      border-left: 1px solid #e3e3e3;
-      padding: 0 15px;
-      margin: 0;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .descomments-form-nav a:first-child{
-      padding-left: 0;
-      border-left: none;
-    }
-
-    body .decomments-icon-format-quote{
-      margin-right: 0 !important;
-      margin-top: 10px;
-    }
-    body .decomments-icon-format-quote:before{display: none;}
-
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-addform-body .decomments-button-save, 
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-addform-body .decomments-button-send{
-      font: normal 15px/48px 'pf_dindisplay_proregular';
-      height: 48px;
-      color: #fff;
-      border-radius: 3px;
-      text-transform: uppercase;
-      padding: 0 60px;
-      background-color: #333131;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-addform-body .decomments-button-save:hover, 
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-addform-body .decomments-button-send:hover{
-      background-color: #ff1616;
-      color: #fff !important;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-head h3{
-      font: normal 18px/32px 'pf_dindisplay_proregular';
-      text-transform: none;
-      display: block;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-head h3 .decomments-comments-number{
-      color: #ff1616;
-      padding-right: 10px;
-      margin-right: 5px;
-      position: relative;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-head h3 .decomments-comments-number:after{
-      height: 32px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 0;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-head i{
-      display: inline-block;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-head i:before{
-      background-color: #ff1616;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-comment-sort label{
-      font: normal 14px/32px 'pf_dindisplay_promedium';
-      color: #787474;
-    }
-
-    body .de-select.de-select{
-      min-width: 130px;
-    }
-
-    body .de-select.de-select-filter dt{
-      border: none;
-      background-color: #f5f5f5;
-      padding: 7px 20px 7px 23px;
-      font: 13px/18px 'pf_dindisplay_promedium';
-      color: #918d8d;
-    }
-
-    body .de-select dt:before{display: none;}
-
-    body .de-select.de-select-filter dd{
-      border: none;
-      background-color: #f1f1f1;
-      padding: 0;
-    }
-
-    body .de-select.de-select-filter dd a{
-      font: 13px/18px 'pf_dindisplay_promedium';
-      color: #918d8d;
-      padding: 7px 23px;
-    }
-
-    body .de-select.de-select-filter dd a:hover,
-    body .de-select.de-select-filter dd a.current{
-      background-color: #d6d2d2;
-      font-weight: normal;
-    }
-
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-title-block{
-      display: inline-block;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-title-block:after{
-      content: "";
-      display: block;
-      clear: both;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-title-block .decomments-date-link{
-      float: right;
-      font: 600 12px/20px 'Open Sans', sans-serif;
-      color: #918d8d;
-    }
-
-    body .decomments-date-link:before{
-      margin-top: -10px;
-      font-size: 12px;
-      font-weight: normal;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-title-block .decomments-autor-name{
-      float: left;
-      font: 600 14px/20px 'Open Sans', sans-serif;
-      color: #333030;
-    }
-
-    body .decomments-button.decomments-button-reply{
-      font: 600 11px/26px 'Open Sans', sans-serif;
-      color: #787474 !important;
-      background-color: #f1f1f1;
-      height: auto;
-    }
-
-    body .decomments-button.decomments-button-reply:hover{
-      background-color: #ebebeb;
-    }
-
-    body #deco_modal_window{
-      padding: 20px 20px 45px;
-    }
-
-    body #decomments-add-picture-form:after{
-      content: "";
-      display: block;
-      clear: both;
-    }
-
-    body #deco_modal_window #deco_modal_title #deco_modal_ajaxWindowTitle{
-      color: #454343;
-      font: normal 18px/22px 'pf_dindisplay_promedium';
-      text-transform: uppercase;
-      margin-bottom: 30px;
-    }
-
-    body #deco_modal_window #deco_modal_ajaxContent{
-      padding: 0;
-    }
-    
-    body #deco_modal_window .deco_modal-close-icon{
-      background: none;
-      width: 33px;
-      height: 39px;
-      top: -39px;
-      right: -33px;
-    }
-
-    body #deco_modal_window .deco_modal-close-icon img{display: none !important;}
-
-    body #deco_modal_window .deco_modal-close-icon:hover{
-      background: none;
-    }
-
-    body #deco_modal_window .deco_modal-close-icon:before{
-      width: 23px;
-      height: 23px;
-      margin-top: -11px;
-      margin-left: -11px;
-      background: url(../images/icon.png) -182px -194px no-repeat;
-    }
-
-    body #deco_modal_window .deco_modal-close-icon:hover:before{
-      background-position: -182px -223px;
-    }
-
-    body .decomments-add-picture-form .decomments-addfile-field{
-      width: 50%;
-      margin: 0;
-      height: 50px;
-    }
-
-    body .decomments-add-picture-form .decomments-addfile-field span{
-      height: 50px;
-      border: 2px solid #f4462e;
-      font: normal 16px/46px 'pf_dindisplay_proregular';
-      text-transform: uppercase;
-      color: #333030;
-    }
-
-    body .decomments-add-picture-form .decomments-addfile-field:hover span{
-      border-color: #f42a0e;
-    }
-
-    body .decomments-add-picture-form .decomments-button{
-      width: 50%;
-      height: 50px;
-    }
-
-    body .decomments-button{
-      height: 50px;
-      font: normal 16px/48px 'pf_dindisplay_proregular';
-      color: #333030;
-      background-color: #dedfe0;
-    }
-    body .decomments-button.decomments-button-addfile-cancel{
-      color: #333030 !important;
-    }
-
-    body .decomments-button:hover{
-      color: #333030 !important;
-      background-color: #edeff0;
-    }
-
-    body .decomments-add-picture-form.added-image .decomments-addfile-field{
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    body .added-image .decomments-button-del-image, 
-    body .added-image .decomments-button-addfile-cancel, 
-    body .added-image .decomments-button-addfile-send{
-      width: 50% !important;
-      float: left;
-    }
-
-    body .decomments-add-picture-form .decomments-button.decomments-button-addfile-send{
-      background-color: #333131;
-      color: #fff !important;
-    }
-    body .decomments-add-picture-form .decomments-button.decomments-button-addfile-send:hover{
-      background-color: #ff1616;
-      color: #fff !important;
-    }
-
-    body .decomments-button-del-image .icon-bin{
-      margin-top: 10px;
-    }
-
-    body .decomments-button-quote-send,
-    body .decomments-button-quote-cancel{
-      width: 50%;
-      float: left;
-      margin: 0;
-      height: 50px;
-      text-transform: uppercase;
-      font: normal 16px/50px 'pf_dindisplay_proregular';
-    }
-
-    body .decomments-button-quote-send{
-      background-color: #f4462e;
-      color: #fff;
-    }
-
-    body .decomments-button-quote-send:hover{
-      background-color: #f55b47;
-      color: #fff !important;
-    }
-
-    body .decomments-button-quote-cancel{
-      background-color: #dedfe0;
-      color: #333030 !important;
-    }
-
-    body .decomments-button-quote-cancel:hover{
-      background-color: #edeff0;
-      color: #333030;
-    }
-
-
-    body .decomments-icon-bvote.decomments-icon-bvote{
-      width: auto;
-      height: auto;
-    }
-
-    body .decomments-icon-bvote.decomments-icon-bvote img{display: none;}
-
-    body .decomments-icon-bvote.decomments-icon-bvote:before{
-      content: "";
-      display: inline-block;
-      width: 25px;
-      height: 21px;
-      background-position: -101px -277px;
-      background: url(../images/icon.png) -101px -277px no-repeat;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-vote .decomments-biggest-vote b{
-      font: 600 14px/24px 'Open Sans', sans-serif;
-      color: #333030;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-share-block ins{
-      font: 11px/26px 'Open Sans', sans-serif;
-      color: #787474 !important;
-      padding: 0 14px 0 34px;
-      background-color: #f1f1f1;
-      position: relative;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-share-block:hover ins{
-      background-color: #167ac6;
-      color: #fff !important;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-share-block ins .decomments-icon-share{
-      position: absolute;
-      top: 50%;
-      left: 9px;
-      margin-top: -8px;
-      width: 16px;
-      height: 16px;
-      background: url(../images/icon.png) -189px -264px no-repeat;
-    }
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-share-block ins .decomments-icon-share:before{display: none;}
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-share-block:hover ins .decomments-icon-share{
-      background-position: -189px -288px;
-    }
-
-    body .decomments-icon-share img{display: none !important;}
-
-    body #decomments-comment-section.decomments-comment-section.decomments-comment-section .decomments-addform .decomments-addform-body .decomments-button-cancel{display: none;}
-  /*
+------------------------------------------------ */
+  
   .enter_social_box>h6{
     font: 19px/26px 'pf_dindisplay_proregular';
     color: #333131;
@@ -3950,7 +3396,7 @@ Theme for ForTrader
     height: 228px;
     resize:none;
     margin-bottom: 17px;
-  }*/
+  }
 
 /* ------------------------------------------------
 
@@ -3961,8 +3407,6 @@ Theme for ForTrader
   .category_box{
     margin: 0 -10px;
   }
-
-  .category_box>li:before{display: none;}
 
   .category_box>li{
     float: left;
@@ -4307,122 +3751,3 @@ Theme for ForTrader
       color: #807d7d;
       padding: 25px 0 0;
     }
-	
-  /* --------------------------------------------
-        19.4. home Quotes
-  -------------------------------------------- */
-	.wQuotesPanel{
-		background-color:#2E2B2B !important;
-	}
-	.quotes_box .header_info_container.QuotesPanel{
-		padding-top:12px;
-		padding-bottom:10px;
-	}
-	
-  /* --------------------------------------------
-        19.5. additionals
-  -------------------------------------------- */
-	.time-date{
-		width:110px !important;
-	}
-	.li-time-date{
-		padding-left:110px !important;
-	}
-	.focus_box .ticker p a{
-		color:#fff;
-	}
-	
-	
-.loader-wrap{
-	position:relative;
-	display:none;
-	height: 49px;
-}
-.loader {
-  width: 250px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  font-family: helvetica, arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: #FF1616;
-  letter-spacing: 0.2em;
-}
-.loader::before, .loader::after {
-    content: "";
-    display: block;
-    width: 15px;
-    height: 15px;
-    background: #FF1616;
-    position: absolute;
-    animation: load .7s infinite alternate ease-in-out;
-}
-.loader::before {
-    top: 0;
-}
-.loader::after {
-    bottom: 0;
-}
-@keyframes load {
-  0% { left: 0; height: 30px; width: 15px }
-  50% { height: 8px; width: 40px }
-  100% { left: 235px; height: 30px; width: 15px}
-}
-
-
-
-.competition_img, .competition_description{
-	width:49.9%;
-}
-.competition_img img{
-	width:100%;
-}
-
-.categories_btn.tag-active{
-	color: #fff;
-	background-position: 0 100%;
-	-webkit-transition: none;
-	-o-transition: none;
-	transition: none;
-}
-
-.categories_btn.tag-active:before,
-.categories_btn.tag-active:after{
-	background-position: 0 100%;
-}
-.load_btn.tag-load-link.chench_btn{
-	display:none;
-}
-.breadcrumbs ul li span a span.breadcrumb-active{
-	color:#333;
-}
-	
-.post_col2.today-css{
-	width:100%;
-}
-.post_col2.today-css .post_small{
-	width:50%;
-	float:left;
-}
-.post_col2.today-css .post_small:nth-child(odd) {
-	padding-left:10px;
-}
-.nav_list li.current span{
-	color: #fff;
-	background-color: #ff1616;
-}
-.nav_list li{
-	padding:4px 5px;
-}
-.currency-rates .rates_icon{
-	cursor:pointer;
-}
-.interview label.no-poll{
-	padding-left:0px;
-}
-	  
