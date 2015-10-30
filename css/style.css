@@ -63,6 +63,7 @@ Theme for ForTrader
   14. Site List
   15. Rates
   16. Comments
+    16.1. Comment plagin
   17. Comment Tabs
   18. Category
   19. Author Block
@@ -75,10 +76,11 @@ Theme for ForTrader
 =======
 */
 @import "reset.css";
+@import "font-awesome.min.css";
 @import "../fonts/PFDindisplayproRegMedLight/font.css";
 @import "../fonts/PFDindisplayproThinBold/font.css";
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic);
 
 /* ------------------------------------------------
 
@@ -176,6 +178,7 @@ Theme for ForTrader
     .PFDlight{font-family: 'pf_dindisplay_prolight';}
     .PFDregular{font-family: 'pf_dindisplay_proregular';}
     .PFDmedium{font-family: 'pf_dindisplay_promedium';}
+    .PFDbold{font-family: 'pf_dindisplay_probold';}
     .PFDthin{font-family: 'pf_dindisplay_prothin';}
 
     .regular{font-weight: 400;}
@@ -581,6 +584,20 @@ Theme for ForTrader
       height: 28px;
       background-position: -156px -272px;
     }
+
+    .watch:before{
+      width: 28px;
+      height: 28px;
+      background-position: -179px -232px;
+    }
+
+    .arrow_red:before{
+      width: 16px;
+      height: 27px;
+      background-position: -186px -195px;
+    }
+
+
 
 /* ------------------------------------------------
 
@@ -2257,9 +2274,9 @@ Theme for ForTrader
       display: none;
     }
 
-    .ask_question button.button1{
+    /*.ask_question button.button1{
       display: none;
-    }
+    }*/
 
     /*.ask_question>textarea:focus ~ button{display: block;}*/
 
@@ -2421,6 +2438,7 @@ Theme for ForTrader
       padding: 11px 15px;
       border: 2px solid #e3e3e3;
       position: relative;
+      color: #454242;
     }
 
     .tabs_list>li>a:hover,
@@ -3440,7 +3458,7 @@ Theme for ForTrader
 
 
   /* ------------------------------------------------
-      13.1. Comment plagin
+      16.1. Comment plagin
   ------------------------------------------------ */
 
     body #decomments-comment-section.decomments-comment-section.decomments-comment-section .wp-social-login-widget{
@@ -4425,4 +4443,618 @@ Theme for ForTrader
 .interview label.no-poll{
 	padding-left:0px;
 }
-	  
+
+
+
+/* --------------------------------------------
+    Quotes
+-------------------------------------------- */
+    
+    .title_box1{
+        padding-bottom: 26px;
+    }
+
+    .rates_box1{
+        float: left;
+        line-height: 33px;
+        position: relative;
+        padding-left: 30px;
+        margin-top: 18px;
+    }
+
+    .rates_box1 i{
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        top: 50%;
+        height: 28px;
+        margin-top: -14px;
+    }
+
+    .rates_box1 .rates_box1_inner{
+        color: #333030;
+        display: inline-block;
+        font-size: 33px;
+        font-weight: 700;
+        vertical-align: baseline;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+
+    .rates_box1_difference{
+        display: inline-block;
+        color: #5e5e5e;
+        font-size: 20px;
+        vertical-align: baseline;
+    }
+
+    .watch_box{
+        float: right;
+        padding-left: 37px;
+        position: relative;
+    }
+
+    .watch_box i{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 27px;
+    }
+
+    .watch_box p{
+        color: #5e5e5e;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+
+    #digital_watch{
+        font-size: 23px;
+        line-height: 26px;
+        font-weight: 300;
+        color: #fff;
+        text-align: center;
+        background-color: #242222;
+        padding: 6px 0;
+    }
+
+    .forecast_box{
+        border-top: 1px solid #e3e3e3;
+        position: relative;
+        padding-top: 26px;
+    }
+
+    .forecast_box:before{
+        content: "";
+        display: block;
+        width: 67px;
+        height: 3px;
+        background-color: #e3e3e3;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"]{
+      display: none;
+    }
+
+    label.square_input{
+      display: block;
+      font: 17px/18px 'pf_dindisplay_proregular';
+      color: #454242;
+      padding-left: 26px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    label.square_input>i{
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      border: 1px solid #cccccc;
+      background-color: #f7f7f7;
+    }
+
+    input[type="radio"]:checked + label>i:before,
+    input[type="checkbox"]:checked + label>i:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 12px;
+      height: 12px;
+      background-color: #f74d4d;
+      border-radius: 3px;
+    }
+
+    .real_time_choice{
+        padding-bottom: 26px;
+    }
+
+    .forecast_tabs .tabs_list{
+        margin-bottom: 60px;
+    }
+
+    .forecast_tabs .tabs_list:before{
+        display: none;
+    }
+
+    .forecast_tabs .tabs_list>li>a{
+        width: 187px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .forecast_tabs .tabs_list>li.rating_traders_link>a{
+        background: none;
+    }
+
+    .forecast_tabs .tabs_list>li.rating_traders_link>a:hover{
+        border-color: #b0b0b0;
+    }
+
+    .forecast_tabs .tabs_list>li.trader_link>a{
+        background: #167ac6;
+        border-color: #167ac6;
+        color: #fff;
+        width: 152px;
+    }
+
+    .forecast_tabs .tabs_list>li.trader_link>a:hover{
+        border-color: #198ae0;
+        background-color: #198ae0;
+    }
+
+    .make_forecast_left{
+        float: left;
+        width: 220px;
+    }
+
+    .make_forecast_center{
+        float: left;
+        margin-left: 33px;
+    }
+
+    .make_forecast_right{
+        float: right;
+        padding-top: 32px;
+    }
+
+    .custom_select{
+        position: relative;
+    }
+
+    .active_option{
+        border: 1px solid #e4e4e4;
+        font-size: 16px;
+        line-height: 27px;
+        color: #787777;
+        padding: 9px 45px 9px 10px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .active_option i{
+        display: block;
+        position: absolute;
+        color: #454545;
+        right: 0;
+        top: 0;
+        border-left: 1px solid #e4e4e4;
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+        line-height: 45px;
+        text-align: center;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f6f5+0,edeceb+100 */
+        background: #f7f6f5; /* Old browsers */
+        background: -moz-linear-gradient(top,  #f7f6f5 0%, #edeceb 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f6f5), color-stop(100%,#edeceb)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #f7f6f5 0%,#edeceb 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #f7f6f5 0%,#edeceb 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #f7f6f5 0%,#edeceb 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #f7f6f5 0%,#edeceb 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f6f5', endColorstr='#edeceb',GradientType=0 ); /* IE6-9 */
+    }
+
+    .active_option:hover i{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f6f5+0,e1e0de+100 */
+        background: #f7f6f5; /* Old browsers */
+        background: -moz-linear-gradient(top,  #f7f6f5 0%, #e1e0de 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f6f5), color-stop(100%,#e1e0de)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #f7f6f5 0%,#e1e0de 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #f7f6f5 0%,#e1e0de 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #f7f6f5 0%,#e1e0de 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #f7f6f5 0%,#e1e0de 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f6f5', endColorstr='#e1e0de',GradientType=0 ); /* IE6-9 */
+    }
+
+    .active_option.opened i{
+        color: #ff1717;
+    }
+
+    .options_list{
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border: 1px solid #e4e4e4;
+        border-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translate(0, 20px);
+        -ms-transform: translate(0, 20px);
+        -o-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .options_list.opened{
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        transform: translate(0);
+    }
+
+    .options_list li{
+        border-top: 1px solid #e4e4e4;
+        margin-bottom: 0 !important;
+    }
+
+    .options_list li:first-child{
+        border-top: none;
+    }
+
+    .options_list li:before{
+        display: none;
+    }
+
+    .options_list li a{
+        color: #787777;
+        font-size: 16px;
+        line-height: 21px;
+        padding: 10px;
+        display: block;
+        font-weight: 400;
+    }
+
+    .options_list li a:hover,
+    .options_list li.active a{
+        background-color: #f6f6f6;
+    }
+
+    .required_message{
+        font-size: 14px;
+        color: #787777;
+    }
+
+    .make_forecast:not(:last-child){
+        margin-bottom: 40px;
+    }
+
+    .forecast_tabs label{
+        display: block;
+        font-size: 18px;
+        color: #454242;
+        margin-bottom: 10px;
+    }
+
+    .forecast_tabs input:not([type="radio"]):not([type="checkbox"]){
+        font-size: 16px;
+        line-height: 25px;
+        padding: 10px;
+        color: #787777;
+        width: 220px;
+        border: 1px solid #e4e4e4;
+    }
+
+    .forecast_tabs button{
+        float: right;
+        outline: none;
+        cursor: pointer;
+        background: none;
+        width: 220px;
+        color: #333030;
+        font-size: 16px;
+        line-height: 23px;
+        padding: 10px 0;
+        text-align: center;
+        border: 2px solid #ff1616;
+    }
+
+    .forecast_tabs button:hover{
+        border-color: #ff8080;
+    }
+
+    .add_mood>a{
+        width: 333px;
+        display: block;
+        position: relative;
+        font-size: 18px;
+        line-height: 20px;
+        padding: 20px 0;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        float: left;
+    }
+
+    .add_mood>span{
+        display: inline-block;
+        font-size: 16px;
+        color: #454242;
+        line-height: 20px;
+        padding: 20px 0;
+        text-transform: uppercase;
+    }
+
+    .add_mood{
+        text-align: center;
+    }
+
+    .add_mood>a.bullish_forecast{
+        background-color: #89bb50;
+        padding-left: 30px;
+    }
+
+    .add_mood>a.bullish_forecast:before{
+        content: "Бычий прогноз";
+    }
+
+    .add_mood>a.bullish_forecast:hover{
+        background-color: #96cc58;
+    }
+
+    .add_mood>a.bear_forecast{
+        background-color: #e06c5a;
+        float: right;
+        padding-right: 32px;
+    }
+
+    .add_mood>a.bear_forecast:before{
+        content: "Медвежий прогноз";
+    }
+
+    .add_mood>a.bear_forecast:hover{
+        background-color: #f27461;
+    }
+
+    .add_mood>a i{
+        display: block;
+        width: 34px;
+        height: 32px;
+        position: absolute;
+        top: 50%;
+        margin-top: -17px;
+        left: 20px;
+        background: url(../images/bull_icon.png) 50% 50% no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .add_mood>a.bear_forecast i{
+        left: auto;
+        right: 20px;
+        background-image: url(../images/bear_icon.png);
+    }
+
+    .add_mood{
+        margin-bottom: 40px;
+    }
+
+    .mood_chart_label{
+        color: #787777;
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+
+    .mood_chart{
+        position: relative;
+        overflow: hidden;
+        height: 10px;
+        width: 100%;
+        clear: both;
+        margin-bottom: 15px;
+    }
+
+    .mood_chart>div{
+        position: absolute;
+        height: 100%;
+    }
+
+    .mood_chart_bull{
+        background-color: #89bb50;
+        left: -1px;
+    }
+
+    .mood_chart_bear{
+        background-color: #e06c5a;
+        right: -1px;
+    }
+
+    .mood_chart_label1{
+        color: #333030;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    /*dropdoun*/
+
+    .dropdown_box{
+        position: relative;
+    }
+
+    .dropdown_active{
+        display: none;
+        position: relative;
+        cursor: pointer;
+        background-color: #f1f1f1;
+        color: #454242;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 10px 20px 10px 12px;
+    }
+
+    .dropdown_active i{
+        position: absolute;
+        top: 0;
+        right: 10px;
+        width: 16px;
+        text-align: center;
+        height: 42px;
+        line-height: 42px;
+    }
+
+    .quotes_list{
+        margin-left: -6px;
+        margin-bottom: 0 !important;
+    }
+
+    .dropdown_box:not(:last-child){
+        margin-bottom: 10px;
+    }
+
+    .quotes_list li{
+        margin-left: 5px;
+        margin-bottom: 5px !important;
+        float: left;
+    }
+
+    .quotes_list li:before{
+        display: none;
+    }
+
+    .quotes_list li a{
+        display: block;
+        width: 142px;
+        background-color: #f1f1f1;
+        color: #454242;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 10px 0;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .quotes_list li a:hover,
+    .quotes_list li.active a{
+        color: #fff;
+        background-color: #333030;
+    }
+
+    .quotes_list1{
+        margin-left: -6px;
+        margin-bottom: 0 !important;
+    }
+
+    .quotes_list1 li{
+        margin-left: 5px;
+        margin-bottom: 5px !important;
+        float: left;
+    }
+
+    .quotes_list1 li:before{
+        display: none;
+    }
+
+    .quotes_list1 li a{
+        display: block;
+        width: 142px;
+        border: 2px solid #e3e3e3;
+        color: #454242;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 8px 0;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .quotes_list1 li a:hover{
+        border: 2px solid #b0b0b0;
+    }
+    
+    .overview_list{
+        margin-left: -2px;
+    }
+
+    .overview_list:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+    .overview_list li{
+        float: left;
+        margin-left: 2px;
+        margin-bottom: 2px !important;
+        position: relative;
+    }
+
+    .overview_list li:before{display: none;}
+
+    .overview_list li a{
+        display: block;
+        text-align: center;
+        line-height: 22px;
+        background-color: #f1f1f1;
+        width: 64px;
+        font-size: 15px;
+        color: #333131;
+        font-weight: normal;
+        padding: 10px 0;
+    }
+
+    .overview_list li a:hover,
+    .overview_list li.active a,
+    .dropdown_box>a.active{
+        background-color: #333030;
+        color: #fff;
+    }
+
+    .overview_block{
+        background-color: #f1f1f1;
+        height: 314px;
+        margin-bottom: 30px;
+    }
+
+    .overview_sublist{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translate(0, 20px);
+        -ms-transform: translate(0, 20px);
+        -o-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .overview_sublist.active{
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        transform: translate(0);
+    }
+
+    .overview_sublist li{
+        float: none;
+        margin: 0;
+        margin-top: 2px;
+    }
+    
+

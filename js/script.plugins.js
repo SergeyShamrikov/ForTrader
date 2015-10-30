@@ -59,17 +59,17 @@
 
 
 		/* ------------------------------------------------
-				liMarquee
+				customSelect
 		------------------------------------------------ */
+			
+			if($(".custom_select").length){
 
-			// if($(".news_slider").length){
-
-			// 	$('.ticker').liMarquee();
-
-			// }
+				$(".custom_select").customSelect();
+			
+			}
 
         /* ------------------------------------------------
-				End of liMarquee
+				End of customSelect
 		------------------------------------------------ */
 
 

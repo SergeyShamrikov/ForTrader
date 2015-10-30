@@ -41,6 +41,37 @@
 	.read_all{width: 410px;}
 
 	.news_post_box figcaption{height: 72px;}
+
+	/*quotes*/
+
+	.forecast_tabs .tabs_list>li>a{
+		width: 151px;
+		font-size: 14px;
+	}
+
+	.forecast_tabs .tabs_list{
+		margin-bottom: 30px;
+	}
+
+	.make_forecast_left{
+		width: 200px;
+	}
+
+	.make_forecast_center{
+		margin-left: 20px;
+	}
+
+	.forecast_tabs input:not([type="radio"]):not([type="checkbox"]){
+		width: 200px;
+	}
+
+	.forecast_tabs button{
+		width: 183px;
+	}
+
+	.add_mood>a{
+		width: 270px;
+	}
 }
 
 @media only screen and (max-width: 992px) {
@@ -411,6 +442,154 @@
 		line-height: 20px;
 	}
 
+	/*quotes*/
+
+	.forecast_tabs .tabs_list>li{
+		width: 50%;
+		margin-bottom: 2px;
+	}
+
+	.forecast_tabs .tabs_list>li>a,
+	.forecast_tabs .tabs_list>li.trader_link>a{
+		width: auto;
+	}
+
+	.forecast_tabs .tabs_list>li>a:before,
+	.forecast_tabs .tabs_list>li>a:after{
+		display: none;
+	}
+
+	.make_forecast_left{
+		width: 50%;
+		padding-right: 1px;
+	}
+
+	.make_forecast_center{
+		float: right;
+		width: 50%;
+		padding-left: 1px;
+		margin-left: 0;
+	}
+
+	.forecast_tabs input:not([type="radio"]):not([type="checkbox"]){
+		width: 100%;
+	}
+
+	.make_forecast_right{
+		width: 100%;
+		clear: both;
+		padding-top: 20px;
+	}
+
+	.forecast_tabs button{
+		width: 100%;
+	}
+
+	.make_forecast:not(:last-child){
+		margin-bottom: 20px;
+	}
+
+	.required_message{
+		text-align: center;
+	}
+
+	.dropdown_active{
+		display: block;
+	}
+
+	.quotes_list{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 99;
+		margin: 0;
+		width: 100%;
+		background-color: #f7f7f7;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transform: translate(0, 20px);
+		-ms-transform: translate(0, 20px);
+		-o-transform: translate(0, 20px);
+		transform: translate(0, 20px);
+		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+
+	.quotes_list.active{
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translate(0);
+		-ms-transform: translate(0);
+		-o-transform: translate(0);
+		transform: translate(0);
+	}
+
+	.quotes_list li{
+		float: none;
+		border-bottom: 1px solid #e3e3e3;
+		margin: 0 !important;
+	}
+
+	.quotes_list li a:hover, 
+	.quotes_list li.active a{
+		background-color: #f1f1f1;
+		color: #454242;
+	}
+
+	.quotes_list li a{
+		width: auto;
+		text-align: left;
+		padding-left: 12px;
+		background: none;
+	}
+
+	.quotes_list1{
+		margin: 0 -3px;
+	}
+
+	.quotes_list1 li{
+		width: 50%;
+		margin-left: 0 !important;
+		padding: 0 3px;
+	}
+
+	.quotes_list1 li a{
+		width: auto;
+	}
+	
+	.add_mood>a{
+		width: 134px;
+		font-size: 16px;
+		text-transform: none;
+	}
+
+    .add_mood>a.bullish_forecast:before{
+        content: "Бычий";
+    }
+
+    .add_mood>a.bear_forecast:before{
+        content: "Медвежий";
+    }
+
+    .add_mood>a i{
+    	width: 25px;
+    	left: 12px;
+    }
+
+    .add_mood>a.bear_forecast i{
+    	left: auto;
+    	right: 12px;
+    }
+
+    .add_mood>span{
+    	font-size: 14px;
+    	text-transform: none;
+    }
+
+    .overview_list li a{
+    	width: 58px;
+    }
 
 
 }

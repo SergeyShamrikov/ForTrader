@@ -8,6 +8,7 @@
 
 			var self = this;
 
+			self.jqueryExtend();
 			self.checkSubmenu();
 			self.headerInfo();
 			self.footerList();
@@ -24,12 +25,15 @@
 			self.goUp();
 			self.nextButtonHover();
 			self.additionalMenuWidth();
+			self.dropdoun();
 
 		},
 
 		windowLoad: function(){
 
 			var self = this;
+
+			self.digitalWatch();
 
 			setTimeout(function(){
 
@@ -57,6 +61,93 @@
 				self.additionalMenuWidth();
 
 			},500);
+		},
+
+		jqueryExtend: function(){
+
+			$.fn.extend({
+
+				/**
+				** Custom select
+				**/
+
+				customSelect : function(){
+
+					// template
+					var template = "<div class='active_option open_select'><div class='inner'></div><i class='fa fa-angle-down'></i></div><ul class='options_list dropDown'></ul>";
+
+					return this.each(function(){
+
+						var $this = $(this);
+
+						$this.prepend(template);
+
+						var active = $this.children('.active_option'),
+							activeInner = active.children('.inner'),
+							list = $this.children('.options_list'),
+							select = $this.children('select').hide(),
+							options = select.children('option');
+
+						active.on('click', function(){
+
+							active.add(list).toggleClass('opened');
+
+						});
+
+						activeInner.text( 
+							select.children('option[selected]').val() ? 
+							select.children('option[selected]').val() : 
+							options.eq(0).val()
+						);
+
+						options.each(function(){
+
+							var template = $('<li></li>'),
+								val = $(this).val();
+
+							template.html('<a href="javascript:;">' + val + '</a>');
+
+							list.append(template);
+
+						});
+
+						list.on("click", "li", function(){
+
+							var vl = $(this).text();
+								activeInner.text(vl);
+								select.val(vl);
+
+							$(this).addClass('active').siblings().removeClass('active');
+
+							if(!Core.TRANSITIONSUPPORTED){
+
+								$(this).closest('.dropDown').add(active).removeClass("active");
+
+							}else{
+
+								$(this).closest(list).add(active).removeClass("opened");
+
+							}
+
+							$('.dropDown,.active_option').removeClass('opened');
+
+						});
+
+						$(document).on('click', function(event){
+
+							if(!$(event.target).closest('.custom_select').length){
+
+								$('.dropDown,.active_option').removeClass('opened');
+
+							}
+
+						});
+
+					});
+
+				},
+
+			});
 		},
 
 		/**
@@ -494,10 +585,56 @@
 						$('.materials_box').removeClass('active');
 					}
 				);
-		}
+		},
 
 		
+		/**
+		**	Digital Watch 
+		**/
 
+		digitalWatch : function() {
+		    
+		    var self = this;
+		    var date = new Date();
+		    var hours = date.getHours();
+		    var minutes = date.getMinutes();
+		    var seconds = date.getSeconds();
+		    if (hours < 10) hours = "0" + hours;
+		    if (minutes < 10) minutes = "0" + minutes;
+		    if (seconds < 10) seconds = "0" + seconds;
+		    document.getElementById("digital_watch").innerHTML = hours + ":" + minutes + ":" + seconds;
+		    setTimeout(function(){
+		    	self.digitalWatch();
+		    },1000);
+		
+		},
+
+
+		/**
+		**	Dropdoun 
+		**/
+
+		dropdoun : function(){
+
+			$('.dropdown_btn').on("click",function(e){
+
+				e.preventDefault();
+
+				$(this).toggleClass('active').next().toggleClass('active');
+			});
+
+			$(document).on('click', function(event){
+
+				if(!$(event.target).closest('.dropdown_box').length){
+
+					$('.dropdoun, .dropdown_btn').removeClass('active');
+
+				}
+
+			});
+
+
+		}
 
 
 	}
